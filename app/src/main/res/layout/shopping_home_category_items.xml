@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/product_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/mask_color" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left"
+            android:layout_marginLeft="@dimen/space_30"
+            android:src="@drawable/shopping_triangle" />
+    </FrameLayout>
+
+    <com.laka.live.shopping.widget.FlowLayout
+        android:id="@+id/product_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.laka.live.shopping.widget.FlowLayout>
+
+    <com.laka.live.shopping.widget.ShoppingFollowView
+        android:id="@+id/product_follow_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_25"
+        android:background="@color/white" />
+
+    <ViewStub
+        android:id="@+id/content_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/shopping_home_category_items_content" />
+
+    <ViewStub
+        android:id="@+id/content_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/shopping_home_category_items_content" />
+
+    <ViewStub
+        android:id="@+id/content_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/shopping_home_category_items_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/shopping_category_line" />
+
+    <com.laka.live.shopping.widget.FlowLayout
+        android:id="@+id/product_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.laka.live.shopping.widget.FlowLayout>
+</LinearLayout>

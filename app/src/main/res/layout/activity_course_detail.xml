@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.laka.live.ui.widget.GradientScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttonStatusView"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical">
+
+            <!-- 预告 -->
+            <com.laka.live.ui.course.detail.CourseTrailerView
+                android:id="@+id/courseTrailerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <!-- 预告-->
+
+            <com.laka.live.ui.widget.PointDividerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_15"
+                android:layout_marginLeft="@dimen/space_15"
+                android:layout_marginRight="@dimen/space_15" />
+
+            <!-- 主播信息 -->
+            <com.laka.live.ui.course.detail.UserInfoView
+                android:id="@+id/userInfoView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <!-- 主播信息 -->
+
+            <View
+                android:background="@color/colorF5F5F5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_5"
+                android:layout_marginTop="@dimen/space_15"/>
+
+            <!-- 商品详情、讨论区、推荐商品 -->
+            <RadioGroup
+                android:id="@+id/moduleGroup"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_50"
+                android:layout_marginLeft="@dimen/space_15"
+                android:layout_marginRight="@dimen/space_15"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/courseDetail"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableBottom="@drawable/course_detail_tab_selector"
+                    android:gravity="center"
+                    android:text="商品详情"
+                    android:textColor="@color/radio_848484_333333_selector" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="15.5dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/colorE5E5E5" />
+
+                <RadioButton
+                    android:id="@+id/discussArea"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:button="@null"
+                    android:drawableBottom="@drawable/course_detail_tab_selector"
+                    android:gravity="center"
+                    android:text="讨论区"
+                    android:textColor="@color/radio_848484_333333_selector" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="15.5dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/colorE5E5E5" />
+
+                <RadioButton
+                    android:id="@+id/recGoods"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:button="@null"
+                    android:drawableBottom="@drawable/course_detail_tab_selector"
+                    android:gravity="center"
+                    android:text="推荐商品"
+                    android:textColor="@color/radio_848484_333333_selector" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorE5E5E5" />
+
+            <!-- 课程详情 -->
+            <com.laka.live.ui.course.detail.CourseDetailView
+                android:id="@+id/courseDetailView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <!-- 课程详情 -->
+
+            <!-- 评论区 -->
+            <com.laka.live.ui.course.detail.CommentAreaView
+                android:id="@+id/commentAreaView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+            <!-- 评论区 -->
+
+            <!-- 推荐商品 -->
+            <com.laka.live.ui.course.detail.RecommendGoodsView
+                android:id="@+id/recommendGoodsView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+            <!-- 推荐商品 -->
+
+        </LinearLayout>
+
+    </com.laka.live.ui.widget.GradientScrollView>
+
+    <!-- 遮罩层 -->
+    <ImageView
+        android:id="@+id/mask"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_60"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/nav_pic_mask"
+        android:scaleType="fitXY" />
+    <!-- 遮罩层 -->
+
+    <!-- 标题栏 -->
+    <com.laka.live.ui.course.detail.TitleBarView
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_60"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+    <!-- 标题栏 -->
+
+    <!-- 底部按钮状态 -->
+    <com.laka.live.ui.course.detail.ButtonStatusView
+        android:id="@+id/buttonStatusView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+    <!-- 底部按钮状态 -->
+
+    <com.laka.live.ui.widget.chatKeyboard.KJChatKeyboardComment
+        android:id="@+id/kjChatKeyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/discountTimeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_5"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/limitTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/space_5"
+            android:drawablePadding="@dimen/space_5"
+            android:gravity="center_vertical"
+            android:text="结束时间"
+            android:textColor="@color/color848484"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/daysTv"
+                style="@style/discount_time_view" />
+
+            <TextView
+                android:layout_width="@dimen/space_18"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="天"
+                android:textColor="@color/color848484"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/hours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/hoursTv"
+                style="@style/discount_time_view" />
+
+            <TextView
+                android:layout_width="@dimen/space_18"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="时"
+                android:textColor="@color/color848484"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/minutes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/minutesTv"
+                style="@style/discount_time_view" />
+
+
+            <TextView
+                android:layout_width="@dimen/space_18"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="分"
+                android:textColor="@color/color848484"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/seconds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/secondsTv"
+                style="@style/discount_time_view" />
+
+            <TextView
+                android:layout_width="@dimen/space_18"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="秒"
+                android:textColor="@color/color848484"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/countTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|bottom"
+        android:orientation="horizontal">
+
+        <com.laka.live.ui.widget.AnimationView
+            android:id="@+id/animation"
+            android:layout_width="@dimen/space_10"
+            android:layout_height="@dimen/space_10"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:drawable_id="@drawable/living_wave_anim" />
+
+        <Chronometer
+            android:id="@+id/courseTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color848484"
+            android:textSize="12sp" />
+
+        <View
+            android:id="@+id/divider"
+            style="@style/vertical_divider"
+            android:layout_height="@dimen/space_12"
+            android:layout_marginLeft="@dimen/space_12"
+            android:background="@color/color999999" />
+
+        <TextView
+            android:id="@+id/buyerCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_12"
+            android:textColor="@color/color848484"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

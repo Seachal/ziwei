@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 课程简介 -->
+    <LinearLayout
+        android:id="@+id/summaryLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/space_10"
+            android:text="@string/course_summary"
+            android:textColor="@color/color333333"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/courseSummary"
+            android:layout_width="@dimen/space_310"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/space_20"
+            android:gravity="left"
+            android:lineSpacingExtra="@dimen/space_4"
+            android:textColor="@color/color848484"
+            android:textSize="14sp" />
+
+        <!-- 课程简介的图片 -->
+        <LinearLayout
+            android:id="@+id/summaryImages"
+            android:layout_width="@dimen/space_310"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical" />
+        <!-- 课程简介的图片 -->
+
+        <com.laka.live.ui.widget.PointDividerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_15" />
+
+    </LinearLayout>
+    <!-- 课程简介 -->
+
+    <!-- 课程配方 -->
+    <LinearLayout
+        android:id="@+id/formulaLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/space_10"
+                android:text="@string/course_formula"
+                android:textColor="@color/color333333"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/courseFormula"
+                android:layout_width="@dimen/space_310"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView2"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/space_10"
+                android:layout_marginTop="@dimen/space_20"
+                android:lineSpacingExtra="@dimen/space_4"
+                android:textColor="@color/color848484"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/formulaImage"
+                android:layout_width="@dimen/space_310"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/courseFormula"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/space_10"
+                android:orientation="vertical"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/formulaLocked"
+                style="@style/clickable"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:drawablePadding="@dimen/space_15"
+                android:drawableTop="@mipmap/icon_formula_locked"
+                android:gravity="center"
+                android:text="购买后即可看到配方做法哦"
+                android:textColor="@color/color848484"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+
+        <com.laka.live.ui.widget.PointDividerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_15" />
+
+    </LinearLayout>
+    <!-- 课程配方 -->
+
+    <!-- 同类课堂 -->
+    <LinearLayout
+        android:id="@+id/similarCourse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/space_11"
+            android:layout_marginTop="@dimen/space_10"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="套课列表"
+                android:textColor="@color/color333333"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_5"
+                android:background="@drawable/detail_tag_discount"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/space_1"
+                android:paddingLeft="@dimen/space_8"
+                android:paddingRight="@dimen/space_8"
+                android:paddingTop="@dimen/space_1"
+                android:text="9.0折"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <com.laka.live.ui.widget.course.CoursesDiscountTimeView
+            android:id="@+id/coursesDiscountTimeView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_11"
+            android:layout_marginTop="@dimen/space_10" />
+
+    </LinearLayout>
+    <!-- 同类课堂 -->
+
+    <LinearLayout
+        android:id="@+id/emptyView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/public_pic_empty2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="此地空空如也"
+            android:textColor="@color/color848484"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

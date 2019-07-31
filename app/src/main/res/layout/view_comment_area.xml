@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_5"
+        android:gravity="center_vertical"
+        android:padding="@dimen/space_15">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/public_bg_head" />
+
+        <TextView
+            android:id="@+id/comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_8"
+            android:background="@drawable/corners_solid_grey"
+            android:hint="我来说两句..."
+            android:lineSpacingExtra="6sp"
+            android:paddingBottom="@dimen/space_8"
+            android:paddingLeft="@dimen/space_12"
+            android:paddingRight="@dimen/space_12"
+            android:paddingTop="@dimen/space_8"
+            android:textColorHint="#b7b7b7"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/commentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <RelativeLayout
+        android:id="@+id/emptyView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/space_25"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/public_pic_comment" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="11dp"
+            android:text="还没有人来讨论，快来说两句..." />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/see_all_tv"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawableEnd="@drawable/home_icon_seeall"
+        android:drawablePadding="@dimen/space_11"
+        android:drawableRight="@drawable/home_icon_seeall"
+        android:padding="@dimen/space_10"
+        android:text="查看全部评论"
+        android:textColor="@color/color848484"
+        android:textSize="@dimen/space_12"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>

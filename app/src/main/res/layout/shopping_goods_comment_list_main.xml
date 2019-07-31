@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.laka.live.shopping.xrecyclerview.XRecyclerView
+        android:id="@+id/goods_comments_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <com.laka.live.shopping.widget.LoadingLayout
+        android:id="@+id/goods_comments_list_loading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>

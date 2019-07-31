@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_video_connect"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/ActivityBackground" >
+
+    <RelativeLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@color/colorFAFAFA">
+
+        <TextView
+            android:id="@+id/clear"
+            style="@style/back_text"
+            android:layout_alignParentRight="true"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:text="@string/clear"
+            android:textColor="@color/theme_red_color_selector" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true">
+
+            <include
+                android:id="@+id/connect_tab"
+                layout="@layout/home_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" />
+
+            <include
+                android:id="@+id/online_tab"
+                layout="@layout/home_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_below="@id/head"
+        style="@style/horizontal_divider"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/divider" />
+
+</RelativeLayout>

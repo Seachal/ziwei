@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_centerInParent="true">
+
+    <TextView  android:layout_centerHorizontal="true"
+        android:id="@+id/loadingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/crazy_loading_please_wait" android:visibility="visible"
+        android:layout_below="@+id/loadingImageView"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:textSize="16dp"/>
+
+    <ImageView
+        android:id="@+id/loadingImageView"
+        android:layout_width="@dimen/space_60"
+        android:layout_height="@dimen/space_60"
+        android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>

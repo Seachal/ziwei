@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorEFEFF7"
+    android:layout_marginBottom="@dimen/px10"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/screen_shot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/title_layout"
+        app:placeholderImage="@drawable/blank_icon_bigimages"
+        app:placeholderImageScaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/views"
+        style="@style/LiveViewStyle"
+        android:layout_margin="@dimen/space_5"
+        android:layout_below="@+id/info_layout"
+        android:layout_alignRight="@+id/title_layout"
+        android:layout_alignEnd="@+id/title_layout" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_5"
+        android:src="@drawable/icon_tag_video"
+        android:id="@+id/typeIcon" />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/live_black_mask"
+        android:orientation="horizontal"
+        android:paddingBottom="6dp"
+        android:paddingTop="6dp">
+
+        <com.laka.live.ui.widget.MarkSimpleDraweeView
+            android:id="@+id/avatar"
+            style="@style/ListFace"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="8dp" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:gravity="center"
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/space_5"
+        android:layout_alignParentBottom="true" >
+
+        <!-- 简介 -->
+        <TextView
+            android:id="@+id/introduction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/topics"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:textColor="@color/color333333"
+            android:textSize="11sp" />
+        <!-- 简介 -->
+
+        <!-- 直播时间和状态 -->
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/introduction"
+            android:layout_marginTop="@dimen/space_5"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/livingTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/color555555"
+                android:textSize="11sp"
+                android:layout_toLeftOf="@+id/livingStatus"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/livingStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/space_10"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/color3BC36B"
+                android:textSize="11sp" />
+
+        </RelativeLayout>
+        <!-- 直播时间和状态 -->
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/secTopic"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/typeIcon"
+        android:layout_marginLeft="52dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="70dp"
+        android:layout_toEndOf="@+id/typeIcon"
+        android:layout_toRightOf="@+id/typeIcon"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="#话题1#"
+        android:textColor="@color/color333333"
+        android:textSize="@dimen/sp35" />
+
+</RelativeLayout>

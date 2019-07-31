@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    style="@style/ActivityBackground">
+
+    <com.laka.live.account.my.ContributionListView
+        android:id="@+id/view_contribution"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+   <!-- <com.laka.live.ui.widget.HeadView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:headText="@string/contribution_list"/>
+
+    <com.laka.live.ui.widget.PageListLayout
+        android:id="@+id/list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/> -->
+</LinearLayout>

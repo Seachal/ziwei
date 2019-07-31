@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <cn.bingoogolapple.qrcode.zbar.ZBarView
+        android:id="@+id/qr_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:qrcv_animTime="1000"
+        app:qrcv_borderColor="@android:color/white"
+        app:qrcv_borderSize="2dp"
+        app:qrcv_cornerColor="@color/colorFFC40E"
+        app:qrcv_cornerLength="20dp"
+        app:qrcv_cornerSize="3dp"
+        app:qrcv_isShowDefaultScanLineDrawable="true"
+        app:qrcv_isTipTextBelowRect="true"
+        app:qrcv_maskColor="@color/color33FFFFFF"
+        app:qrcv_qrCodeTipText="@string/capture_text_hint"
+        app:qrcv_rectWidth="220dp"
+        app:qrcv_scanLineColor="@color/colorFFC40E"
+        app:qrcv_tipTextColor="@color/white"
+        app:qrcv_tipTextSize="16sp"
+        app:qrcv_toolbarHeight="44dp"
+        app:qrcv_topOffset="150dp" />
+
+    <ImageView
+        android:id="@+id/iv_scan_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:src="@drawable/live_pop_close_white_selector"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_scan_close">
+
+        <TextView
+            android:id="@+id/tv_scan_title_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/scan_title_hint"
+            android:textColor="@color/color99ffffff"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_scan_web_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_scan_title_hint" />
+
+        <TextView
+            android:id="@+id/tv_scan_web_hint_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_scan_web_hint" />
+
+        <TextView
+            android:id="@+id/tv_scan_copy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:background="@drawable/shape_gray_corner_button"
+            android:gravity="center"
+            android:paddingBottom="2dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="2dp"
+            android:text="复制"
+            android:textColor="@color/color99ffffff"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_scan_web_hint_line"
+            app:layout_constraintLeft_toRightOf="@id/tv_scan_web_hint_line" />
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>

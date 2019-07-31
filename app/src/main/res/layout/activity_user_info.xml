@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ActivityBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:layout_gravity="top">
+
+        <View
+            android:id="@+id/back_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0"
+            android:background="@color/white" />
+
+        <View
+            android:id="@+id/divider"
+            style="@style/horizontal_divider"
+            android:layout_gravity="bottom"
+            android:visibility="invisible" />
+
+        <RelativeLayout
+            android:id="@+id/back_item"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/head_height">
+
+            <com.laka.live.ui.widget.AlphaTextView
+                android:id="@+id/back_icon"
+                style="@style/userinfo_back_view"
+                android:layout_alignParentLeft="true"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/space_14" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/space_66"
+                android:layout_marginRight="@dimen/space_66"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/space_20"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/operation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <View style="@style/horizontal_divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_44"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/follow"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/list_item_selector">
+
+                    <TextView
+                        android:id="@+id/follow_item"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:clickable="false"
+                        android:drawableLeft="@drawable/user_icon_follow_selector"
+                        android:drawablePadding="@dimen/space_4"
+                        android:gravity="center"
+                        android:text="@string/follow_button_content"
+                        android:textColor="@color/color333333"
+                        android:textSize="@dimen/space_13" />
+                </FrameLayout>
+
+                <View
+                    style="@style/vertical_divider"
+                    android:layout_height="@dimen/space_20"
+                    android:layout_gravity="center_vertical" />
+
+                <FrameLayout
+                    android:id="@+id/msg_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/list_item_selector">
+
+                    <TextView
+                        android:id="@+id/msg_item"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:clickable="false"
+                        android:drawableLeft="@drawable/user_icon_chat_selector"
+                        android:drawablePadding="@dimen/space_4"
+                        android:gravity="center"
+                        android:text="@string/private_letter"
+                        android:textColor="@color/color333333"
+                        android:textSize="@dimen/space_13" />
+                </FrameLayout>
+
+                <View
+                    style="@style/vertical_divider"
+                    android:layout_height="@dimen/space_20"
+                    android:layout_gravity="center_vertical" />
+
+                <FrameLayout
+                    android:id="@+id/black"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/list_item_selector">
+
+                    <TextView
+                        android:id="@+id/black_item"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:clickable="false"
+                        android:drawableLeft="@drawable/user_icon_blacklist_selector"
+                        android:drawablePadding="@dimen/space_4"
+                        android:gravity="center"
+                        android:text="@string/shield"
+                        android:textColor="@color/color333333"
+                        android:textSize="@dimen/space_13" />
+                </FrameLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <com.laka.live.ui.widget.PageListLayout
+            android:id="@+id/data_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/operation" />
+
+    </RelativeLayout>
+
+</FrameLayout>
+

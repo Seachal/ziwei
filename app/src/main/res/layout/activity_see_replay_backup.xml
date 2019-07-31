@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view" style="@style/ActivityBackground"
+    >
+
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_overbg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/live_bg_loading"/>
+
+    <!-- 触摸层  <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />-->
+    <RelativeLayout android:id="@+id/rl_touch"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/seekbar"
+        android:layout_height="match_parent"/>
+
+
+    <include layout="@layout/live_top_bar"
+        android:id="@+id/ll_topbar_zhubo"/>
+
+    <SeekBar android:layout_marginLeft="5dp" android:layout_marginRight="5dp"
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="2dp"
+        android:layout_above="@+id/ll_bottom"
+        android:layout_marginBottom="5dp"
+        android:thumb="@drawable/playback_progress"
+        android:progressDrawable="@drawable/seekbar_define_style" /><!-- seekbar_thumb-->
+
+
+
+    <LinearLayout android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="6dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical">
+
+
+        <Button
+            android:id="@+id/btn_play"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:background="@drawable/live_btn_stop_selector" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="00:00/00:00"
+            android:textColor="@color/white"
+            android:textSize="11dp"
+            android:layout_marginLeft="6dp"/>
+
+        <Button
+            android:id="@+id/btn_formula"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            android:background="@drawable/live_btn_formula_selector" />
+
+        <Button
+            android:id="@+id/btn_share"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:background="@drawable/live_btn_share_selector" />
+
+        <Button
+            android:id="@+id/btn_letter"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/live_btn_letter_selector" />
+
+        <Button
+            android:id="@+id/btn_gift"
+            android:layout_marginLeft="10dp"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:background="@drawable/live_btn_gift_selector" />
+    </LinearLayout>
+
+    <RelativeLayout android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#88000000"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/button_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="暂停" />
+
+        <Button
+            android:id="@+id/button_replay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/button_play"
+            android:text="重播" />
+
+        <Button
+            android:id="@+id/button_screenShot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/button_replay"
+            android:text="截图" />
+
+        <Button
+            android:id="@+id/button_videoSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/button_screenShot"
+            android:text="窗口" />
+
+        <TextView
+            android:id="@+id/textView_showTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="#ffffff" />
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+    <!-- 礼物显示区  -->
+    <com.laka.live.ui.widget.gift.GiftShowView android:layout_above="@+id/lv_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gift_show_view"/>
+
+    <!-- 评论 -->
+    <ListView
+        android:padding="9dp"
+        android:id="@+id/lv_comment"
+        style="@style/ListViewNormal"
+        android:layout_height="200dp"
+        android:layout_gravity="bottom"
+        android:background="@color/transparent"
+        android:divider="@color/transparent"
+        android:dividerHeight="1px"
+        android:fastScrollEnabled="false"
+        android:stackFromBottom="true"
+        android:layout_above="@+id/seekbar"/>
+
+    <com.laka.live.ui.widget.gift.GiftGridView
+        android:visibility="gone"
+        android:id="@+id/gift_grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        />
+
+
+    <com.laka.live.ui.widget.room.ScreenLoadingView
+        android:id="@+id/loading"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.laka.live.ui.chat.ChatMessageView
+        android:id="@+id/message_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        app:mode="1" />
+</RelativeLayout>

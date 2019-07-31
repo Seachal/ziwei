@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".account.income.WithdrawalActivity"
+    style="@style/ActivityBackground">
+
+    <com.laka.live.ui.widget.HeadView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:headText="@string/for_diamond"
+        app:headColor="@color/color2E2E2E"/>
+
+    <com.laka.live.ui.widget.InputFrame
+        android:id="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        app:keyText="@string/exchange_count" />
+
+    <TextView
+        android:id="@+id/today_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:text="@string/exchange_tips"
+        android:textSize="12dp"
+        style="@style/GrayText"/>
+
+    <Button
+        android:id="@+id/sure"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:text="@string/exchange_sure"
+        style="@style/GrayBigButton"/>
+</LinearLayout>

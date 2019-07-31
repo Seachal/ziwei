@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/space_15">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/product_image"
+        android:layout_width="@dimen/space_110"
+        android:layout_height="@dimen/space_110" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_1"
+        android:layout_marginTop="@dimen/space_13"
+        android:background="@color/shopping_categories_line" />
+
+    <TextView
+        android:id="@+id/product_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/space_10"
+        android:text="Mini Pump迷你套套"
+        android:textColor="@color/title_text_color"
+        android:textSize="@dimen/space_18" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_1"
+        android:background="@color/shopping_categories_line" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_100"
+        android:layout_marginTop="@dimen/space_15">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/product_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/space_5"
+                android:textColor="@color/title_text_color"
+                android:textSize="@dimen/space_13" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_30">
+
+        <CheckBox
+            android:id="@+id/product_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:button="@drawable/shopping_get_it_bg" />
+
+        <TextView
+            android:id="@+id/product_check_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_10"
+            android:layout_toRightOf="@+id/product_check"
+            android:gravity="center"
+            android:text="@string/shopping_get_it"
+            android:textColor="@color/shopping_get_it_color"
+            android:textSize="@dimen/space_14"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_20"
+        android:gravity="center"
+        android:text="@string/shopping_get_it_bottom"
+        android:textColor="@color/shopping_category_line"
+        android:textSize="@dimen/space_13" />
+</LinearLayout>

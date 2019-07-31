@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/money_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="29"
+        android:textColor="@color/colorFB4E44"
+        android:textSize="@dimen/space_30" />
+
+    <TextView
+        android:id="@+id/free_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:text="@string/free"
+        android:textColor="@color/colorFF950B"
+        android:textSize="@dimen/space_14" />
+
+    <!--<View-->
+        <!--android:id="@+id/divider_view"-->
+        <!--android:layout_width="1px"-->
+        <!--android:layout_height="@dimen/space_10"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_marginLeft="@dimen/space_5"-->
+        <!--android:layout_marginRight="@dimen/space_5"-->
+        <!--android:paddingBottom="@dimen/space_5"-->
+        <!--android:layout_toRightOf="@id/money_tv"-->
+        <!--android:background="@color/colorFB4E44" />-->
+
+    <TextView
+        android:id="@+id/weidou_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/money_tv"
+        android:paddingBottom="@dimen/space_4"
+        android:layout_marginLeft="@dimen/space_5"
+        android:layout_alignParentBottom="true"
+        android:drawableLeft="@drawable/drawable_divider_price"
+        android:drawablePadding="@dimen/space_5"
+        android:text="@string/weidou"
+        android:textColor="@color/colorFB4E44"
+        android:textSize="@dimen/space_12"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/original_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_13"
+        android:paddingBottom="@dimen/space_4"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/weidou_tv"
+        android:text="@string/original_price"
+        android:textColor="@color/color848484"
+        android:textSize="@dimen/space_12" />
+</merge>

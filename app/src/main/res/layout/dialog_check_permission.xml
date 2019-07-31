@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/round_12px_white">
+
+
+    <TextView
+        android:text="开启直播需允许以下权限"
+        android:id="@+id/dialog_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dip"
+        android:layout_marginTop="10dip"
+        android:gravity="center"
+        android:minHeight="53dip"
+        android:padding="15dip"
+        android:textColor="@color/black"
+        android:textSize="14dp" />
+
+    <LinearLayout
+        android:layout_width="233dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+
+        <LinearLayout android:id="@+id/ll_camera"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/round_63px_ff6364_border"
+            android:gravity="center_vertical"
+            android:layout_width="172dp"
+            android:layout_height="42dp">
+
+            <ImageView
+                android:id="@+id/iv_sign_camrea"
+                android:layout_marginLeft="11dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/home_root_camera"/>
+
+            <TextView
+                android:id="@+id/tv_camera"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textColor="@color/check_permission_selector"
+                android:text="@string/camera_permission"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_mic"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/round_63px_ff6364_border"
+            android:gravity="center_vertical"
+            android:layout_width="172dp"
+            android:layout_height="42dp">
+
+            <ImageView
+                android:id="@+id/iv_sign_mic"
+                android:layout_marginLeft="11dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/home_root_mic"/>
+
+            <TextView
+                android:id="@+id/tv_mic"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textColor="@color/check_permission_selector"
+                android:text="@string/mic_permission"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_position"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/round_63px_ff6364_border"
+            android:gravity="center_vertical"
+            android:layout_width="172dp"
+            android:layout_height="42dp">
+
+            <ImageView
+                android:id="@+id/iv_sign_position"
+                android:layout_marginLeft="11dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/home_root_position"/>
+
+            <TextView
+                android:id="@+id/tv_position"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textColor="@color/check_permission_selector"
+                android:text="@string/locate_permission"
+                android:gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

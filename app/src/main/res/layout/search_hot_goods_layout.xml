@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/search_hot_goods_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/space_10"
+        android:paddingTop="@dimen/space_15"
+        android:text="@string/search_hot_goods_title"
+        android:textColor="@color/llgray"
+        android:textSize="@dimen/space_10"/>
+
+
+    <com.laka.live.shopping.widget.FlowLayout
+        android:id="@+id/hot_goods_flow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

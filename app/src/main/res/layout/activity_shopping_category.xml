@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.laka.live.ui.widget.HeadView
+        android:id="@+id/head_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:visibility="gone"
+            app:elevation="0dp">
+
+            <!-- 可移动部分 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <com.laka.live.shopping.widget.ShoppingCustomRecycler
+                    android:id="@+id/horizontal_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_60" />
+
+                <View style="@style/order_common_line" />
+            </LinearLayout>
+
+
+            <!-- 固定部分 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.laka.live.shopping.search.widget.SearchClassifyTitleView
+                    android:id="@+id/classify_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_50" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_5"
+                    android:background="@color/divider_F5F5F5"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+
+        </android.support.design.widget.AppBarLayout>
+
+
+        <!--滑动列表-->
+        <com.laka.live.ui.widget.PageListLayout
+            android:id="@+id/page_list_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/space__6"
+            android:background="@color/colorF5F5F5"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+</LinearLayout>

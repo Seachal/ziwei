@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorF5F5F5"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/home_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/back_head_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/back"
+            android:layout_toStartOf="@+id/iv_topics_share"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="优先专题" />
+
+        <ImageView
+            android:id="@+id/iv_topics_share"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:src="@drawable/nav_icon_share" />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:src="@drawable/nav_icon_back" />
+
+        <View
+            style="@style/head_divider"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+    <com.laka.live.ui.widget.PageListLayout
+        android:id="@+id/page_list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

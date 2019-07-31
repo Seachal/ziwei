@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/shopping_bg">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/order_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_bottom"/>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        android:gravity="center_vertical|right"
+        android:background="@color/white">
+
+        <com.laka.live.ui.widget.AlphaTextView
+            android:id="@+id/order_btn_cancel"
+            android:layout_width="92dp"
+            android:layout_height="30dp"
+            android:background="@drawable/order_button_cancel_bg"
+            android:gravity="center"
+            android:text="@string/order_btn_cancel"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:layout_marginRight="15dp"
+            android:textSize="13dp"
+            android:textColor="@color/color848484"
+            android:visibility="gone" />
+
+        <com.laka.live.ui.widget.AlphaTextView
+            android:id="@+id/order_btn_pay"
+            android:layout_width="92dp"
+            android:layout_height="30dp"
+            android:background="@drawable/order_button_ok_bg"
+            android:gravity="center"
+            android:text="@string/order_btn_pay"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:layout_marginRight="15dp"
+            android:textSize="13dp"
+            android:textColor="@color/colorFF950B"
+            android:visibility="gone" />
+
+        <com.laka.live.ui.widget.AlphaTextView
+            android:id="@+id/order_btn_get"
+            android:layout_width="92dp"
+            android:layout_height="30dp"
+            android:background="@drawable/order_button_cancel_bg"
+            android:gravity="center"
+            android:text="@string/order_btn_get"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:layout_marginRight="15dp"
+            android:textSize="13dp"
+            android:textColor="@color/colorFF950B"
+            android:visibility="gone" />
+
+        <com.laka.live.ui.widget.AlphaTextView
+            android:id="@+id/order_btn_delete"
+            android:layout_width="92dp"
+            android:layout_height="30dp"
+            android:background="@drawable/order_button_cancel_bg"
+            android:gravity="center"
+            android:text="@string/order_btn_delete"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:layout_marginRight="15dp"
+            android:textSize="13dp"
+            android:textColor="@color/colorFF950B"
+            android:visibility="gone" />
+
+        <com.laka.live.ui.widget.AlphaTextView
+            android:id="@+id/order_btn_review"
+            android:layout_width="92dp"
+            android:layout_height="30dp"
+            android:background="@drawable/order_button_cancel_bg"
+            android:gravity="center"
+            android:text="@string/order_btn_review"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:layout_marginRight="15dp"
+            android:textSize="13dp"
+            android:textColor="@color/colorFF950B"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <com.laka.live.shopping.widget.LoadingLayout
+        android:id="@+id/order_detail_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:custom="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+    android:background="@color/white"
+    android:paddingBottom="7dp"
+    android:paddingTop="7dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_pic"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginLeft="15dp"
+        android:layout_centerVertical="true">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/iv_pic"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            custom:placeholderImage="@drawable/blank_icon_banner"
+            custom:placeholderImageScaleType="centerCrop" />
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/rect_1dp_e5e5e5"
+            android:scaleType="fitXY"/>
+
+        <Button
+            android:id="@+id/btn_index"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:background="@drawable/live_icon_tag"
+            android:textSize="12dp"
+            android:textColor="@color/white"
+            android:text="0"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_alignTop="@+id/rl_pic"
+        android:layout_toRightOf="@+id/rl_pic"
+        android:layout_marginLeft="15dp"
+        android:textSize="13dp"
+        android:textColor="@color/color333333"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:minLines="2"
+        android:text="商品名"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_toRightOf="@+id/rl_pic"
+        android:layout_below="@+id/tv_name"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp">
+
+        <com.laka.live.shopping.widget.PriceView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            custom:CarttextColor="@color/colorFF950B"
+            custom:bold="true"
+            custom:decimalSize="16dp"
+            custom:intSize="16dp"
+            custom:moneySize="16dp"
+            custom:strike="false"
+            android:text="单价"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"/>
+      <!--   <TextView
+            android:id="@+id/tv_price"
+             android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¥ 0"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorFF950b"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"/> -->
+
+
+        <com.laka.live.shopping.widget.PriceView
+            android:id="@+id/tv_old_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            custom:CarttextColor="@color/color848484"
+            custom:bold="true"
+            custom:decimalSize="12dp"
+            custom:intSize="12dp"
+            custom:moneySize="12dp"
+            custom:strike="false"
+            android:text="原价"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_price" />
+
+<!--     <TextView
+            android:id="@+id/tv_old_price"
+            android:layout_toRightOf="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¥ 0"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:textColor="@color/color848484"
+            android:layout_centerVertical="true"
+          />-->
+
+    </RelativeLayout>
+
+
+
+    <com.laka.live.ui.widget.SelectorButton
+        android:id="@+id/btn_add_car"
+        android:layout_width="78dp"
+        android:layout_height="25dp"
+        android:text="加入购物车"
+        android:textColor="@color/colorFF950B"
+        android:textSize="12sp"
+        custom:color="@color/colorFF950B"
+        custom:radius="@dimen/space_5"
+        custom:stroke="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"/>
+
+</RelativeLayout>

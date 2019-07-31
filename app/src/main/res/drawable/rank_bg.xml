@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <gradient android:startColor="@color/color2C2A38"
+                android:endColor="@color/color2B2938"
+                android:angle="270"/>
+        </shape>
+    </item>
+
+    <item>
+        <bitmap android:gravity="top"
+            android:src="@drawable/share_lists_bg02"/>
+    </item>
+</layer-list>

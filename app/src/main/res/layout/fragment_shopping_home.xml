@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorF5F5F5"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        style="@style/back_head_layout"
+        android:background="@color/white">
+        <!--  <ImageView
+            android:id="@+id/service_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/space_15"
+            android:src="@drawable/nav_icon_service" /> -->
+
+        <com.laka.live.shopping.framework.ui.TitleBarActionItem
+            android:id="@+id/service_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/space_15" />
+
+        <com.laka.live.shopping.framework.ui.TitleBarActionItem
+            android:id="@+id/shopping_car_tbai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="@dimen/space_15" />
+
+        <ImageView
+            android:id="@+id/search_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/shopping_car_tbai"
+            android:paddingRight="@dimen/space_5"
+            android:src="@drawable/nav_icon_search" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/back_head_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/shopping" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorE5E5E5" />
+
+    </RelativeLayout>
+
+    <com.laka.live.ui.widget.PageListLayout
+        android:id="@+id/page_list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="@dimen/space__6" />
+
+</LinearLayout>

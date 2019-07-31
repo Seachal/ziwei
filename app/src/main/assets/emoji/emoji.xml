@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PopoEmoticons>
+    <Catalog Title="default">
+        <Emoticon ID="emoticon_001" Tag="[001]" File="001.png" />
+        <Emoticon ID="emoticon_002" Tag="[002]" File="002.png" />
+        <Emoticon ID="emoticon_003" Tag="[003]" File="003.png" />
+        <Emoticon ID="emoticon_004" Tag="[004]" File="004.png" />
+        <Emoticon ID="emoticon_005" Tag="[005]" File="005.png" />
+        <Emoticon ID="emoticon_006" Tag="[006]" File="006.png" />
+        <Emoticon ID="emoticon_007" Tag="[007]" File="007.png" />
+        <Emoticon ID="emoticon_008" Tag="[008]" File="008.png" />
+        <Emoticon ID="emoticon_009" Tag="[009]" File="009.png" />
+        <Emoticon ID="emoticon_010" Tag="[010]" File="010.png" />
+        <Emoticon ID="emoticon_011" Tag="[011]" File="011.png" />
+        <Emoticon ID="emoticon_012" Tag="[012]" File="012.png" />
+        <Emoticon ID="emoticon_013" Tag="[013]" File="013.png" />
+        <Emoticon ID="emoticon_014" Tag="[014]" File="014.png" />
+        <Emoticon ID="emoticon_015" Tag="[015]" File="015.png" />
+        <Emoticon ID="emoticon_016" Tag="[016]" File="016.png" />
+        <Emoticon ID="emoticon_017" Tag="[017]" File="017.png" />
+        <Emoticon ID="emoticon_018" Tag="[018]" File="018.png" />
+        <Emoticon ID="emoticon_019" Tag="[019]" File="019.png" />
+        <Emoticon ID="emoticon_020" Tag="[020]" File="020.png" />
+        <Emoticon ID="emoticon_021" Tag="[021]" File="021.png" />
+        <Emoticon ID="emoticon_022" Tag="[022]" File="022.png" />
+        <Emoticon ID="emoticon_023" Tag="[023]" File="023.png" />
+        <Emoticon ID="emoticon_024" Tag="[024]" File="024.png" />
+        <Emoticon ID="emoticon_025" Tag="[025]" File="025.png" />
+        <Emoticon ID="emoticon_026" Tag="[026]" File="026.png" />
+        <Emoticon ID="emoticon_027" Tag="[027]" File="027.png" />
+        <Emoticon ID="emoticon_028" Tag="[028]" File="028.png" />
+        <Emoticon ID="emoticon_029" Tag="[029]" File="029.png" />
+        <Emoticon ID="emoticon_030" Tag="[030]" File="030.png" />
+        <Emoticon ID="emoticon_031" Tag="[031]" File="031.png" />
+        <Emoticon ID="emoticon_032" Tag="[032]" File="032.png" />
+        <Emoticon ID="emoticon_033" Tag="[033]" File="033.png" />
+        <Emoticon ID="emoticon_034" Tag="[034]" File="034.png" />
+        <Emoticon ID="emoticon_035" Tag="[035]" File="035.png" />
+        <Emoticon ID="emoticon_036" Tag="[036]" File="036.png" />
+        <Emoticon ID="emoticon_037" Tag="[037]" File="037.png" />
+        <Emoticon ID="emoticon_038" Tag="[038]" File="038.png" />
+        <Emoticon ID="emoticon_039" Tag="[039]" File="039.png" />
+        <Emoticon ID="emoticon_040" Tag="[040]" File="040.png" />
+        <Emoticon ID="emoticon_041" Tag="[041]" File="041.png" />
+        <Emoticon ID="emoticon_042" Tag="[042]" File="042.png" />
+        <Emoticon ID="emoticon_043" Tag="[043]" File="043.png" />
+        <Emoticon ID="emoticon_044" Tag="[044]" File="044.png" />
+        <Emoticon ID="emoticon_045" Tag="[045]" File="045.png" />
+        <Emoticon ID="emoticon_046" Tag="[046]" File="046.png" />
+        <Emoticon ID="emoticon_047" Tag="[047]" File="047.png" />
+        <Emoticon ID="emoticon_048" Tag="[048]" File="048.png" />
+        <Emoticon ID="emoticon_049" Tag="[049]" File="049.png" />
+        <Emoticon ID="emoticon_050" Tag="[050]" File="050.png" />
+        <Emoticon ID="emoticon_051" Tag="[051]" File="051.png" />
+        <Emoticon ID="emoticon_052" Tag="[052]" File="052.png" />
+        <Emoticon ID="emoticon_053" Tag="[053]" File="053.png" />
+        <Emoticon ID="emoticon_054" Tag="[054]" File="054.png" />
+        <Emoticon ID="emoticon_055" Tag="[055]" File="055.png" />
+        <Emoticon ID="emoticon_056" Tag="[056]" File="056.png" />
+        <Emoticon ID="emoticon_057" Tag="[057]" File="057.png" />
+        <Emoticon ID="emoticon_058" Tag="[058]" File="058.png" />
+        <Emoticon ID="emoticon_059" Tag="[059]" File="059.png" />
+        <Emoticon ID="emoticon_060" Tag="[060]" File="060.png" />
+        <Emoticon ID="emoticon_061" Tag="[061]" File="061.png" />
+        <Emoticon ID="emoticon_062" Tag="[062]" File="062.png" />
+      <!--   <Emoticon ID="emoticon_063" Tag="[063]" File="063.png" />
+        <Emoticon ID="emoticon_064" Tag="[064]" File="064.png" />
+        <Emoticon ID="emoticon_065" Tag="[065]" File="065.png" />
+        <Emoticon ID="emoticon_066" Tag="[066]" File="066.png" />
+        <Emoticon ID="emoticon_067" Tag="[067]" File="067.png" />
+        <Emoticon ID="emoticon_068" Tag="[068]" File="068.png" /> -->
+
+    </Catalog>
+</PopoEmoticons>
+
+

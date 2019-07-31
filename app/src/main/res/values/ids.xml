@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="scrollview"/>
+    <item name="tag_category_title" type="id"/>
+    <item name="tag_category_position" type="id"/>
+    <item name="tag_category_object" type="id"/>
+    <item name="tag_category_follow_view" type="id"/>
+
+    <item name="tag_get_it_view" type="id"/>
+    <item name="tag_get_it_panel" type="id"/>
+    <item name="tag_get_it_text" type="id"/>
+
+</resources>

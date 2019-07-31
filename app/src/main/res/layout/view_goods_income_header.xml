@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_87"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/space_15">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total_income"
+                android:textColor="@color/color999999"
+                android:textSize="@dimen/dimen_12" />
+
+            <TextView
+                android:id="@+id/total_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_23"
+                android:text="@string/def_income"
+                android:textColor="@color/colorFF950B"
+                android:textSize="@dimen/dimen_14" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/space_1"
+            android:layout_height="@dimen/space_10"
+            android:layout_marginTop="@dimen/space_2"
+            android:background="@color/colorE2E2E2" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recommend_income"
+                android:textColor="@color/color999999"
+                android:textSize="@dimen/dimen_12" />
+
+            <TextView
+                android:id="@+id/recommend_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_23"
+                android:text="@string/def_income"
+                android:textColor="@color/colorFF950B"
+                android:textSize="@dimen/dimen_14" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/space_1"
+            android:layout_height="@dimen/space_10"
+            android:layout_marginTop="@dimen/space_2"
+            android:background="@color/colorE2E2E2" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/agent_income"
+                android:textColor="@color/color999999"
+                android:textSize="@dimen/dimen_12" />
+
+            <TextView
+                android:id="@+id/agent_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_23"
+                android:text="@string/def_income"
+                android:textColor="@color/colorFF950B"
+                android:textSize="@dimen/dimen_14" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_4"
+        android:background="@color/divider_F5F5F5" />
+</merge>
+

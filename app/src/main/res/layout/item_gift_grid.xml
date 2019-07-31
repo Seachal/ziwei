@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="92dp"><!--  android:padding="6dp"-->
+
+    <RelativeLayout
+        android:id="@+id/rl_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"><!--android:background="@drawable/live_gift_box_bg_nomal" round_8px_white15-->
+
+        <TextView
+            android:id="@+id/tv_multi"
+            android:layout_width="11dp"
+            android:layout_height="11dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/color46464d"
+            android:gravity="center"
+            android:text="@string/link"
+            android:textColor="@color/white"
+            android:textSize="8dp" />
+
+        <LinearLayout
+            android:id="@+id/item_gift_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/iv_gift"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="4dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="2dp">
+
+                <TextView
+                    android:id="@+id/tv_kazuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/px5"
+                    android:textColor="@color/white" /><!--  android:drawableRight="@mipmap/gift_icon_diamonds" -->
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/mine_icon_diamonds"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_experience"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="加10经验值"
+                android:textColor="@color/white"
+                android:textSize="9dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_line_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/rl_bg"
+        android:scaleType="fitXY"
+        android:src="@color/white10" />
+
+    <RelativeLayout
+        android:id="@+id/rl_selected_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/live_gift_selected" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent" />
+    </RelativeLayout>
+</RelativeLayout>

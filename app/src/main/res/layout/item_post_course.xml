@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_15"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/courseCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/color333333"
+            android:textSize="16sp" />
+
+        <com.laka.live.ui.widget.SelectorImage
+            android:id="@+id/editCourse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/space_5"
+            android:padding="@dimen/px15"
+            app:default_image="@drawable/class_btn_edit_n"
+            app:press_image="@drawable/class_btn_edit_h" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/addView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px400"
+        android:layout_marginBottom="@dimen/space_13"
+        android:layout_marginLeft="@dimen/space_15"
+        android:layout_marginRight="@dimen/space_15"
+        android:layout_marginTop="@dimen/space_15"
+        android:background="@drawable/add_course_bg_selector"
+        android:clickable="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@drawable/class_icon_add"
+            android:drawablePadding="@dimen/space_5"
+            android:text="添加一节课程"
+            android:textColor="@color/colorA9A9A9"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/courseCover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/courseTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_15"
+        android:layout_marginLeft="@dimen/space_15"
+        android:layout_marginRight="@dimen/space_15"
+        android:textColor="@color/color333333"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:id="@+id/discountLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            style="@style/horizontal_divider"
+            android:layout_height="@dimen/space_10" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_70"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/space_15"
+            android:paddingRight="@dimen/space_15">
+
+            <TextView
+                android:id="@+id/totalCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="课堂优惠(共0节)"
+                android:textColor="@color/color333333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/discountTv"
+                android:layout_alignBottom="@+id/discountTv"
+                android:layout_toLeftOf="@+id/discountTv"
+                android:layout_toStartOf="@+id/discountTv"
+                android:background="@drawable/detail_tag_discount"
+                android:gravity="center"
+                android:paddingBottom="@dimen/space_2"
+                android:paddingLeft="@dimen/space_5"
+                android:paddingRight="@dimen/space_5"
+                android:paddingTop="@dimen/space_2"
+                android:text="9.0折"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/discountTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/space_5"
+                android:drawablePadding="@dimen/space_10"
+                android:drawableRight="@drawable/icon_more_n"
+                android:gravity="center_vertical"
+                android:text="无优惠"
+                android:textColor="@color/color999999"
+                android:textSize="15sp" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/discountTimeLayout"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                style="@style/horizontal_divider"
+                android:layout_height="@dimen/space_10" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_70"
+                android:paddingLeft="@dimen/space_15"
+                android:paddingRight="@dimen/space_15">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="限时优惠"
+                    android:textColor="@color/color333333"
+                    android:textSize="15sp" />
+
+                <com.laka.live.ui.widget.toggle.CourseToggle
+                    android:id="@+id/toggle"
+                    android:layout_width="@dimen/px110"
+                    android:layout_height="@dimen/px65"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    app:tbAsDefaultOn="false"
+                    app:tbBorderWidth="@dimen/px1"
+                    app:tbOffBorderColor="#e6eaf2"
+                    app:tbOffColor="@color/white"
+                    app:tbOnColor="@color/colorFFC40E"
+                    app:tbSpotColor="@color/white" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:paddingLeft="@dimen/space_15"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+                <View
+                    style="@style/horizontal_divider_colorE9E9E9"
+                    android:layout_alignParentTop="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="截止时间"
+                    android:textColor="@color/color333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/discountTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/space_5"
+                    android:layout_marginRight="@dimen/space_15"
+                    android:drawablePadding="@dimen/space_10"
+                    android:drawableRight="@drawable/icon_more_n"
+                    android:gravity="center_vertical"
+                    android:text="请选择"
+                    android:textColor="@color/color999999"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <View
+            style="@style/horizontal_divider"
+            android:layout_height="@dimen/space_10" />
+
+    </LinearLayout>
+
+</LinearLayout>

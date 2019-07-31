@@ -1,0 +1,17 @@
+在这个模块中开发，比较绕的地方大概有几个点
+1.页面布局----小视频列表主页布局还算简单，普通的ViewPager+Fragment实现
+但是里面的小视频播放页面的就比较复杂，而且用了一个比较远古的方式去实现了，
+可以看到一个叫MiniVideoContainerActivity，里面使用了一个LocalActivityManager去实现（由于UserInfoActivity是之前
+已经写好了，而且抽取成Fragment的成本太高了，所以保留不变）。
+然后包裹着两个Activity，小视频播放列表页MiniVideoPlayActivity和UserInfoActivity
+
+2.生命周期的控制
+整个播放页面的生命周期都是通过MiniVideoContainerActivity去实现控制（LocalActivityManager的子生命周期回调方法都已经失效）
+所以使用EventBus去传递对应的生命周期相关事件
+
+3.多个播放Activity共存
+由于之前忽略了一种情况就是，小视频的播放页面可能同时存在两个（小视频主页入口和H5跳转覆盖）
+所以这里面的EventBus事件交互也比较复杂（因为EventBus事件的传递是不会区分具体对象的，所以假若存在两个播放页面AB，那么AB同时会受到
+列表刷新引起的事件传递，那么相当于修改了原本的事件，这样是不合理的。所以每个事件的传递，基本上都加上了targetObj的判断）
+
+比较绕的事件传递有PostEvent和MiniVideoEvent（带target）和一个VideoDecorEvent（Container传递和两Activity交互时需要存在的事件）

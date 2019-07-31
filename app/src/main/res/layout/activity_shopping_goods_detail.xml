@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/head_view"
+        style="@style/back_head_layout">
+
+        <ImageView
+            android:id="@+id/back_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/dimen_11"
+            android:paddingRight="9dp"
+            android:src="@drawable/title_icon_back_selector" />
+
+        <ImageView
+            android:id="@+id/share_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/space_10"
+            android:paddingRight="@dimen/space_15"
+            android:src="@drawable/nav_icon_share" />
+
+        <com.laka.live.shopping.framework.ui.TitleBarActionItem
+            android:id="@+id/shopping_car_tbai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/space_15"
+            android:paddingRight="@dimen/space_10"
+            android:layout_toLeftOf="@+id/share_iv"/>
+
+        <View
+            style="@style/head_divider"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.laka.live.shopping.widget.CustomScrollView
+                android:id="@+id/shopping_goods_detail_scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:descendantFocusability="blocksDescendants"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/shopping_goods_detail_top_layout" />
+
+                    <include layout="@layout/shopping_goods_detail_middle_layout" />
+                </LinearLayout>
+            </com.laka.live.shopping.widget.CustomScrollView>
+
+            <include layout="@layout/shopping_goods_detail_bottom_layout" />
+        </LinearLayout>
+
+        <include layout="@layout/shopping_goods_detail_float_layout" />
+
+        <com.laka.live.ui.widget.LoadingLayout
+            android:id="@+id/loading_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+    </FrameLayout>
+</LinearLayout>

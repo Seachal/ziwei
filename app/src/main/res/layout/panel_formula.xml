@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.laka.live.ui.widget.HeadView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:headText="课堂黑板"
+        custom:showDivider="false"
+        custom:tipSize="15dp"
+        custom:tipText="@string/close" />
+
+    <View style="@style/horizontal_divider" />
+
+    <TextView
+        android:id="@+id/titleTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:paddingBottom="@dimen/px20"
+        android:paddingTop="@dimen/px30"
+        android:text="配方做法"
+        android:textColor="@color/color2E2E2E"
+        android:textSize="@dimen/sp35" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sp500"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/px30"
+        android:paddingLeft="@dimen/px30"
+        android:paddingRight="@dimen/px30"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/px30">
+
+            <TextView
+                android:id="@+id/formula"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/formulaImage"
+                android:layout_below="@+id/emptyView"
+                android:gravity="left"
+                android:textColor="@color/color333333"
+                android:textSize="@dimen/sp33" />
+
+            <TextView
+                android:id="@+id/emptyView"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawablePadding="@dimen/px30"
+                android:drawableTop="@drawable/public_pic_empty"
+                android:layout_marginTop="@dimen/px30"
+                android:gravity="center"
+                android:text="这里空空如也"
+                android:textColor="@color/color999999" />
+
+            <LinearLayout
+                android:id="@+id/formulaImage"
+                android:layout_width="@dimen/space_310"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/formula"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/space_10"
+                android:orientation="vertical"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ActivityBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/head_layout"
+        layout="@layout/search_head_layout"/>
+
+    <com.laka.live.ui.widget.MyScrollview
+        android:id="@+id/search_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/head_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/search_hot_keyword_item_height"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:text="@string/people_all_in_search"
+                android:textColor="@color/color999999"
+                android:textSize="14dp"/>
+
+
+            <View style="@style/horizontal_divider"/>
+
+            <!--<android.support.v7.widget.RecyclerView
+                android:id="@+id/hot_rmd_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>-->
+            <com.laka.live.ui.widget.FlowLayout
+                android:id="@+id/hot_tag_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/space_5"
+                android:paddingLeft="9dp"
+                android:paddingRight="9dp"
+                android:paddingTop="@dimen/space_5"/>
+
+            <View
+                style="@style/horizontal_divider"
+                />
+
+            <TextView
+                android:id="@+id/search_history_title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/search_hot_keyword_item_height"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:text="@string/people_history_in_search"
+                android:textColor="@color/color666666"
+                android:textSize="14dp"/>
+
+            <View
+                style="@style/horizontal_divider"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/search_history_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <View style="@style/horizontal_divider"/>
+        </LinearLayout>
+    </com.laka.live.ui.widget.MyScrollview>
+
+    <com.laka.live.ui.widget.PageListLayout
+        android:id="@+id/search_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/head_layout"
+        android:visibility="gone"/>
+</RelativeLayout>

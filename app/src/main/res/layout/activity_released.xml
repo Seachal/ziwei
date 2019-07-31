@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0"/>
+
+
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0"/>
+
+        <include
+            android:id="@+id/released_head"
+            layout="@layout/head_layout" />
+
+        <LinearLayout
+            android:gravity="center"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_50">
+
+            <CheckedTextView
+                android:id="@+id/live_tab"
+                style="@style/home_tab"
+                android:textColor="@color/home_tab_text_color_selector"
+                android:background="@drawable/left_corners_5_solid_black" />
+
+            <CheckedTextView
+                android:id="@+id/video_tab"
+                style="@style/home_tab"
+                android:background="@drawable/home_tab_selector"
+                android:textColor="@color/home_tab_text_color_selector" />
+
+            <CheckedTextView
+                android:id="@+id/news_tab"
+                style="@style/home_tab"
+                android:textColor="@color/home_tab_text_color_selector"
+                android:background="@drawable/right_corners_5_solid_black" />
+
+        </LinearLayout>
+
+        <View style="@style/horizontal_divider" />
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:background="@color/colorEFF0F7">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pager"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/delete"
+                android:layout_width="match_parent"
+                android:background="@color/colorEFF0F7"/>
+
+            <TextView
+                android:id="@+id/delete"
+                android:text="取消课程"
+                android:gravity="center"
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_60"
+                android:background="@drawable/yellow_btn_selector"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</TabHost>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="402.5dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tipTv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_42"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="7sp"
+            android:paddingLeft="15dp"
+            android:text="选择分类"
+            android:textColor="#595959"
+            android:textSize="13sp" />
+
+        <View style="@style/horizontal_line_half_dp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.laka.live.ui.widget.FlowLayout
+                android:id="@+id/flowLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/space_15"
+                android:paddingLeft="@dimen/space_15"
+                android:paddingRight="@dimen/space_15"
+                android:paddingTop="@dimen/space_15"/>
+        </ScrollView>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/iv_head"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center_horizontal"
+        custom:placeholderImage="@drawable/blank_icon_avatar"
+        custom:placeholderImageScaleType="centerCrop"
+        custom:roundAsCircle="true"
+        custom:roundingBorderColor="@color/colorC8C8C8"
+        custom:roundingBorderWidth="2px" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/space_20"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/px10"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal">
+
+        <ImageView
+            android:src="@drawable/mine_icon_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"/>
+        <TextView
+            android:id="@+id/id_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="ID：123456"
+            android:textSize="12dp"
+            android:textColor="@color/colorE5E5E5"
+             />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/signature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/my_horizontal_margin"
+        android:layout_marginRight="@dimen/my_horizontal_margin"
+        android:layout_marginTop="@dimen/space_10"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:text="@string/default_sign"
+        android:textColor="@color/colorE5E5E5"
+        android:textSize="@dimen/space_12" />
+
+    <TextView
+        android:id="@+id/auth_layout"
+        style="@style/AuthText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/space_5"
+        android:textColor="@color/colorFFBB34"
+        android:textSize="@dimen/space_12" />
+</LinearLayout>

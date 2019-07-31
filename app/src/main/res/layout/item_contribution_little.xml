@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:background="@drawable/list_item_selector">
+
+    <TextView
+        android:id="@+id/mIndex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:text="5"
+        android:textColor="@color/color777777"
+        android:textSize="12dp"/>
+
+    <com.laka.live.ui.widget.MarkSimpleDraweeView
+        android:id="@+id/face"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="37.3dp"
+        android:layout_marginRight="15dp"
+        app:placeholderImage="@drawable/blank_icon_avatar"
+        app:roundAsCircle="true" />
+
+
+    <LinearLayout
+        android:id="@+id/contribution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="right"
+        android:orientation="vertical"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contribution"
+            android:textColor="@color/color777777"
+            android:textSize="12dp"/>
+
+        <TextView
+            android:id="@+id/tickets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-0.8dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="10000"
+            android:textColor="@color/colorFFA90E"
+            android:textSize="12dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@id/face"
+        android:drawablePadding="5dp"
+        android:drawableRight="@drawable/mine_icon_men"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="ddd"
+        android:textColor="@color/white"/>
+
+    <com.laka.live.ui.widget.LevelText
+        android:id="@+id/level"
+        style="@style/user_level"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/name"/>
+
+    <View
+        android:id="@+id/divider"
+        style="@style/horizontal_divider"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

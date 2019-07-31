@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.laka.live.ui.widget.HorizontalDragLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/list_item_selector">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/progress_btn"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:id="@+id/music_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="陪你"
+                android:textColor="@color/color333333"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/singer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="歌手"
+                android:textColor="@color/color7B7B8B"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+
+        <com.laka.live.ui.widget.MusicDownLoadBtn
+            android:id="@+id/progress_btn"
+            android:layout_width="67.6dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true" />
+
+
+        <View
+            android:id="@+id/top_divider_line"
+            style="@style/horizontal_divider"
+            android:layout_alignParentTop="true" />
+
+        <View
+            android:id="@+id/bottom_divider_line"
+            style="@style/horizontal_divider"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/delete"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@color/colorF76720"
+        android:gravity="center"
+        android:text="@string/delete"
+        android:textColor="@color/white"
+        android:textSize="16dp" />
+
+
+</com.laka.live.ui.widget.HorizontalDragLayout>

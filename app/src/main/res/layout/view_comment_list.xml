@@ -1,0 +1,7 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/comment_tv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:lineSpacingMultiplier="1.1"
+    android:textColor="@color/color1A1A1A"
+    android:textSize="@dimen/space_14" />

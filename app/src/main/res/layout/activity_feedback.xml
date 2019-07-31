@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/contact_us"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="27dp"
+        android:gravity="center_horizontal"
+        android:text="@string/help_tips"
+        android:textSize="14dp"
+        android:textColor="@color/color666666" />
+
+    <LinearLayout
+        style="@style/ActivityBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".account.setting.FeedbackActivity">
+
+        <com.laka.live.ui.widget.HeadView
+            android:id="@+id/head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:headColor="@color/color2E2E2E"
+            app:headText="@string/advice_feedback"
+            app:tipColor="@color/color333333"
+            app:tipText="@string/submit" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:id="@+id/feedback_input"
+                style="@style/FeedbackInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="top"
+                android:hint="@string/feedback_hint"
+                android:lineSpacingExtra="2dp"
+                android:minHeight="121dp" />
+
+            <TextView
+                android:id="@+id/text_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="15dp"
+                android:text="200/200"
+                android:textColor="@color/colorAAAAAA"
+                android:textSize="14dp" />
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/contact"
+                android:textColor="@color/color2E2E2E"
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/input_contact"
+                style="@style/FeedbackInput"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="@string/contact_hint"
+                android:inputType="phone"
+                android:singleLine="true"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</merge>
+

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.laka.live.ui.widget.HeadView
+            android:id="@+id/head_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:backText=""
+            app:headText="@string/detail" />
+
+        <RelativeLayout
+            android:id="@+id/comment_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_44"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorD2D2D2" />
+
+            <ImageView
+                android:id="@+id/face_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_14"
+                android:layout_marginRight="@dimen/space_14"
+                android:background="@drawable/chat_face_selector" />
+
+            <TextView
+                android:id="@+id/comment_tv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_28"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/space_14"
+                android:layout_toRightOf="@id/face_iv"
+                android:background="@drawable/comment_icon_search"
+                android:gravity="center_vertical"
+                android:hint="@string/simple_say"
+                android:paddingLeft="@dimen/space_15"
+                android:textColor="@color/color333333"
+                android:textColorHint="@color/color999999"
+                android:textSize="@dimen/space_14" />
+        </RelativeLayout>
+
+        <com.laka.live.ui.widget.PageListLayout
+            android:id="@+id/page_list_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/comment_rl"
+            android:layout_below="@id/head_view"
+            android:background="@color/white" />
+
+    </RelativeLayout>
+
+    <com.laka.live.ui.widget.chatKeyboard.KJChatKeyboardComment
+        android:id="@+id/kj_chat_keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+</FrameLayout>

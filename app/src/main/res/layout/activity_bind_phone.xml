@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              style="@style/ActivityBackground"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".account.income.BindPhoneActivity">
+
+    <com.laka.live.ui.widget.HeadView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:headText="@string/bind_phone"/>
+    <View style="@style/horizontal_divider"
+        android:layout_marginTop="@dimen/space_9"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+        <TextView
+            style="@style/BlackText.16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:gravity="center_vertical"
+            android:text="+86"
+            android:textColor="@color/color2E2E2E"/>
+
+        <View
+            style="@style/vertical_divider"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="30dp"/>
+
+        <EditText
+            android:id="@+id/phone_input"
+            style="@style/BlackText.Input16dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/phone_number"
+            android:inputType="number"/>
+    </LinearLayout>
+
+    <View
+        style="@style/horizontal_divider"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/get_pcv_tip"
+            style="@style/BlackText.16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:gravity="center_vertical"
+            android:text="@string/get_pvc"
+            android:textColor="@color/color2E2E2E"/>
+
+        <View
+            android:id="@+id/divider"
+            style="@style/vertical_divider"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/get_pcv_tip"/>
+
+        <EditText
+            android:id="@+id/verify_code"
+            style="@style/BlackText.Input16dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/divider"
+            android:hint="@string/please_input_phone_verify_code"
+            android:inputType="number"
+            android:paddingLeft="30dp"/>
+    </RelativeLayout>
+
+    <View
+        style="@style/horizontal_divider"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"/>
+
+    <Button
+        android:id="@+id/sure"
+        style="@style/GrayBigButton"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="15dp"
+        android:enabled="false"
+        android:text="@string/confim"/>
+</LinearLayout>

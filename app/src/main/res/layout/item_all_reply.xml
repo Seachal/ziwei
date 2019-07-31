@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/space_15"
+    android:paddingTop="@dimen/space_15">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_gravity="center"
+        android:background="@color/colorE1E1E1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:gravity="center"
+        android:paddingLeft="@dimen/space_24"
+        android:paddingRight="@dimen/space_24"
+        android:text="@string/all_reply"
+        android:textColor="@color/color333333"
+        android:textSize="@dimen/space_15" />
+</FrameLayout>

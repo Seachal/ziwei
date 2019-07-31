@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              style="@style/ActivityBackground"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".account.income.WithdrawalActivity">
+
+    <com.laka.live.ui.widget.HeadView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:headText="@string/withdrawal"/>
+
+    <View style="@style/horizontal_divider"/>
+    <com.laka.live.ui.widget.InputFrame
+        android:id="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        app:keyText="@string/withdrawal_amount"/>
+    <View style="@style/horizontal_divider"/>
+    <TextView
+        android:id="@+id/today_tip"
+        style="@style/GrayText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="10dp"
+        android:textSize="12dp"/>
+
+    <Button
+        android:id="@+id/sure"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_44"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/mine_get_cash_button_selector"
+        android:text="@string/confim"
+        android:textColor="@color/white"
+        android:textSize="@dimen/space_16"
+        />
+</LinearLayout>

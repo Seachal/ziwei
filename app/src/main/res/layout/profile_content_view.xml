@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:custom="http://schemas.android.com/apk/res-auto"
+              style="@style/ActivityBackground"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View style="@style/horizontal_divider"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@drawable/list_item_selector">
+                <TextView
+                    android:id="@+id/id_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_13"
+                    android:gravity="start"
+                    android:layout_marginStart="@dimen/space_20"
+                    android:layout_marginLeft="@dimen/space_20"
+                    android:text="@string/user_laka_id_title"
+                    android:textSize="@dimen/space_12"
+                    android:textColor="@color/color555555"/>
+                <TextView
+                    android:id="@+id/id_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space_20"
+                    android:gravity="end"
+                    android:layout_marginEnd="@dimen/space_39"
+                    android:layout_marginRight="@dimen/space_39"
+                    android:text="10086"
+                    android:textSize="@dimen/space_18"
+                    android:textColor="@color/color999999"/>
+            </LinearLayout>
+            <View
+                android:layout_height="match_parent"
+                style="@style/vertical_divider"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/list_item_selector">
+                <TextView
+                    android:id="@+id/sex_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_13"
+                    android:gravity="start"
+                    android:layout_marginStart="@dimen/space_20"
+                    android:layout_marginLeft="@dimen/space_20"
+                    android:text="性别"
+                    android:textSize="@dimen/space_12"
+                    android:textColor="@color/color555555"/>
+                <TextView
+                    android:id="@+id/sex_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space_20"
+                    android:gravity="end"
+                    android:layout_marginEnd="@dimen/space_39"
+                    android:layout_marginRight="@dimen/space_39"
+                    android:text="@string/sex_girl"
+                    android:textSize="@dimen/space_18"
+                    android:textColor="@color/color999999"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            style="@style/horizontal_divider"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+            <LinearLayout
+                android:id="@+id/recive"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/list_item_selector">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_13"
+                    android:gravity="start"
+                    android:layout_marginStart="@dimen/space_20"
+                    android:layout_marginLeft="@dimen/space_20"
+                    android:text="收到"
+                    android:textSize="@dimen/space_12"
+                    android:textColor="@color/color555555"/>
+                <TextView
+                    android:id="@+id/recive_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space_20"
+                    android:gravity="end"
+                    android:layout_marginEnd="@dimen/space_39"
+                    android:layout_marginRight="@dimen/space_39"
+                    android:text="0"
+                    android:textSize="@dimen/space_18"
+                    android:textColor="@color/color333333"/>
+            </LinearLayout>
+            <View
+                android:layout_height="match_parent"
+                style="@style/vertical_divider"/>
+            <LinearLayout
+                android:id="@+id/level"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/list_item_selector">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_13"
+                    android:gravity="start"
+                    android:layout_marginStart="@dimen/space_20"
+                    android:layout_marginLeft="@dimen/space_20"
+                    android:text="@string/my_level"
+                    android:textSize="@dimen/space_12"
+                    android:textColor="@color/color555555"/>
+                <TextView
+                    android:id="@+id/level_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space_20"
+                    android:gravity="end"
+                    android:layout_marginEnd="@dimen/space_39"
+                    android:layout_marginRight="@dimen/space_39"
+                    android:text="0"
+                    android:textSize="@dimen/space_18"
+                    android:textColor="@color/color333333"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View style="@style/horizontal_divider"/>
+    </LinearLayout>
+
+    <com.laka.live.ui.widget.MyInfoItemView
+        android:id="@+id/my_income"
+        style="@style/my_item_style"
+        custom:key="@string/my_income_we_chat"
+        custom:keyColor="@color/color555555"
+        custom:keySize="@dimen/space_12"
+        custom:paddingEnd="@dimen/space_19"
+        custom:valueColor="@color/color333333"
+        custom:valueSize="@dimen/space_18"/>
+
+    <View style="@style/horizontal_divider"/>
+
+    <com.laka.live.ui.widget.MyInfoItemView
+        android:id="@+id/my_coin"
+        style="@style/my_item_style"
+        custom:paddingEnd="@dimen/space_19"
+        custom:key="@string/my_coin"
+        custom:keyColor="@color/color555555"
+        custom:keySize="@dimen/space_12"
+        custom:value="0"
+        custom:valueColor="@color/colorFFB71B"
+        custom:valueSize="@dimen/space_18"/>
+
+    <View style="@style/horizontal_divider"/>
+
+    <View
+        style="@style/horizontal_divider"
+        android:layout_marginTop="@dimen/big_divider_height"/>
+
+    <include layout="@layout/layout_userinfo_contribute"
+        android:id="@+id/contribution_list"/>
+
+    <View style="@style/horizontal_divider"/>
+
+</LinearLayout>

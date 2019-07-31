@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent" >
+
+    <com.laka.live.ui.widget.MarkSimpleDraweeView
+        android:id="@+id/id_index_gallery_item_image"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        fresco:placeholderImage="@drawable/blank_icon_avatar"
+        fresco:roundAsCircle="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="6dp"
+        android:scaleType="centerCrop"
+        style="@style/ListFace"/>
+
+    <ImageView
+             android:layout_alignRight="@+id/id_index_gallery_item_image"
+             android:layout_alignBottom="@+id/id_index_gallery_item_image"
+                android:id="@+id/iv_heart"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:scaleType="fitXY"
+              />
+</RelativeLayout>

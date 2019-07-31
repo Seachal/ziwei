@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              style="@style/ActivityBackground"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".account.setting.SettingActivity">
+
+    <com.laka.live.ui.widget.HeadView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:headText="@string/setting"
+        app:headColor="@color/color2E2E2E"
+        app:headSize="@dimen/space_18" />
+
+    <View
+        style="@style/horizontal_divider"
+        android:layout_marginTop="@dimen/space_10"/>
+
+    <TextView
+        android:id="@+id/about_us"
+        style="@style/setting_item"
+        android:text="@string/about_us"/>
+
+    <View
+        style="@style/horizontal_divider"/>
+
+    <View
+        style="@style/horizontal_divider"
+        android:layout_marginTop="@dimen/space_10"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/list_item_selector">
+
+        <!--<include-->
+            <!--android:id="@+id/live_only_wifi"-->
+            <!--layout="@layout/item_switch_button"/>-->
+        <!--<View style="@style/horizontal_divider_margin_left_15dp"-->
+            <!--android:layout_marginLeft="@dimen/space_15"/>-->
+        <TextView
+            android:id="@+id/my_profile"
+            style="@style/setting_item"
+            android:text="@string/personal_data"/>
+
+        <View
+            style="@style/horizontal_divider"/>
+
+        <TextView
+            android:id="@+id/clear_cache"
+            style="@style/setting_item"
+            android:text="@string/clear_cache" />
+
+        <View style="@style/horizontal_divider_margin_left_15dp" />
+
+        <TextView
+            android:id="@+id/msg_to_remind"
+            style="@style/setting_item"
+            android:text="@string/msg_to_remind"/>
+
+        <View style="@style/horizontal_divider_margin_left_15dp"/>
+
+        <TextView
+            android:id="@+id/feedback"
+            style="@style/setting_item"
+            android:text="@string/advice_feedback"/>
+    </LinearLayout>
+
+    <View
+        style="@style/horizontal_divider"/>
+
+    <TextView
+        style="@style/setting_label"
+        android:text="@string/help_tips"/>
+
+    <View style="@style/horizontal_divider"/>
+
+    <View style="@style/horizontal_divider"/>
+
+    <TextView
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_51"
+        android:background="@drawable/list_item_selector"
+        android:gravity="center"
+        android:text="@string/logout"
+        android:textColor="@color/color333333"
+        android:textSize="@dimen/space_14"/>
+</LinearLayout>

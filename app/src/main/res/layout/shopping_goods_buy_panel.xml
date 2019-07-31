@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/shopping_goods_buy_panel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/transparent" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_107"
+        android:background="@color/transparent">
+
+        <RelativeLayout
+            android:id="@+id/shopping_goods_buy_popup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="@dimen/dimen_15"
+            android:background="@color/white"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:id="@+id/price_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_118"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/shopping_goods_buy_panel_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorFF950B"
+                    android:textSize="@dimen/space_16"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/shopping_goods_buy_panel_original_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_15"
+                    android:textColor="@color/color848484"
+                    android:textSize="@dimen/space_12" />
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/shopping_goods_buy_panel_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/price_ll"
+                android:layout_below="@id/price_ll"
+                android:layout_marginTop="@dimen/space_10"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/stock_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shopping_stock"
+                    android:textColor="@color/color848484"
+                    android:textSize="@dimen/space_12" />
+
+                <TextView
+                    android:id="@+id/shopping_goods_buy_panel_goods_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_9"
+                    android:layout_marginRight="@dimen/space_15"
+                    android:layout_toRightOf="@id/stock_tv"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/color848484"
+                    android:textSize="@dimen/space_12" />
+
+                <TextView
+                    android:id="@+id/selected_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/stock_tv"
+                    android:layout_marginTop="@dimen/space_5"
+                    android:text="@string/shopping_selected"
+                    android:textColor="@color/color848484"
+                    android:textSize="@dimen/space_12" />
+
+                <TextView
+                    android:id="@+id/shopping_goods_buy_panel_goods_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/selected_tv"
+                    android:layout_marginLeft="@dimen/space_9"
+                    android:layout_marginRight="@dimen/space_15"
+                    android:layout_toRightOf="@id/selected_tv"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:minLines="2"
+                    android:textColor="@color/color848484"
+                    android:textSize="@dimen/space_12" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/shopping_goods_buy_panel_goods_img"
+            android:layout_width="@dimen/space_87"
+            android:layout_height="@dimen/space_87"
+            android:layout_gravity="top"
+            android:layout_marginBottom="@dimen/space_20"
+            android:layout_marginLeft="@dimen/space_15"
+            app:actualImageScaleType="centerCrop"
+            app:failureImage="@drawable/blank_icon_bigimages"
+            app:failureImageScaleType="centerCrop"
+            app:placeholderImage="@drawable/blank_icon_bigimages"
+            app:placeholderImageScaleType="centerCrop"
+            app:roundAsCircle="false"
+            app:roundingBorderColor="@color/colorFF950B"
+            app:roundingBorderWidth="@dimen/space_1" />
+
+        <ImageView
+            android:id="@+id/shopping_goods_buy_panel_close_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/space_15"
+            android:layout_marginTop="@dimen/space_30"
+            android:background="@drawable/mall_btn_close_selector" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View
+            style="@style/order_common_line"
+            android:layout_marginLeft="@dimen/space_15"
+            android:layout_marginRight="@dimen/space_15" />
+
+        <TextView
+            android:id="@+id/shopping_goods_buy_panel_goods_spec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_15"
+            android:layout_marginTop="@dimen/space_15"
+            android:background="@color/white"
+            android:text="@string/shopping_spec"
+            android:textColor="@color/color848484"
+            android:textSize="@dimen/space_16" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_116"
+            android:layout_marginTop="@dimen/space_15"
+            android:scrollbars="none">
+
+            <com.laka.live.ui.widget.FlowLayout
+                android:id="@+id/shopping_goods_buy_panel_spec_flow_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_15"
+                android:layout_marginRight="@dimen/space_15" />
+        </ScrollView>
+
+        <View
+            style="@style/order_common_line"
+            android:layout_marginLeft="@dimen/space_15"
+            android:layout_marginRight="@dimen/space_15"
+            android:layout_marginTop="@dimen/dimen_15" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_15">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_15"
+                android:text="@string/shopping_buy_count"
+                android:textColor="@color/color848484"
+                android:textSize="@dimen/space_16" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/space_15"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/shopping_goods_buy_panel_num_reduce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/mall_btn_minus_selector" />
+
+                <TextView
+                    android:id="@+id/shopping_goods_buy_panel_num"
+                    android:layout_width="@dimen/space_45"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@color/colorFF950B"
+                    android:textSize="@dimen/space_15" />
+
+                <ImageView
+                    android:id="@+id/shopping_goods_buy_panel_num_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/mall_btn_plus_selector" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_60"
+            android:layout_marginTop="@dimen/space_30">
+
+            <TextView
+                android:id="@+id/shopping_goods_buy_panel_btn_add_car"
+                android:layout_width="@dimen/space_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/buy_panel_buy_text"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="@string/shopping_sure_add_car"
+                android:textColor="@color/color333333"
+                android:textSize="@dimen/space_15" />
+
+            <TextView
+                android:id="@+id/shopping_goods_buy_panel_btn_confirm"
+                android:layout_width="@dimen/space_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/buy_panel_buy_text"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="@string/shopping_sure_buy"
+                android:textColor="@color/color333333"
+                android:textSize="@dimen/space_15" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

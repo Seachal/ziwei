@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/text"
+    android:layout_width="match_parent"
+    android:layout_weight="1"
+    android:textAlignment="center"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:textColor="@color/text_848484_ff950b_selector"
+    android:textSize="14sp"
+    android:drawablePadding="10dp"
+    android:background="@color/white"
+    android:lineSpacingExtra="-1sp"
+    android:drawableBottom="@drawable/home_tab_bar_selecter" />

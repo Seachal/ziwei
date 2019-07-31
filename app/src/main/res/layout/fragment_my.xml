@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:scrollbars="none"><!-- android:clipChildren="false" style="@style/ActivityBackground" -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical">
+
+            <!-- 个人信息 -->
+            <RelativeLayout
+                android:id="@+id/head_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_320">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/head_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        custom:actualImageScaleType="centerCrop"
+                        custom:placeholderImage="@drawable/mine_bg_picture"
+                        custom:placeholderImageScaleType="centerCrop" />
+
+                    <!-- 这个遮罩必须有,不然当head_bg换成白色背景类图片时,所有白色的图标和字体都看不到了 -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent56" />
+                    <!-- 这个必须有,不然当head_bg换成白色背景类图片时,所有白色的图标和字体都看不到了 -->
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:paddingBottom="@dimen/space_20">
+
+                        <include
+                            android:id="@+id/ll_my_info"
+                            layout="@layout/layout_userinfo_names"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+                    <com.laka.live.ui.widget.SelectorButton
+                        android:id="@+id/btn_login"
+                        android:layout_width="150dp"
+                        android:layout_height="43dp"
+                        android:layout_centerInParent="true"
+                        android:text="登录/注册"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        custom:color="@color/white"
+                        custom:radius="@dimen/space_8"
+                        custom:stroke="true" />
+
+
+                    <LinearLayout
+                        android:id="@+id/count_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="@dimen/space_15">
+
+
+                        <include
+                            android:id="@+id/fans_count"
+                            style="@style/my_count_info"
+                            layout="@layout/user_count_info_item" />
+
+                        <View style="@style/my_vertical_divider" />
+
+                        <include
+                            android:id="@+id/level_value"
+                            style="@style/my_count_info"
+                            layout="@layout/user_count_info_item"
+                            android:visibility="visible" />
+
+                        <View
+                            android:id="@+id/level_divider"
+                            style="@style/my_vertical_divider"
+                            android:visibility="visible" />
+
+                        <include
+                            android:id="@+id/follow_count"
+                            style="@style/my_count_info"
+                            layout="@layout/user_count_info_item" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_50"
+                    android:layout_gravity="top"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_red"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="@dimen/activity_horizontal_margin"
+                        android:visibility="visible">
+
+                        <com.laka.live.ui.widget.SelectorImage
+                            android:id="@+id/chatting_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            custom:default_image="@drawable/mine_btn_edit2_n"
+                            custom:press_image="@drawable/mine_btn_edit2_h" />
+
+                        <ImageView
+                            android:id="@+id/iv_red"
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:layout_alignRight="@+id/chatting_img"
+                            android:layout_alignTop="@+id/chatting_img"
+                            android:src="@drawable/index_icon_red"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:layout_width="@dimen/space_0"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/space_18" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_setting"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp">
+
+                        <com.laka.live.ui.widget.SelectorImage
+                            android:id="@+id/setting_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="15dp"
+                            android:padding="@dimen/activity_horizontal_margin"
+                            custom:default_image="@drawable/mine_btn_set_n"
+                            custom:press_image="@drawable/mine_btn_set_h" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/editUserInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:padding="@dimen/activity_horizontal_margin"
+                        android:src="@drawable/mine_icon_edit_selector"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </RelativeLayout>
+            <!-- 个人信息 -->
+
+            <!-- 已购买、已发布等入口 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="98dp"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:id="@+id/ll_my_buy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.laka.live.ui.widget.SelectorImage
+                        android:id="@+id/iv_buy"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginBottom="5dp"
+                        custom:default_image="@drawable/mine_btn_buy_n"
+                        custom:press_image="@drawable/mine_btn_buy_h" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="已买课程"
+                        android:textColor="@color/color333333"
+                        android:textSize="11dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_my_publish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.laka.live.ui.widget.SelectorImage
+                        android:id="@+id/iv_publish"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginBottom="5dp"
+                        custom:default_image="@drawable/mine_btn_issue_n"
+                        custom:press_image="@drawable/mine_btn_issue_h" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="已发布"
+                        android:textColor="@color/color333333"
+                        android:textSize="11dp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ll_my_income"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:id="@+id/my_income_ll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.laka.live.ui.widget.SelectorImage
+                            android:id="@+id/iv_income"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginBottom="5dp"
+                            custom:default_image="@drawable/mine_btn_earnings_n"
+                            custom:press_image="@drawable/mine_btn_earnings_h" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="收益"
+                            android:textColor="@color/color333333"
+                            android:textSize="11dp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/red_iv"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_alignRight="@+id/my_income_ll"
+                        android:layout_alignTop="@+id/my_income_ll"
+                        android:src="@drawable/index_icon_red"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_my_package"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.laka.live.ui.widget.SelectorImage
+                        android:id="@+id/iv_package"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginBottom="5dp"
+                        custom:default_image="@drawable/mine_btn_wallet_n"
+                        custom:press_image="@drawable/mine_btn_wallet_h" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="钱包"
+                        android:textColor="@color/color333333"
+                        android:textSize="11dp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_my_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.laka.live.ui.widget.SelectorImage
+                        android:id="@+id/iv_order"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginBottom="5dp"
+                        custom:default_image="@drawable/mine_btn_order_n"
+                        custom:press_image="@drawable/mine_btn_order_h" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="商城订单"
+                        android:textColor="@color/color333333"
+                        android:textSize="11dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 最新直播课程 -->
+            <View
+                style="@style/ActivityBackground"
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <RelativeLayout
+                android:id="@+id/ll_live"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="30dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_live_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="65dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="最新直播课程"
+                    android:textColor="@color/color333333"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/iv_live"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_below="@+id/tv_live_tips"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    custom:actualImageScaleType="centerCrop"
+                    custom:placeholderImage="@drawable/blank_icon_banner"
+                    custom:placeholderImageScaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/tv_live_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_live"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="标题"
+                    android:textColor="@color/color333333"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_live_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_live_title"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="开播时间"
+                    android:textColor="@color/color848484"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <com.laka.live.ui.widget.AnimationView
+                    android:id="@+id/animation_yellow"
+                    android:layout_width="@dimen/space_10"
+                    android:layout_height="@dimen/space_10"
+                    android:layout_below="@+id/tv_live_title"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/space_5"
+                    android:layout_marginTop="14dp"
+                    android:layout_toRightOf="@+id/tv_live_time"
+                    custom:drawable_id="@drawable/living_wave_anim" /><!--  android:visibility="gone"-->
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_no_live"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="65dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="最新直播课程"
+                    android:textColor="@color/color333333"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/public_pic_empty2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="此地空空如也"
+                    android:textColor="@color/color848484"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <!-- 底部的各种横条选项 -->
+            <LinearLayout
+                android:id="@+id/content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/space_15"
+                android:layout_marginTop="@dimen/space_15"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <include
+                    android:id="@+id/contribution_list"
+                    layout="@layout/layout_userinfo_contribute" />
+
+                <View
+                    style="@style/horizontal_divider"
+                    android:layout_marginBottom="@dimen/space_15" />
+
+                <com.laka.live.ui.widget.MyInfoItemView
+                    android:id="@+id/my_subscribe"
+                    style="@style/my_item_style"
+                    custom:key="已购买的课堂"
+                    custom:keyColor="@color/color2E2E2E"
+                    custom:keySize="@dimen/space_12"
+                    custom:paddingEnd="@dimen/space_19"
+                    custom:valueColor="@color/color333333"
+                    custom:valueSize="@dimen/space_18" />
+
+                <View style="@style/horizontal_divider" />
+
+                <com.laka.live.ui.widget.MyInfoItemView
+                    android:id="@+id/my_released"
+                    style="@style/my_item_style"
+                    custom:key="已发布的课堂"
+                    custom:keyColor="@color/color2E2E2E"
+                    custom:keySize="@dimen/space_12"
+                    custom:paddingEnd="@dimen/space_19"
+                    custom:valueColor="@color/color333333"
+                    custom:valueSize="@dimen/space_18" />
+
+                <View
+                    style="@style/horizontal_divider"
+                    android:layout_marginBottom="@dimen/space_15" />
+
+                <com.laka.live.ui.widget.MyInfoItemView
+                    android:id="@+id/my_income"
+                    style="@style/my_item_style"
+                    custom:key="@string/my_income_we_chat"
+                    custom:keyColor="@color/color2E2E2E"
+                    custom:keySize="@dimen/space_12"
+                    custom:paddingEnd="@dimen/space_19"
+                    custom:valueColor="@color/color333333"
+                    custom:valueSize="@dimen/space_18" />
+
+                <View style="@style/horizontal_divider" />
+
+                <com.laka.live.ui.widget.MyInfoItemView
+                    android:id="@+id/my_coin"
+                    style="@style/my_item_style"
+                    custom:key="@string/my_coin"
+                    custom:keyColor="@color/color2E2E2E"
+                    custom:keySize="@dimen/space_12"
+                    custom:paddingEnd="@dimen/space_19"
+                    custom:value="0"
+                    custom:valueColor="@color/colorFFB71B"
+                    custom:valueSize="@dimen/space_18" />
+
+                <View style="@style/horizontal_divider" />
+
+                <View
+                    style="@style/horizontal_divider"
+                    android:layout_marginBottom="@dimen/space_15" />
+
+                <com.laka.live.ui.widget.MyInfoItemView
+                    android:id="@+id/approve"
+                    style="@style/my_item_style"
+                    custom:key="认证为达人老师"
+                    custom:keyColor="@color/color2E2E2E"
+                    custom:keySize="@dimen/space_12"
+                    custom:paddingEnd="@dimen/space_19"
+                    custom:valueColor="@color/color333333"
+                    custom:valueSize="@dimen/space_18" />
+
+                <View style="@style/horizontal_divider" />
+
+
+            </LinearLayout>
+            <!-- 底部的各种横条选项 -->
+            <!-- 未使用到，删除 -->
+            <!--<com.laka.live.MyVideoPlayer-->
+                <!--android:id="@+id/player"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:visibility="visible" />-->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/ll_start"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/mine_btn_star_selector"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.laka.live.ui.widget.AnimationView
+            android:id="@+id/animation_white"
+            android:layout_width="@dimen/space_15"
+            android:layout_height="@dimen/space_12"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/tv_live_time"
+            custom:drawable_id="@drawable/living_wave_white" />
+
+        <TextView
+            android:id="@+id/btn_live"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开播"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</RelativeLayout>

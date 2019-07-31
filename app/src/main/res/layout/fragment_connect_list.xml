@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/foot"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:text="@string/open_connect_mic"
+        android:textSize="17dp"
+        android:textColor="@color/color333333"
+        android:background="@drawable/open_mic_btn_bg"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_above="@id/foot"
+        android:background="@color/colorC8C8C8"
+        style="@style/horizontal_divider"/>
+
+    <com.laka.live.ui.widget.PageListLayout
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/divider"/>
+
+</RelativeLayout>

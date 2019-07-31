@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/default_bg"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/space_5">
+
+    <LinearLayout
+        android:paddingTop="@dimen/space_15"
+        android:paddingBottom="@dimen/space_10"
+        android:paddingLeft="@dimen/space_15"
+        android:background="@color/white"
+        android:paddingRight="@dimen/space_15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/order_goods_sum_title"
+                android:textColor="@color/color848484"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_15"
+                android:text="@string/order_goods_freight"
+                android:textColor="@color/color848484"
+                android:textSize="13sp" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_ta_coin_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_15"
+                android:text="@string/order_desc_ta_coin_desc"
+                android:textColor="@color/order_detail_address" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_goods_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textColor="@color/color848484"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_goods_freight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_15"
+                android:gravity="right"
+                android:textColor="@color/color848484"
+                android:textSize="15sp" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_ta_coin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_15"
+                android:gravity="right"
+                android:textColor="@color/shopping_title"
+                android:textSize="@dimen/space_12" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        style="@style/order_common_line"
+        android:layout_height="0.5dp"
+        android:background="@color/default_bg"/>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/space_15"
+        android:paddingRight="@dimen/space_15"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_45"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/order_goods_total_cost"
+            android:textColor="@color/color333333"
+            android:textSize="14dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_goods_sum_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:textColor="@color/colorFF950B"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

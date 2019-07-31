@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+   >
+    
+   <!--  <com.laka.live.ui.widget.MyGridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="4"
+        android:horizontalSpacing="5dp"
+        android:verticalSpacing="5dp"
+        android:scrollbars="none"
+        android:fadingEdge="none"
+        android:gravity="center" />-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+       /><!-- android:background="@drawable/rect_white10"-->
+
+    <ImageView
+        android:id="@+id/iv_line_top"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:scaleType="fitXY"
+        android:src="@color/white10" />
+</LinearLayout>

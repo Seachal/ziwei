@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"><!--     android:orientation="vertical" -->
+
+    <TextView
+        android:id="@+id/tv_date"
+        style="@style/chat_item_date"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="4月1日" />
+
+    <LinearLayout
+        android:id="@+id/ll_bg"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_below="@+id/tv_date"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/dm_bg_yellow"
+        android:orientation="horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_bg"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/dm_bg_black"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="【官方公告】"
+            android:textColor="@color/color333333"
+            android:textSize="14dp" />
+
+
+        <View
+            android:id="@+id/divider"
+            style="@style/horizontal_divider"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color777D91" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="滋味Live直播升级啦！滋味Live直播升级啦！滋味Live直播升级啦！滋味Live直播升级啦！滋味Live直播升级啦！滋味Live直播升级啦！滋味Live直播升级啦！滋味Live直播升级啦！滋味Live直播升级啦！滋味Live直播升级啦！滋味Live直播升级啦！滋味Live直播升级啦！"
+            android:textColor="@color/color7B7B8B"
+            android:textSize="12dp" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

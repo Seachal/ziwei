@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <com.laka.live.shopping.widget.MaterialRippleLayout
+        android:layout_width="@dimen/space_0"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:mrl_rippleAlpha="0.1"
+        app:mrl_rippleColor="@color/lgray"
+        app:mrl_rippleHover="true"
+        app:mrl_rippleOverlay="true">
+
+        <TextView
+            android:id="@+id/classify_comprehensive"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/classify_comprehensive"
+            android:textColor="@color/classify_title_color"
+            android:textSize="@dimen/space_14" />
+
+    </com.laka.live.shopping.widget.MaterialRippleLayout>
+
+    <com.laka.live.shopping.widget.MaterialRippleLayout
+        android:layout_width="@dimen/space_0"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:mrl_rippleAlpha="0.1"
+        app:mrl_rippleColor="@color/lgray"
+        app:mrl_rippleHover="true"
+        app:mrl_rippleOverlay="true">
+
+        <TextView
+            android:id="@+id/classify_sales"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/classify_sales"
+            android:textColor="@color/classify_title_color"
+            android:textSize="@dimen/space_14" />
+    </com.laka.live.shopping.widget.MaterialRippleLayout>
+
+    <com.laka.live.shopping.widget.MaterialRippleLayout
+        android:layout_width="@dimen/space_0"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:mrl_rippleAlpha="0.1"
+        app:mrl_rippleColor="@color/lgray"
+        app:mrl_rippleHover="true"
+        app:mrl_rippleOverlay="true">
+
+        <TextView
+            android:id="@+id/classify_new"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/classify_new"
+            android:textColor="@color/classify_title_color"
+            android:textSize="@dimen/space_14" />
+    </com.laka.live.shopping.widget.MaterialRippleLayout>
+
+    <com.laka.live.shopping.widget.MaterialRippleLayout
+        android:layout_width="@dimen/space_0"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:mrl_rippleAlpha="0.1"
+        app:mrl_rippleColor="@color/lgray"
+        app:mrl_rippleHover="true"
+        app:mrl_rippleOverlay="true">
+
+        <TextView
+            android:id="@+id/classify_price"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:drawablePadding="@dimen/space_5"
+            android:gravity="center"
+            android:text="@string/classify_price"
+            android:textColor="@color/classify_title_color"
+            android:textSize="@dimen/space_14" />
+    </com.laka.live.shopping.widget.MaterialRippleLayout>
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/rl_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp">
+
+        <com.laka.live.ui.widget.LevelText
+            android:id="@+id/tv_level"
+            style="@style/user_level"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="4dp"
+            android:visibility="gone"/>
+
+        <!--   <LinearLayout android:id="@+id/ll_sign"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:paddingRight="5dp"
+              android:paddingLeft="6dp"
+              android:layout_marginTop="5dp">
+          </LinearLayout> -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_toRightOf="@+id/tv_level">
+
+
+
+            <com.laka.live.ui.widget.ClickTextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:lineSpacingExtra="3dp"
+                android:shadowColor="@color/black60"
+                android:shadowDx="0"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:gravity="center_vertical"/>
+
+            <com.facebook.drawee.view.SimpleDraweeView android:visibility="visible"
+                android:id="@+id/iv_gift"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:scaleType="fitXY"
+                android:layout_gravity="top"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_bottombar"
+        android:background="@color/colorF4F4F6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+
+        <View  android:layout_height="1px"
+            android:layout_width="match_parent"
+            android:background="@color/colorC3C3C3"/>
+
+        <EditText
+            android:hint="@string/input_msg"
+            android:id="@+id/toolbox_et_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/toolbox_btn_face"
+            android:background="@drawable/round_49px_d7d7d7"
+            android:inputType="textMultiLine"
+            android:maxLines="5"
+            android:maxHeight="60dp"
+            android:minHeight="35dp"
+            android:singleLine="false"
+            android:textSize="15dp"
+            android:textColorHint="@color/colorAAAAAA"
+            android:textColor="@color/color2E2E2E"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp"/>
+
+        <!--<EditText-->
+            <!--android:hint="@string/input_msg"-->
+            <!--android:id="@+id/toolbox_et_message"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_toLeftOf="@+id/toolbox_btn_face"-->
+            <!--android:layout_toRightOf="@+id/iv_gift"-->
+            <!--android:background="@drawable/round_49px_d9d9d9"-->
+            <!--android:inputType="textMultiLine"-->
+            <!--android:maxLines="5"-->
+            <!--android:maxHeight="60dp"-->
+            <!--android:minHeight="35dp"-->
+            <!--android:singleLine="false"-->
+            <!--android:textSize="15dp"-->
+            <!--android:textColorHint="@color/colorAAAAAA"-->
+            <!--android:textColor="@color/color2E2E2E"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:paddingTop="5dp"-->
+            <!--android:paddingBottom="5dp"-->
+            <!--android:paddingLeft="12dp"-->
+            <!--android:paddingRight="10dp"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:layout_marginBottom="5dp"-->
+            <!--android:layout_marginRight="10dp"/>-->
+
+        <!--图片功能-->
+        <!--<ImageView-->
+            <!--android:id="@+id/iv_gift"-->
+            <!--android:layout_width="27dp"-->
+            <!--android:layout_height="27dp"-->
+            <!--android:src="@drawable/chat_gift_selector"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_alignBottom="@id/toolbox_et_message"-->
+            <!--android:layout_marginBottom="3.6dp"/>-->
+
+        <CheckBox
+            android:id="@+id/toolbox_btn_face"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:background="@drawable/selector_chat_face"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/rl_right"
+            android:layout_alignBottom="@id/toolbox_et_message"
+            android:layout_marginBottom="3.6dp"
+            android:button="@null"
+            android:checked="false" />
+
+
+
+        <FrameLayout
+            android:id="@+id/rl_right"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@id/toolbox_et_message">
+
+            <ImageView
+                android:id="@+id/iv_pic"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:src="@drawable/live_btn_addphoto_selector"
+                android:layout_alignParentRight="true"
+                android:layout_alignBottom="@id/toolbox_et_message"
+                android:layout_marginBottom="3.6dp"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/iv_gift"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:src="@drawable/chat_gift_selector"
+                android:layout_alignParentLeft="true"
+                android:layout_alignBottom="@id/toolbox_et_message"
+                android:layout_marginBottom="3.6dp"/>
+            <Button
+                android:layout_marginBottom="1.2dp"
+                android:id="@+id/toolbox_btn_send"
+                android:layout_width="40dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center_horizontal"
+                android:text="发送"
+                android:textSize="12dp"
+                android:textColor="@color/mine_btn_01_selector"
+                android:background="@drawable/mine_btn_01_radius_18px_selector"/>
+        </FrameLayout>
+    </RelativeLayout>
+
+    <com.laka.live.ui.widget.emoji.EmoticonPickerView
+        android:id="@+id/emoticon_picker_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <com.laka.live.ui.widget.gift.GiftGridView
+        android:visibility="gone"
+        android:id="@+id/gift_grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        />
+
+    <RelativeLayout
+        android:id="@+id/pic_panel"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:visibility="gone"
+        android:background="@color/white">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/take_photo"
+            android:orientation="vertical"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp">
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/home_root_camera"/>
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="拍照"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/album"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@id/take_photo">
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/home_root_camera"/>
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="相册"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="5dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+  <!--   <RelativeLayout
+        android:id="@+id/toolbox_layout_face"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/toolbox_pagers_face"
+            android:layout_width="match_parent"
+            android:layout_height="160dp">
+        </android.support.v4.view.ViewPager>
+
+        <com.tlv.live.ui.widget.chatKeyboard.PagerSlidingTabStrip
+            android:id="@+id/toolbox_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/toolbox_pagers_face"
+            android:background="#ffffff"
+            android:visibility="visible"
+            app:pstsDividerColor="#a7a5a5"
+            app:pstsIndicatorColor="#ffffff"
+            app:pstsShouldExpand="true"
+            app:pstsTabPaddingLeftRight="14dip"
+            app:pstsUnderlineColor="#ffffff"/>
+    </RelativeLayout>-->
+</LinearLayout>

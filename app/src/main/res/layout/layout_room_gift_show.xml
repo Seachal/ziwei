@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="bottom">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_gift_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"><!--  android:layout_alignParentBottom="true"  android:layout_above="@+id/rl_gift_show1"
+    android:layout_marginBottom="-20dp"-->
+
+        <ImageView
+            android:id="@+id/iv_empty_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_below="@+id/rl_gift" />
+
+        <RelativeLayout
+            android:id="@+id/rl_gift"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/round_180px_transparent50"
+            android:paddingRight="@dimen/space_40"><!--38dp -->
+            <com.laka.live.ui.widget.CircleImageView
+                android:id="@+id/iv_gift_head"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp"
+                fresco:placeholderImage="@drawable/blank_icon_avatar" /><!--     fresco:border_color="@color/white30"
+            fresco:border_width="6px"-->
+
+            <LinearLayout
+                android:id="@+id/user_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@+id/iv_gift_head"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.laka.live.ui.widget.LevelText
+                    android:id="@+id/tv_level"
+                    style="@style/user_level"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/iv_gift_head"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tv_gift_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_toRightOf="@+id/tv_level"
+                    android:ellipsize="end"
+                    android:maxWidth="@dimen/space_80"
+                    android:singleLine="true"
+                    android:text="名字"
+                    android:textColor="@color/colorFFC40E"
+                    android:textSize="14dp"
+                   />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_gift_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_layout"
+                android:layout_marginLeft="7dp"
+                android:layout_toRightOf="@+id/iv_gift_head"
+                android:text="送一把香蕉"
+                android:textColor="@color/white"
+                android:textSize="12dp" /><!--   android:layout_marginBottom="5dp"-->
+        </RelativeLayout>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/iv_gift_icon"
+            android:layout_width="@dimen/space_50"
+            android:layout_height="@dimen/space_50"
+            android:layout_above="@+id/iv_empty_bottom"
+            android:layout_alignRight="@+id/rl_gift"
+            android:layout_marginBottom="-5dp"
+            android:layout_marginRight="15dp"/>
+
+       <!--    <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/iv_gift_icon"
+            android:layout_width="@dimen/space_50"
+            android:layout_height="@dimen/space_50"
+            android:layout_above="@+id/iv_empty_bottom"
+            android:layout_alignRight="@+id/rl_gift"
+            android:layout_marginBottom="-5dp"
+            android:layout_marginRight="15dp"
+            /> -->
+
+
+        <com.laka.live.ui.widget.StrokeTextView
+            android:id="@+id/tv_gift_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/iv_empty_bottom"
+            android:layout_marginBottom="13dp"
+            android:layout_marginLeft="205dp"
+            android:paddingTop="10dp"
+            android:text="x  1"
+            android:textColor="@color/colorFFC40E"
+            android:textSize="17dp"
+            fresco:stroke_border_color="@color/black"
+            fresco:stroke_border_width="2dp"
+            />
+        <!--       android:layout_alignRight="@+id/rl_gift"
+            android:layout_marginRight="-12dp"    android:layout_marginTop="28dp" android:layout_toRightOf="@+id/iv_gift_icon"   <com.laka.live.ui.widget.MagicTextView
+            android:id="@+id/tv_gift_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_gift_icon"
+            android:text="x 1"
+            android:textColor="@color/color97EABC"
+            android:textSize="17dp"
+            fresco:magicStrokeColor="@color/color4C7749"
+            fresco:strokeJoinStyle="miter"
+            fresco:magicStrokeWidth="4px"
+            android:layout_marginTop="38dp"
+            android:textStyle="bold"/>-->
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_gift_show1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="-30dp"><!--   android:layout_alignParentBottom="true" -->
+
+        <ImageView
+            android:id="@+id/iv_empty_bottom1"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_below="@+id/rl_gift1" />
+
+        <RelativeLayout
+            android:id="@+id/rl_gift1"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="38dp"
+            android:background="@drawable/round_180px_transparent50"
+            android:paddingRight="@dimen/space_40">
+
+            <com.laka.live.ui.widget.CircleImageView
+                android:id="@+id/iv_gift_head1"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp"
+                fresco:placeholderImage="@drawable/blank_icon_avatar" /><!--     fresco:border_color="@color/white30"
+            fresco:border_width="6px" -->
+
+            <LinearLayout
+                android:id="@+id/user_layout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@+id/iv_gift_head1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.laka.live.ui.widget.LevelText
+                    android:id="@+id/tv_level1"
+                    style="@style/user_level"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/iv_gift_head1"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tv_gift_name1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_toRightOf="@+id/tv_level1"
+                    android:maxWidth="@dimen/space_80"
+                    android:singleLine="true"
+                    android:text="名字"
+                    android:textColor="@color/colorFFC40E"
+                    android:textSize="14dp"
+                     /><!--     android:layout_marginTop="4dp" -->
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_gift_content1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_layout1"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/iv_gift_head1"
+                android:text="送一把香蕉"
+                android:textColor="@color/white"
+                android:textSize="12dp" /><!--     android:layout_marginBottom="5dp" -->
+        </RelativeLayout>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/iv_gift_icon1"
+            android:layout_width="@dimen/space_50"
+            android:layout_height="@dimen/space_50"
+            android:layout_above="@+id/iv_empty_bottom1"
+            android:layout_alignRight="@+id/rl_gift1"
+            android:layout_marginBottom="-5dp"
+            android:layout_marginRight="15dp"/>
+
+      <!--     <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/iv_gift_icon1"
+            android:layout_width="@dimen/space_50"
+            android:layout_height="@dimen/space_50"
+            android:layout_above="@+id/iv_empty_bottom1"
+            android:layout_alignRight="@+id/rl_gift1"
+            android:layout_marginBottom="-5dp"
+            android:layout_marginRight="15dp"
+           /> -->
+        <com.laka.live.ui.widget.StrokeTextView
+            android:id="@+id/tv_gift_count1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/iv_empty_bottom1"
+            android:layout_marginBottom="13dp"
+            android:layout_marginLeft="205dp"
+            android:text="x  1"
+            android:textColor="@color/colorFFC40E"
+            android:textSize="17dp"
+            fresco:stroke_border_color="@color/black"
+            fresco:stroke_border_width="2dp"
+            /><!--    android:layout_alignRight="@+id/rl_gift1"
+            android:layout_marginRight="-12dp"  android:layout_marginTop="50dp"  android:layout_toRightOf="@+id/rl_gift1" -->
+    </RelativeLayout>
+
+
+</LinearLayout>

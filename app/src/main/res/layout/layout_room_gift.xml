@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_gift"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="@color/black70"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_line_top"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:scaleType="fitXY"
+        android:background="@color/white10" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_gift"
+        android:layout_width="match_parent"
+        android:layout_height="185dp"
+        android:layout_below="@+id/iv_line_top" />
+
+
+    <!--   android:layout_marginLeft="5dp"
+
+    android:layout_marginRight="5dp"-->
+
+    <ImageView
+        android:id="@+id/iv_line_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/vp_gift"
+        android:scaleType="fitXY"
+        android:background="@color/white10" />
+
+    <LinearLayout
+        android:id="@+id/ll_dots"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_line_bottom"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" />
+
+    <RelativeLayout
+        android:id="@+id/rl_bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_dots"
+        android:layout_toLeftOf="@+id/btn_send_gift_multi">
+
+        <LinearLayout
+            android:id="@+id/ll_kazuan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:text="@string/kazuan"
+                android:textColor="@color/white50"
+                android:textSize="12dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/live_icon_diamonds"
+                android:visibility="gone"/> <!-- mine_icon_diamonds -->
+
+            <TextView
+                android:id="@+id/tv_gift_kazuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tv_gift_recharge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:text="@string/go_recharge"
+                android:textColor="@color/colorFCCD05"
+                android:textSize="12dp" />
+
+            <Button
+                android:id="@+id/btn_send_gift"
+                android:layout_width="60dp"
+                android:layout_height="28dp"
+                android:layout_marginRight="6dp"
+                android:text="@string/zengsong"
+                android:background="@drawable/chat_send_gift_selector"
+                android:textColor="@color/btn_yellow_text_selector"
+                android:textSize="14dp" /><!--    android:background="@drawable/round_8px_878889"  send_gift_bg_selector-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_special"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="14dp">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:src="@drawable/live_special_bar_words" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp">
+                <!-- 进度条 -->
+                <com.laka.live.gift.AnimProgressBar
+                    android:id="@+id/pb_special"
+                    style="?android:progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"
+                    android:layout_centerVertical="true" />
+
+                <!-- 条纹 -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp">
+
+                    <com.laka.live.gift.SlashView
+                        android:id="@+id/slash"
+                        android:layout_width="match_parent"
+                        android:layout_height="11dp" />
+                </RelativeLayout>
+                <!-- 闪电 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/live_special_bar_bolt" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/live_special_bar_bolt" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/live_special_bar_bolt" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.laka.live.ui.widget.continueButton.ContinueButton
+        android:id="@+id/btn_send_gift_multi"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignBottom="@+id/rl_bottombar"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="6dp"
+        android:layout_marginRight="6dp"
+        android:gravity="center"
+        android:text="8s\n连送"
+        android:textColor="@color/black" /><!--  android:layout_alignBottom="@+id/ll_kazuan"-->
+</RelativeLayout>

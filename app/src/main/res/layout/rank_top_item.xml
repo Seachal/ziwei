@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/face_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <com.laka.live.ui.widget.MarkSimpleDraweeView
+                android:id="@+id/face"
+                style="@style/contribution_list_face"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp" />
+
+            <ImageView
+                android:id="@+id/crown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/shara_icon_king"/>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/space_7"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="name"
+            android:textColor="@color/color333333"
+            android:textSize="15dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/space_6"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/mine_icon_women" />
+
+            <com.laka.live.ui.widget.LevelText
+                android:id="@+id/level"
+                style="@style/user_level"
+                android:layout_marginLeft="5dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/space_6"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textSize="14dp" />
+
+        <com.laka.live.ui.rankinglist.widget.DrawableCenterTextView
+            android:id="@+id/follow_text"
+            style="@style/FollowButton"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/space_5"
+
+            android:text="@string/follow" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/medal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/mine_icon_women" />
+</FrameLayout>

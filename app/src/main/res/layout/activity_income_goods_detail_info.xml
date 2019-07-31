@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.laka.live.ui.widget.HeadView
+        android:id="@+id/head_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:headText="@string/goods_income_detail"
+        app:showDivider="true" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_60">
+
+                    <TextView
+                        android:id="@+id/income_type_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/space_15"
+                        android:textColor="@color/color033333"
+                        android:textSize="@dimen/space_16" />
+
+                    <TextView
+                        android:id="@+id/income_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/space_15"
+                        android:textColor="@color/colorFF950B"
+                        android:textSize="@dimen/space_24" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/income_tv"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/space_3"
+                        android:layout_toLeftOf="@id/income_tv"
+                        android:text="@string/rmb"
+                        android:textColor="@color/colorFF950B"
+                        android:textSize="@dimen/space_15" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/space_05"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/colorE5E5E5" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_50">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/space_15"
+                        android:text="@string/buy_user"
+                        android:textColor="@color/color848484"
+                        android:textSize="@dimen/space_14" />
+
+                    <TextView
+                        android:id="@+id/buy_user_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/space_15"
+                        android:textColor="@color/color333333"
+                        android:textSize="@dimen/space_14" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/space_05"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/colorE5E5E5" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_50">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/space_15"
+                        android:text="@string/buy_time"
+                        android:textColor="@color/color848484"
+                        android:textSize="@dimen/space_14" />
+
+                    <TextView
+                        android:id="@+id/buy_time_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/space_15"
+                        android:textColor="@color/color333333"
+                        android:textSize="@dimen/space_14" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/space_05"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/colorE5E5E5" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_50">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/space_15"
+                        android:text="@string/user_pay"
+                        android:textColor="@color/color848484"
+                        android:textSize="@dimen/space_14" />
+
+                    <TextView
+                        android:id="@+id/user_pay_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/space_15"
+                        android:textColor="@color/color333333"
+                        android:textSize="@dimen/space_14" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/space_05"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/colorE5E5E5" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/recommend_user_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_50">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/space_15"
+                        android:text="@string/goods_recommend_user"
+                        android:textColor="@color/color848484"
+                        android:textSize="@dimen/space_14" />
+
+                    <TextView
+                        android:id="@+id/recommend_user_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/space_15"
+                        android:textColor="@color/color333333"
+                        android:textSize="@dimen/space_14" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/space_05"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/colorE5E5E5" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/recommend_income_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_50">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/space_15"
+                        android:text="@string/recommend_income"
+                        android:textColor="@color/color848484"
+                        android:textSize="@dimen/space_14" />
+
+                    <TextView
+                        android:id="@+id/recommend_income_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/space_15"
+                        android:textColor="@color/color333333"
+                        android:textSize="@dimen/space_14" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/space_05"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/colorE5E5E5" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/agent_user_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_50">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/space_15"
+                        android:text="@string/agent_user"
+                        android:textColor="@color/color848484"
+                        android:textSize="@dimen/space_14" />
+
+                    <TextView
+                        android:id="@+id/agent_user_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/space_15"
+                        android:textColor="@color/color333333"
+                        android:textSize="@dimen/space_14" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/space_05"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/colorE5E5E5" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/agent_income_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_50">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/space_15"
+                        android:text="@string/agent_income"
+                        android:textColor="@color/color848484"
+                        android:textSize="@dimen/space_14" />
+
+                    <TextView
+                        android:id="@+id/agent_income_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/space_15"
+                        android:textColor="@color/color333333"
+                        android:textSize="@dimen/space_14" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/space_05"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/colorE5E5E5" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <com.laka.live.ui.widget.LoadingLayout
+            android:id="@+id/loading_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.laka.live.ui.widget.PageListLayout
+        android:id="@+id/page_list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="@dimen/space__6" />
+
+    <RelativeLayout
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:alpha="0"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_home_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/home_icon_zwlogo"
+            android:visibility="visible" />
+
+        <!--因为单独放外面很难控制位置，这里面copy一份，用户alpha显示-->
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:paddingLeft="@dimen/space_14"
+            android:paddingRight="@dimen/space_14"
+            android:paddingTop="@dimen/space_6"
+            android:src="@drawable/index_icon_search_black" />
+
+        <View
+            android:id="@+id/divider_line"
+            style="@style/head_divider"
+            android:layout_alignParentBottom="true"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/mask"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_12"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/nav_pic_mask" />
+
+    <ImageView
+        android:id="@+id/search"
+        android:layout_width="52dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="@dimen/space_14"
+        android:paddingRight="@dimen/space_14"
+        android:paddingTop="@dimen/space_12"
+        android:src="@drawable/index_icon_search_white" />
+</RelativeLayout>

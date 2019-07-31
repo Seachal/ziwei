@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/my_info_item_height"
+    android:background="@drawable/list_item_selector">
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:gravity="center_vertical"
+        android:text="@string/packet_contribution_list"
+        android:textColor="@color/color2E2E2E"
+        android:textSize="@dimen/space_12"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="17dp" />
+
+    <ImageView
+        android:id="@+id/contribution_list_icon_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/space_15"
+        android:src="@drawable/mine_icon_next02"/>
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/space_9"
+        android:layout_toLeftOf="@id/contribution_list_icon_next"
+        android:layout_centerVertical="true">
+
+        <com.laka.live.ui.widget.CircleImageView
+            android:id="@+id/contribution_list_right_face"
+            android:layout_width="@dimen/space_31"
+            android:layout_height="@dimen/space_31"
+            android:layout_gravity="end"
+            custom:border_color="@color/white"
+            custom:border_width="@dimen/space_1"
+            fresco:placeholderImage="@drawable/blank_icon_avatar"
+            fresco:roundAsCircle="true"/>
+
+        <com.laka.live.ui.widget.CircleImageView
+            android:id="@+id/contribution_list_mid_face"
+            android:layout_width="@dimen/space_31"
+            android:layout_height="@dimen/space_31"
+            android:layout_gravity="end"
+            android:layout_marginRight="@dimen/space_24"
+            custom:border_color="@color/white"
+            custom:border_width="@dimen/space_1"
+            fresco:placeholderImage="@drawable/blank_icon_avatar"
+            fresco:roundAsCircle="true"/>
+
+        <com.laka.live.ui.widget.CircleImageView
+            android:id= "@+id/contribution_list_left_face"
+            android:layout_width="@dimen/space_31"
+            android:layout_height="@dimen/space_31"
+            android:layout_gravity="end"
+            android:layout_marginRight="@dimen/space_48"
+            custom:border_color="@color/white"
+            custom:border_width="@dimen/space_1"
+            fresco:placeholderImage="@drawable/blank_icon_avatar"
+            fresco:roundAsCircle="true"/>
+    </FrameLayout>
+</RelativeLayout>

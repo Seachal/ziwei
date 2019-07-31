@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/ActivityBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_200"
+        android:background="@drawable/mine_bg_wdqb">
+
+        <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@drawable/mine_bg_wallet" />-->
+
+        <com.laka.live.ui.widget.HeadView
+            android:id="@+id/head_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            app:headBg="@android:color/transparent"
+            app:headText="@string/my_coin"
+            app:showDivider="false" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/head_layout"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginRight="@dimen/space_20"-->
+            <!--android:src="@drawable/mine_icon_diamonds_bg" />-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="@dimen/space_15"-->
+            <!--android:orientation="vertical">-->
+
+            <TextView
+                android:id="@+id/coins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/colorFF950A"
+                android:textSize="@dimen/space_32" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_20"
+                android:drawablePadding="@dimen/space_5"
+                android:drawableRight="@drawable/btn_blue_explain"
+                android:text="@string/current_weidou"
+                android:textColor="@color/color333333"
+                android:textSize="@dimen/space_13" />
+            <!--</LinearLayout>-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_15"
+                android:text="@string/weidou_used_to_session"
+                android:textColor="@color/color333333"
+                android:textSize="@dimen/space_13" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View style="@style/horizontal_divider" />
+
+            <LinearLayout
+                android:id="@+id/pay_way_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/radio"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/alipay_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/list_item_selector"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/alipay"
+                            style="@style/my_coins_pay_way"
+                            android:checked="true"
+                            android:text="@string/alipay_pay" />
+
+                        <ImageView
+                            android:id="@+id/alipay_bottom"
+                            style="@style/my_coins_pay_way_bottom"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/wechat_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/list_item_selector"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/wechat"
+                            style="@style/my_coins_pay_way"
+                            android:checked="false"
+                            android:text="@string/wechat_pay" />
+
+                        <ImageView
+                            android:id="@+id/wechat_bottom"
+                            style="@style/my_coins_pay_way_bottom"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View style="@style/horizontal_divider" />
+
+                <TabHost
+                    android:id="@android:id/tabhost"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TabWidget
+                        android:id="@android:id/tabs"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="0"
+                        android:orientation="horizontal" />
+
+                    <FrameLayout
+                        android:id="@android:id/tabcontent"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="0" />
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </TabHost>
+            </LinearLayout>
+        </LinearLayout>
+
+        <include
+            layout="@layout/exception"
+            android:visibility="gone" />
+
+    </FrameLayout>
+</LinearLayout>
+
+
+

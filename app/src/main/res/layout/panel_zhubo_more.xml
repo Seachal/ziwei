@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:custom="http://schemas.android.com/apk/res-auto"
+              android:layout_width="40dp"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+             >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/live_pop_zhubo_more"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/btn_flashlight"
+            style="@style/LiveSwitch"
+            android:src="@drawable/live_more_btn_flashlight_selector"
+            android:text=""/>
+
+        <ImageView
+            android:layout_marginTop="8dp"
+            android:id="@+id/btn_mic"
+            style="@style/LiveSwitch"
+            android:src="@drawable/live_btn_mic_selector"
+            android:text=""/>
+
+        <ImageView
+            android:layout_marginTop="8dp"
+            android:id="@+id/btn_camera"
+            style="@style/LiveSwitch"
+            android:src="@drawable/live_btn_camera_selector"
+            android:text=""/>
+
+        <ImageView
+            android:layout_marginTop="8dp"
+            android:id="@+id/btn_filter"
+            style="@style/LiveSwitch"
+            android:src="@drawable/live_begin_btn_filter_selector"
+            android:text=""/>
+
+        <ImageView
+            android:layout_marginTop="8dp"
+            android:id="@+id/btn_beauty"
+            style="@style/LiveSwitch"
+            android:layout_marginBottom="9.3dp"
+            android:src="@drawable/live_begin_btn_beauty_selector"
+            android:text=""/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/transparent_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_50"/>
+</LinearLayout>

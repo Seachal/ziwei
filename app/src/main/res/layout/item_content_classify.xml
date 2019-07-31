@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/space_90"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.laka.live.ui.widget.ScrollRecyclerView
+            android:id="@+id/category"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_85"
+            android:background="@color/white" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_5"
+            android:background="@color/colorF5F5F5" />
+
+    </LinearLayout>
+
+    <com.laka.live.ui.widget.MoreBtnView
+        android:id="@+id/more"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/space_85"
+        android:layout_alignParentRight="true" />
+
+</RelativeLayout>

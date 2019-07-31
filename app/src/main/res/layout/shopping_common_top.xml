@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <com.laka.live.shopping.widget.MaterialRippleLayout
+            android:layout_width="@dimen/space_52"
+            android:layout_height="@dimen/space_44"
+            android:layout_gravity="left"
+            app:mrl_rippleAlpha="0.1"
+            app:mrl_rippleColor="@color/lgray"
+            app:mrl_rippleHover="true"
+            app:mrl_rippleOverlay="true">
+
+            <com.laka.live.shopping.framework.ui.TitleBarActionItem
+                android:id="@+id/shopping_btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/space_4" />
+        </com.laka.live.shopping.widget.MaterialRippleLayout>
+
+        <com.laka.live.shopping.widget.MaterialRippleLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/space_44"
+            android:layout_gravity="center"
+            app:mrl_rippleAlpha="0.1"
+            app:mrl_rippleColor="@color/lgray"
+            app:mrl_rippleHover="true"
+            app:mrl_rippleOverlay="true">
+
+            <TextView
+                android:id="@+id/shopping_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/space_20"
+                android:layout_marginRight="@dimen/space_20"
+                android:drawablePadding="@dimen/space_5"
+                android:drawableRight="@drawable/shopping_category_down"
+                android:gravity="center"
+                android:maxEms="6"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/title_text_color"
+                android:textSize="@dimen/space_18" />
+        </com.laka.live.shopping.widget.MaterialRippleLayout>
+
+        <com.laka.live.shopping.widget.MaterialRippleLayout
+            android:layout_width="@dimen/space_52"
+            android:layout_height="@dimen/space_44"
+            android:layout_gravity="right"
+            app:mrl_rippleAlpha="0.1"
+            app:mrl_rippleColor="@color/lgray"
+            app:mrl_rippleHover="true"
+            app:mrl_rippleOverlay="true">
+
+            <com.laka.live.shopping.framework.ui.TitleBarActionItem
+                android:id="@+id/shopping_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/space_4" />
+        </com.laka.live.shopping.widget.MaterialRippleLayout>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/shopping_goods_comment_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/shopping_goods_comment_item_user_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            app:actualImageScaleType="centerCrop"
+            app:failureImage="@drawable/blank_icon_avatar"
+            app:placeholderImage="@drawable/blank_icon_avatar"
+            app:roundAsCircle="true" />
+
+        <TextView
+            android:id="@+id/shopping_goods_comment_item_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/shopping_goods_comment_item_user_icon"
+            android:text="@string/shopping_product_anony"
+            android:textColor="#A6A6A6"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/shopping_goods_comment_item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="2016-05-10"
+            android:textColor="#A6A6A6"
+            android:textSize="12dp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/shopping_goods_comment_item_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="3"
+        android:text="hello,world"
+        android:textColor="#666666"
+        android:textSize="14dp" />
+
+    <LinearLayout
+        android:id="@+id/shopping_goods_comment_item_image_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/shopping_goods_comment_item_image_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:actualImageScaleType="centerCrop"
+            app:backgroundImage="@color/llgray"
+            app:viewAspectRatio="1.0" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/shopping_goods_comment_item_image_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            app:actualImageScaleType="centerCrop"
+            app:backgroundImage="@color/llgray"
+            app:viewAspectRatio="1.0" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/shopping_goods_comment_item_image_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            app:actualImageScaleType="centerCrop"
+            app:backgroundImage="@color/llgray"
+            app:viewAspectRatio="1.0" />
+
+    </LinearLayout>
+
+    <com.laka.live.shopping.widget.RatingBar
+        android:id="@+id/shopping_goods_comment_item_ratting_self"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="15dp"
+        app:starSize="12dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:layout_marginTop="15dp"
+        android:background="@color/divider_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="查看完整报告"
+            android:textColor="#666666"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/shopping_goods_comment_item_comment_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/community_comment_icon"
+            android:drawablePadding="3dp"
+            android:text="80"
+            android:textColor="#A6A6A6"
+            android:textSize="11dp" />
+
+        <TextView
+            android:id="@+id/shopping_goods_comment_item_view_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/shopping_goods_comment_item_comment_num"
+            android:drawableLeft="@drawable/community_focus_icon"
+            android:drawablePadding="3dp"
+            android:text="1000"
+            android:textColor="#A6A6A6"
+            android:textSize="11dp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/divider_color" />
+
+</LinearLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    style="@style/ActivityBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.laka.live.ui.widget.HeadView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:headText="@string/private_letter"
+        custom:showDivider="false"
+        custom:tipSize="15dp"
+        custom:tipText="@string/ignore_unread" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_below="@id/header"
+        style="@style/horizontal_divider"
+        android:background="@color/colorC8C8C8"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/rl_unfollow"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/user_info_item_height"
+        android:background="@drawable/list_item_selector"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/user_face"
+            android:layout_width="@dimen/user_info_item_face_height"
+            android:layout_height="@dimen/user_info_item_face_height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:src="@drawable/index_icon_follow" />
+
+        <TextView
+            android:id="@+id/nickName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/user_face"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/stranger_msg"
+            android:textColor="@color/color2E2E2E"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/iv_red"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/index_icon_red" />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/horizontal_divider"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone" />
+
+    <!--<View  android:layout_height="14dp" android:layout_width="match_parent"
+        />-->
+
+
+    <ListView
+        android:id="@+id/list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/divider"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent" />
+
+
+    <FrameLayout
+        android:id="@+id/view_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/divider">
+
+        <TextView
+            android:id="@+id/tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="20dp"
+            android:drawableTop="@drawable/public_pic_empty"
+            android:gravity="center_horizontal"
+            android:text="@string/no_message"
+            android:textColor="@color/color4D4A58"
+            android:textSize="15dp" />
+
+    </FrameLayout>
+</RelativeLayout>

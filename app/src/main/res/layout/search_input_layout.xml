@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/space_48"
+              android:gravity="center"
+              android:paddingBottom="@dimen/space_12"
+              android:paddingTop="@dimen/space_12">
+
+    <com.laka.live.shopping.widget.AlphaImageView
+        android:id="@+id/search_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/space_14"
+        android:paddingRight="@dimen/space_14"
+        android:src="@drawable/title_back_gray"/>
+
+    <EditText
+        android:id="@+id/search_content"
+        android:layout_width="@dimen/space_0"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@null"
+        android:hint="@string/search_hint"
+        android:imeOptions="actionSearch"
+        android:singleLine="true"
+        android:textSize="@dimen/space_14"/>
+
+    <com.laka.live.shopping.widget.AlphaImageView
+        android:id="@+id/search_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/account_login_edit_clear_button"
+        android:visibility="gone"/>
+
+    <com.laka.live.shopping.widget.AlphaImageView
+        android:id="@+id/search_ico"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/space_14"
+        android:paddingRight="@dimen/space_14"
+        android:src="@drawable/search_ico"/>
+</LinearLayout>

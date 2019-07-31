@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chat_message_layout"
+    android:background="@color/colorF5F5F5"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+
+        <ImageView
+            android:src="@drawable/mall_icon_commodity"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            />
+
+        <TextView
+            android:text="全部商品"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:textColor="@color/color333333"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_good_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:textColor="@color/colorFF950B"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_car"
+            android:layout_width="35dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:src="@drawable/nav_icon_shop"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"/>
+
+            <Button
+                android:id="@+id/btn_car_amount"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="7dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/oval_f43531"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="11dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.laka.live.ui.widget.PageListLayout
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_top"/>
+</RelativeLayout>

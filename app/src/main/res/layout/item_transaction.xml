@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/head_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/divider1"
+            style="@style/horizontal_divider"
+            android:background="@color/colorE5E5E5" />
+
+        <TextView
+            android:id="@+id/head_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_30"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/space_15"
+            android:text="2016年6月"
+            android:textColor="@color/color848484"
+            android:textSize="@dimen/space_14" />
+
+        <View
+            android:id="@+id/divider2"
+            style="@style/horizontal_divider"
+            android:background="@color/colorE5E5E5" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_item_selector">
+
+        <TextView
+            android:id="@+id/operation_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_15"
+            android:layout_marginTop="@dimen/space_15"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color333333"
+            android:textSize="@dimen/space_15" />
+
+        <TextView
+            android:id="@+id/time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/operation_tv"
+            android:layout_marginBottom="@dimen/space_15"
+            android:layout_marginLeft="@dimen/space_15"
+            android:layout_marginTop="@dimen/space_10"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color848484"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/trans_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/space_15"
+            android:layout_marginTop="@dimen/space_15"
+            android:drawablePadding="@dimen/space_12"
+            android:textSize="@dimen/space_15" />
+
+        <TextView
+            android:id="@+id/balance_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/trans_tv"
+            android:layout_marginBottom="@dimen/space_15"
+            android:layout_marginRight="@dimen/space_15"
+            android:layout_marginTop="@dimen/space_10"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color848484"
+            android:textSize="@dimen/space_12" />
+
+        <View
+            style="@style/horizontal_divider"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/space_15"
+            android:background="@color/colorE5E5E5" />
+    </RelativeLayout>
+
+</LinearLayout>

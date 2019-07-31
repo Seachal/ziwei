@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px400"
+        android:src="@mipmap/trailer_icon_success" />
+
+    <TextView
+        android:id="@+id/tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px40"
+        android:text="预告发布成功"
+        android:textColor="@color/color777777" />
+
+    <com.laka.live.ui.widget.SelectorButton
+        android:id="@+id/play"
+        app:radius="@dimen/space_30"
+        app:color="@color/color333333"
+        app:stroke="true"
+        app:onlyStrokeColor="true"
+        app:press_color="@color/color777777"
+        app:press_text_color="@color/color777777"
+        android:text="观看直播"
+        android:visibility="gone"
+        android:layout_width="@dimen/px350"
+        android:textColor="@color/color333333"
+        android:layout_height="@dimen/px100"
+        android:layout_marginTop="@dimen/px100"/>
+
+
+    <com.laka.live.ui.widget.SelectorButton
+        android:id="@+id/share"
+        app:radius="@dimen/space_30"
+        app:color="@color/color333333"
+        app:stroke="true"
+        app:onlyStrokeColor="true"
+        app:press_color="@color/color777777"
+        app:press_text_color="@color/color777777"
+        android:text="通知大家查看预告"
+        android:layout_width="@dimen/px350"
+        android:textColor="@color/color333333"
+        android:layout_height="@dimen/px100"
+        android:layout_marginTop="@dimen/px40"/>
+
+    <com.laka.live.ui.widget.SelectorButton
+        android:id="@+id/commit"
+        app:radius="@dimen/space_30"
+        app:color="@color/colorFCCD05"
+        android:text="查看发布的课堂"
+        android:layout_width="@dimen/px350"
+        android:textColor="@color/color333333"
+        android:layout_marginTop="@dimen/px40"
+        android:layout_height="@dimen/px100"/>
+
+</LinearLayout>

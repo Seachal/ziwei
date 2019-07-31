@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/search_history_item_height"
+    android:background="@drawable/list_item_selector">
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/clear_search_history"
+        android:textColor="@color/colorEC5B4F"
+        android:textSize="14dp" />
+
+    <View
+        android:layout_gravity="bottom"
+        style="@style/horizontal_divider" />
+</FrameLayout>

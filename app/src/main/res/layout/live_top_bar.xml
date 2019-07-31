@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/live_bg_upper"
+    android:paddingRight="8dp"
+    android:paddingTop="8dp">
+
+    <LinearLayout
+        android:id="@+id/ll_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_time_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rl_info_zhubo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_51px_transparent15"
+                android:paddingBottom="9dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="5dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_point"
+                    android:layout_width="4dp"
+                    android:layout_height="4dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/oval_red" />
+
+                <TextView
+                    android:id="@+id/tv_timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/iv_point"
+                    android:text="00:00:00"
+                    android:textColor="@color/white"
+                    android:textSize="9dp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_info_audience"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_51px_transparent15"
+                android:paddingLeft="9dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="7.5dp"
+                android:paddingTop="7.5dp"><!-- 16dp 5dp-->
+
+
+                <com.laka.live.ui.widget.MarkSimpleDraweeView
+                    android:id="@+id/iv_head_zhubo"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="3dp"
+                    app:placeholderImage="@drawable/blank_icon_avatar"
+                    app:roundAsCircle="true"
+                    app:roundingBorderColor="@color/white"
+                    app:roundingBorderWidth="1dp" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv_head_zhubo"
+                    android:layout_marginTop="1.5dp">
+
+                    <TextView
+                        android:id="@+id/tv_zhibo_live"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:ellipsize="end"
+                        android:maxEms="6"
+                        android:shadowColor="@color/black50"
+                        android:shadowDx="0"
+                        android:shadowDy="1"
+                        android:shadowRadius="1"
+                        android:singleLine="true"
+                        android:text="@string/zhibo_live"
+                        android:textColor="@color/white"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:layout_below="@+id/tv_zhibo_live"
+                        android:id="@+id/tv_lakano"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ziwei_id"
+                        android:textColor="@color/white"
+                        android:textSize="11dp" />
+                    <!--     android:shadowColor="@color/black50"
+                        android:shadowDx="0"
+                        android:shadowDy="1"
+                        android:shadowRadius="1"-->
+                </RelativeLayout>
+
+
+                <Button
+                    android:id="@+id/btn_follow"
+                    android:layout_width="43dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="4dp"
+                    android:layout_toRightOf="@+id/rl_text"
+                    android:background="@drawable/live_icon_follow"
+                    android:text="@string/follow"
+                    android:textColor="@color/white"
+                    android:textSize="12dp"
+                    android:visibility="gone" /><!-- live_btn_follow_selector-->
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcv_head"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="6dp"
+            android:layout_toLeftOf="@+id/btn_close"
+            android:layout_toRightOf="@id/rl_time_info"
+            android:layout_weight="1"
+            android:scrollbars="none"
+            android:visibility="gone"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_weight="1"/>
+        <com.laka.live.ui.widget.SelectorImage
+            android:id="@+id/close_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="2dp"
+            app:default_image="@drawable/live_btn_close"
+            app:press_image="@drawable/live_btn_close_press"
+            />
+    </LinearLayout>
+
+    <!-- 时长和观众 -->
+    <LinearLayout
+        android:id="@+id/ll_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_info"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/rl_time"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginLeft="13dp"
+            android:background="@drawable/round_51px_transparent15"
+            android:paddingBottom="5dp"
+            android:paddingLeft="9dp"
+            android:paddingRight="16dp"
+            android:paddingTop="5dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_audience_cnt_now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="11dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="人"
+                android:textColor="@color/white"
+                android:textSize="11dp"
+                android:id="@+id/tv_time_tips"/><!--时长 -->
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="18px"
+                android:background="@color/white"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"/>
+
+            <TextView
+                android:id="@+id/my_current"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textColor="@color/white"
+                android:textSize="11dp"
+                 />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:textColor="@color/white"
+                android:textSize="11dp"
+                android:id="@+id/tv_time_divide"/>
+
+            <TextView
+                android:id="@+id/my_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="00:00"
+                android:textColor="@color/white"
+                android:textSize="11dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/rl_audience"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/round_51px_transparent15"
+            android:paddingBottom="5dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="5dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="观众"
+                android:textColor="@color/white"
+                android:textSize="11dp"
+                />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="18px"
+                android:background="@color/white"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_info"
+        android:layout_marginTop="8dp"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rl_kazuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-10dp"
+            android:background="@drawable/round_51px_transparent15"
+            android:paddingBottom="5dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="6dp"
+            android:paddingTop="5dp">
+
+
+            <TextView
+                android:id="@+id/tv_laka"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:shadowColor="@color/black50"
+                android:shadowDx="0"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:text="主播收益"
+                android:textColor="@color/colorFF9290"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/tv_kazuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="6dp"
+                android:layout_toRightOf="@+id/tv_laka"
+                android:shadowColor="@color/black50"
+                android:shadowDx="0"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="13dp" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="6dp"
+                android:layout_toRightOf="@+id/tv_kazuan"
+                android:src="@drawable/live_btn_enter" />
+        </RelativeLayout>
+
+
+
+        <Button
+            android:id="@+id/btn_forbid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="禁播"
+            android:textColor="@color/white"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

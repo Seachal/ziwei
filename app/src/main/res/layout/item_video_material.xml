@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mcxtzhang.swipemenulib.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe_video_material"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    app:ios="true"
+    app:leftSwipe="true"
+    app:swipeEnable="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_video_material"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_110"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/space_12"
+        android:paddingLeft="@dimen/space_12"
+        android:paddingRight="@dimen/space_12"
+        android:paddingTop="@dimen/space_12">
+
+        <ImageView
+            android:id="@+id/iv_video_material_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/space_12"
+            android:paddingRight="@dimen/space_12"
+            android:paddingTop="@dimen/space_12"
+            android:src="@drawable/checkbox_yellow"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/iv_video_material_cover"
+            android:layout_width="170dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            app:actualImageScaleType="centerCrop"
+            app:failureImage="@drawable/blank_icon_bigimages"
+            app:failureImageScaleType="centerCrop"
+            app:layout_constraintDimensionRatio="w,2:1"
+            app:layout_constraintLeft_toRightOf="@id/iv_video_material_check"
+            app:placeholderImage="@drawable/blank_icon_bigimages"
+            app:placeholderImageScaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/tv_video_material_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_10"
+            android:layout_marginTop="@dimen/space_4"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text=""
+            android:textColor="@color/color_333333"
+            app:layout_constraintLeft_toRightOf="@id/iv_video_material_cover"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_video_material_cover" />
+
+        <TextView
+            android:id="@+id/tv_video_material_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_4"
+            android:text="00:00:00"
+            android:textColor="@color/color848484"
+            app:layout_constraintBottom_toBottomOf="@id/iv_video_material_cover"
+            app:layout_constraintLeft_toLeftOf="@id/tv_video_material_title" />
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_material_delete"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:background="#ff4a57"
+        android:gravity="center"
+        android:text="删除"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+</com.mcxtzhang.swipemenulib.SwipeMenuLayout>

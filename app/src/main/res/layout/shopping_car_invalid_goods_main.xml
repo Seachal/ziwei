@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_shopping_car_invalid"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/space_15"
+    android:background="@drawable/white_bg_selector">
+
+    <TextView
+        android:id="@+id/invalid_goods_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:drawableRight="@drawable/public_icon_arrow2"
+        android:padding="@dimen/space_15"
+        android:textColor="@color/color848484" />
+
+</LinearLayout>

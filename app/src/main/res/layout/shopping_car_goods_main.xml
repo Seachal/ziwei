@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cart="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_shopping_car_goods"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/space_5"
+        android:paddingTop="@dimen/space_5">
+
+        <RelativeLayout
+            android:layout_width="@dimen/space_91"
+            android:layout_height="@dimen/space_91"
+            android:layout_marginBottom="@dimen/space_5"
+            android:background="@color/colorE5E5E5">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/shopping_car_goods_items_img"
+                android:scaleType="centerCrop"
+                android:layout_width="@dimen/space_90"
+                android:layout_height="@dimen/space_90"
+                android:layout_centerInParent="true"
+                cart:placeholderImage="@drawable/blank_icon_bigimages"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/space_10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/frameLayout2"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/space_5"
+                android:layout_marginRight="@dimen/space_15"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/shopping_car_goods_items_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="@dimen/space_2"
+                    android:maxLines="2"
+                    android:textColor="@color/color333333"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/shopping_car_goods_items_spec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_5"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/color848484"
+                    android:textSize="12sp"
+                    android:paddingLeft="@dimen/space_3"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_5"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/shopping_car_goods_items_panic_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/product_detail_icon_welfare"
+                        android:drawablePadding="@dimen/space_10"
+                        android:gravity="center"
+                        android:textSize="12sp" />
+
+                    <com.laka.live.shopping.widget.ShoppingCountdownView
+                        android:id="@+id/shopping_car_goods_items_count_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/space_10"
+                        android:gravity="center"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/shopping_car_goods_items_panic_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/space_10"
+                        android:gravity="center"
+                        android:text="@string/shopping_car_panic_right_text"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/frameLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/space_10"
+                android:paddingLeft="@dimen/space_5"
+                android:paddingRight="@dimen/space_15"
+                android:paddingTop="@dimen/space_5">
+
+                <com.laka.live.shopping.widget.PriceView
+                    android:id="@+id/shopping_car_goods_items_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="visible"
+                    cart:CarttextColor="@color/colorFF950B"
+                    cart:bold="true"
+                    cart:decimalSize="16sp"
+                    cart:intSize="16sp"
+                    cart:moneySize="16sp"
+                    cart:strike="false" />
+
+                <LinearLayout
+                    android:id="@+id/edit_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:orientation="horizontal">
+
+                    <com.laka.live.ui.widget.SelectorImage
+                        android:id="@+id/shopping_goods_buy_panel_num_reduce"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        cart:default_image="@drawable/mall_btn_minus_n"
+                        cart:press_image="@drawable/mall_btn_minus_h" />
+
+                    <TextView
+                        android:id="@+id/shopping_goods_buy_panel_num"
+                        android:layout_width="@dimen/space_45"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/colorFF950B"
+                        android:textSize="15sp" />
+
+                    <com.laka.live.ui.widget.SelectorImage
+                        android:id="@+id/shopping_goods_buy_panel_num_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        cart:default_image="@drawable/mall_btn_plus_n"
+                        cart:press_image="@drawable/mall_btn_plus_h" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/shopping_car_goods_items_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:textColor="@color/color848484"
+                    android:textSize="14sp" />
+
+            </FrameLayout>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

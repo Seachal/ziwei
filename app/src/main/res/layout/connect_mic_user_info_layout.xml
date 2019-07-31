@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.laka.live.ui.widget.HorizontalDragLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="66dp"
+    android:orientation="horizontal">
+
+
+    <com.laka.live.account.ConnectMicUserInfoItemView
+        android:id="@+id/user_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_66"/>
+
+    <TextView
+        android:id="@+id/refuse"
+        android:layout_width="66dp"
+        android:layout_height="match_parent"
+        android:background="@color/colorFF3B30"
+        android:gravity="center"
+        android:text="@string/refuse"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+
+</com.laka.live.ui.widget.HorizontalDragLayout>

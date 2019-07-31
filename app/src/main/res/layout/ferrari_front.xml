@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/font_name"
+        layout="@layout/gift_name" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/gift_car2" />
+
+        <ImageView
+            android:id="@+id/light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/gift_car2_light" />
+
+        <ImageView
+            android:id="@+id/front_wheel"
+            android:layout_width="39.6dp"
+            android:layout_height="39.6dp"
+            android:layout_marginLeft="136.3dp"
+            android:layout_marginTop="48dp"
+            android:rotationY="60"
+            android:rotationX="-20"
+            android:src="@drawable/gift_car2_wheel" />
+
+        <ImageView
+            android:id="@+id/reae_wheel"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="31.6dp"
+            android:layout_marginLeft="208.6dp"
+            android:rotationY="72"
+            android:rotationX="-28"
+            android:src="@drawable/gift_car2_wheel" />
+
+    </FrameLayout>
+</LinearLayout>

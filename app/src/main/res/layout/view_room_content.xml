@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.laka.live.ui.widget.chatKeyboard.InputRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_room_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <!-- 礼物显示区  -->
+
+
+    <com.laka.live.ui.widget.gift.GiftShowView
+        android:id="@+id/gift_show_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="270dp"
+        android:layout_marginTop="-15dp" /><!-- android:layout_above="@+id/room_danmu"
+        android:layout_below="@+id/rl_lrc" android:layout_marginTop="-110dp" android:layout_marginBottom="280dp" 246dp android:layout_above="@+id/rl_danmaku"-->
+
+    <!-- 弹幕  android:layout_below="@+id/gift_show_view" -->
+
+
+    <com.laka.live.ui.widget.room.RoomDanmuView
+        android:id="@+id/room_danmu"
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:layout_above="@+id/rl_lv_comment"
+        android:layout_marginBottom="28dp"/>
+
+    <!-- 触摸层 -->
+    <RelativeLayout
+        android:id="@+id/rl_touch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--  <ProgressBar
+         android:id="@+id/loading"
+         style="android:Widget.ProgressBar.Large"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_centerInParent="true" />
+            <include
+        android:id="@+id/loading"
+        layout="@layout/laka_loading"/>-->
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/hot_activity"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="50dp"
+        android:background="@color/color33C57F"
+        android:visibility="gone"/>
+
+    <!-- 水波纹动画 -->
+    <com.laka.live.ui.widget.room.ScreenLoadingView
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <!-- 圆形动画 -->
+    <com.laka.live.ui.widget.LakaLoading
+        android:id="@+id/circle_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <!-- 土豪进来了 -->
+    <!-- <include
+
+         layout="@layout/item_live_comment"
+         android:layout_width="278dp"
+         android:layout_height="wrap_content"
+         android:visibility="visible"
+        />-->
+    <RelativeLayout
+        android:id="@+id/rl_tuhao_come"
+        android:layout_width="278dp"
+        android:layout_height="31dp"
+        android:layout_above="@+id/rl_lv_comment"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <RelativeLayout
+            android:layout_marginTop="9dp"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:background="@drawable/live_icon_blackyellow">
+        <RelativeLayout
+            android:id="@+id/ll_level_tu_hao"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/live_icon_yellow"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:id="@+id/tv_level_tu_hao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:singleLine="true"
+                android:text="10"
+                android:textColor="@color/color9F6E04"
+                android:textSize="16dp"
+                 /><!-- android:textStyle="bold|italic" -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tv_level_tu_hao"
+                android:text="@string/level"
+                android:textColor="@color/color9F6E04"
+                android:textSize="9dp" />
+
+
+        </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_tuhao_content"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/ll_level_tu_hao"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white"
+                android:textSize="13dp"
+                /><!--com.laka.live.ui.widget.Click     android:lineSpacingExtra="3dp"-->
+
+            <ImageView
+                android:id="@+id/iv_tuhao_light"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/live_bglight_tuhao"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:scaleType="fitXY"
+            android:id="@+id/iv_star1"
+            android:layout_width="12dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="3dp"
+            />
+      <!--   <ImageView
+            android:scaleType="fitXY"
+            android:layout_alignBottom="@+id/iv_star1"
+            android:layout_toRightOf="@+id/iv_star1"
+            android:id="@+id/iv_star2"
+            android:src="@drawable/live_icon_star2"
+            android:layout_width="4dp"
+            android:layout_height="4dp"
+            /> android:layout_marginLeft="-3dp" -->
+
+
+    </RelativeLayout>
+
+    <!--  -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="172dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/live_bg_lower" />
+
+
+    <!-- 评论 -->
+    <RelativeLayout
+        android:id="@+id/rl_lv_comment"
+        android:layout_width="278dp"
+        android:layout_height="120dp"
+        android:layout_above="@+id/rl_comment"
+        android:layout_toLeftOf="@+id/view_live_small"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="15dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_comment_touch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </RelativeLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/lv_comment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:animateLayoutChanges="false"
+            android:scrollbars="none" />
+    </RelativeLayout>
+
+
+    <!-- 赞显示     <me.yifeiyuan.library.PeriscopeLayout
+        android:id="@+id/periscope"
+        android:layout_width="150dp"
+        android:layout_height="300dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="40dp" />-->
+
+    <com.laka.live.ui.widget.room.DivergeView
+        android:id="@+id/divergeView"
+        android:layout_width="130dp"
+        android:layout_height="300dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="-23dp" />
+
+    <com.laka.live.ui.room.LiveSmallView
+        android:id="@+id/view_live_small"
+        android:layout_width="110dp"
+        android:layout_height="193dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="60dp"
+        android:visibility="gone"/>
+    <!--观众底部栏  -->
+    <LinearLayout
+        android:id="@+id/ll_bottombar_audience"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_margin="15dp"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btn_goods_audience"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/live_btn_bag_selector"
+            android:text="0"
+            android:textColor="@color/colorF5F5F5"
+            android:textSize="13dp"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <FrameLayout android:visibility="gone"
+            android:id="@+id/fl_connect_audience"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_connect_audience"
+                android:layout_width="@dimen/room_bottom_icon_height"
+                android:layout_height="@dimen/room_bottom_icon_height"
+                android:background="@drawable/live_btn_link_selector" />
+
+            <ImageView
+                android:id="@+id/iv_connect_red_poit_audience"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:src="@drawable/red_point"
+                android:visibility="gone" />
+        </FrameLayout>
+
+
+        <Button
+            android:id="@+id/btn_orientation_audience"
+            android:layout_width="@dimen/room_bottom_icon_height"
+            android:layout_height="@dimen/room_bottom_icon_height"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/live_btn_orientation_selector"
+             />
+
+        <Button
+            android:id="@+id/btn_share_audience"
+            android:layout_width="@dimen/room_bottom_icon_height"
+            android:layout_height="@dimen/room_bottom_icon_height"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/live_btn_share_selector" />
+
+        <Button
+            android:id="@+id/btn_comment_audience"
+            android:layout_width="@dimen/room_bottom_icon_height"
+            android:layout_height="@dimen/room_bottom_icon_height"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/live_btn_comment_selector" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_letter"
+                android:layout_width="@dimen/room_bottom_icon_height"
+                android:layout_height="@dimen/room_bottom_icon_height"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/live_btn_letter_selector" />
+
+            <ImageView
+                android:id="@+id/msg_red_poit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:src="@drawable/red_point"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_formula"
+                android:layout_marginLeft="10dp"
+                android:layout_width="@dimen/room_bottom_icon_height"
+                android:layout_height="@dimen/room_bottom_icon_height"
+                android:background="@drawable/live_btn_formula_selector" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_gift_audience"
+            android:layout_width="@dimen/room_bottom_icon_height"
+            android:layout_height="@dimen/room_bottom_icon_height"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/live_btn_gift_selector" />
+        </FrameLayout>
+    </LinearLayout>
+    <!--主播底部栏 -->
+    <LinearLayout
+        android:id="@+id/ll_bottombar_zhubo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:gravity="center_vertical"
+        android:layout_margin="15dp">
+
+        <Button
+            android:id="@+id/btn_goods_zhubo"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/live_btn_bag_selector"
+            android:text="0"
+            android:textColor="@color/colorF5F5F5"
+            android:textSize="13dp"
+           />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <FrameLayout
+            android:id="@+id/fl_connect_zhubo"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_connect_zhubo"
+                android:layout_width="@dimen/room_bottom_icon_height"
+                android:layout_height="@dimen/room_bottom_icon_height"
+                android:background="@drawable/live_btn_link_selector" />
+
+            <ImageView
+                android:id="@+id/iv_connect_red_poit_zhubo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:src="@drawable/red_point"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/btn_orientation"
+            android:layout_width="@dimen/room_bottom_icon_height"
+            android:layout_height="@dimen/room_bottom_icon_height"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/live_btn_orientation_selector" />
+
+        <Button
+            android:id="@+id/btn_share"
+            android:layout_width="@dimen/room_bottom_icon_height"
+            android:layout_height="@dimen/room_bottom_icon_height"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/live_btn_share_selector" />
+
+        <Button
+            android:id="@+id/btn_comment"
+            android:layout_width="@dimen/room_bottom_icon_height"
+            android:layout_height="@dimen/room_bottom_icon_height"
+            android:background="@drawable/live_btn_comment_selector"
+            android:layout_marginLeft="10dp"/>
+
+        <FrameLayout
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_letter_zhubo"
+                android:layout_width="@dimen/room_bottom_icon_height"
+                android:layout_height="@dimen/room_bottom_icon_height"
+                android:background="@drawable/live_btn_letter_selector" />
+
+            <ImageView
+                android:id="@+id/msg_red_poit_zhubo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:src="@drawable/red_point"
+                android:visibility="gone" />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_formula_zhubo"
+                android:layout_marginLeft="10dp"
+                android:layout_width="@dimen/room_bottom_icon_height"
+                android:layout_height="@dimen/room_bottom_icon_height"
+                android:background="@drawable/live_btn_formula_selector" />
+
+        </FrameLayout>
+
+
+        <Button
+            android:id="@+id/btn_camera"
+            android:layout_width="@dimen/room_bottom_icon_height"
+            android:layout_height="@dimen/room_bottom_icon_height"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/live_btn_camera_selector"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_mic"
+            android:layout_width="@dimen/room_bottom_icon_height"
+            android:layout_height="@dimen/room_bottom_icon_height"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/live_btn_mic_selector"
+            android:visibility="gone" />
+
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btn_bgm"
+            android:layout_width="@dimen/room_bottom_icon_height"
+            android:layout_height="@dimen/room_bottom_icon_height"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/live_btn_music_selector" />
+
+        <Button
+            android:id="@+id/btn_more"
+            android:layout_width="@dimen/room_bottom_icon_height"
+            android:layout_height="@dimen/room_bottom_icon_height"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/live_btn_more_selector" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/rl_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white95"
+        android:orientation="vertical"
+        android:visibility="invisible"><!--  android:visibility="gone"-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <ImageView
+                android:id="@+id/iv_line_left"
+                android:layout_width="1px"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="2dp"
+                android:layout_toRightOf="@+id/btn_face"
+                android:src="@color/colorE5E5E5" />
+
+            <ImageView
+                android:id="@+id/iv_line_right"
+                android:layout_width="1px"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toLeftOf="@+id/btn_send_comment"
+                android:src="@color/colorE5E5E5" />
+
+            <EditText
+                android:id="@+id/et_comment"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@+id/iv_line_right"
+                android:layout_toRightOf="@+id/iv_line_left"
+                android:background="@drawable/transparent"
+                android:hint="@string/say_something"
+                android:textColor="@color/color333333"
+                android:textColorHint="@color/colorAAAAAA"
+                android:textSize="15dp" />
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/rl_tanmu"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp">
+
+                <ImageView
+                    android:id="@+id/iv_tanmu"
+                    android:layout_width="42dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/live_bg_dan_normal" />
+
+                <Button
+                    android:id="@+id/btn_tanmu"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/live_bg_dantext"
+                    android:gravity="center"
+                    android:text="弹"
+                    android:textColor="@color/black"
+                    android:textSize="10dp" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_face"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_toRightOf="@id/rl_tanmu"
+                android:background="@drawable/selector_chat_face"
+                android:checked="false"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_10"/>
+
+            <Button
+                android:id="@+id/btn_send_comment"
+                android:layout_width="43dp"
+                android:layout_height="38dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/btn_gift"
+                android:background="@color/transparent"
+                android:text="@string/send_to"
+                android:textColor="@color/colorFFC40E"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/btn_gift"
+                android:layout_width="@dimen/room_bottom_icon_height"
+                android:layout_height="@dimen/room_bottom_icon_height"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/live_btn_gift_selector"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <com.laka.live.ui.widget.emoji.EmoticonPickerView
+            android:id="@+id/face_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+
+
+
+    <com.laka.live.ui.widget.gift.GiftGridView
+        android:id="@+id/gift_grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"  />
+
+    <com.laka.live.ui.widget.gift.GiftGridViewLand
+        android:visibility="gone"
+        android:id="@+id/gift_grid_view_land"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        />
+    <!--主播顶部栏 -->
+
+    <LinearLayout
+        android:id="@+id/ll_top_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/ll_topbar_zhubo"
+            layout="@layout/live_top_bar" />
+
+        <include
+            android:id="@+id/rl_lrc"
+            layout="@layout/layout_room_lrc" />
+
+    </LinearLayout>
+
+
+    <include layout="@layout/focus_indicator" />
+
+
+    <com.laka.live.ui.chat.ChatMessageView
+        android:id="@+id/message_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        app:mode="1" />
+
+    <!-- 购物车列表 -->
+    <com.laka.live.ui.room.GoodsPanel
+        android:id="@+id/goods_panel"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"/>
+
+    <include layout="@layout/dialog_share"
+        android:id="@+id/share_dialog"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <include layout="@layout/dialog_share"
+        android:id="@+id/share_dialog"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+</com.laka.live.ui.widget.chatKeyboard.InputRelativeLayout>

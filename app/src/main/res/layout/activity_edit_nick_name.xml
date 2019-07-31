@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:custom="http://schemas.android.com/apk/res-auto"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        style="@style/ActivityBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.laka.live.ui.widget.HeadView
+            android:id="@+id/head_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:headText="@string/nick_name"
+            custom:tipText="@string/save"/>
+
+        <View
+            style="@style/horizontal_divider"
+            android:layout_marginTop="@dimen/big_divider_height"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/my_info_item_height">
+
+            <EditText
+                android:id="@+id/edit_name"
+                style="@style/my_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/my_info_item_height"
+                android:hint="@string/edit_name_tip"
+                android:maxLength="16"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="43dp"
+                android:maxLines="1"
+                android:background="@color/white"/>
+
+            <ImageView
+                android:id="@+id/clear"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|center_vertical"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:src="@drawable/mine_icon_clear_selector"/>
+        </FrameLayout>
+
+        <View style="@style/horizontal_divider"/>
+    </LinearLayout>
+
+</merge>

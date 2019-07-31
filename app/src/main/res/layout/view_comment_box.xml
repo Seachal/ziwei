@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/blank_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/black40" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_05"
+        android:layout_above="@id/comment_rl"
+        android:background="@color/colorC8C8C8" />
+
+    <RelativeLayout
+        android:id="@+id/comment_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_154"
+        android:layout_above="@id/emoticon_picker_view"
+        android:layout_gravity="bottom"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/operate_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/space_14">
+
+            <TextView
+                android:id="@+id/cancel_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_10"
+                android:padding="@dimen/space_5"
+                android:text="@string/cancel"
+                android:textColor="@color/color777777"
+                android:textSize="@dimen/space_16" />
+
+            <TextView
+                android:id="@+id/send_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/space_10"
+                android:enabled="false"
+                android:padding="@dimen/space_5"
+                android:text="@string/publish"
+                android:textColor="@drawable/comment_send_text_selector"
+                android:textSize="@dimen/space_16" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/face_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/space_10">
+
+            <CheckBox
+                android:id="@+id/face_cb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_15"
+                android:background="@drawable/comment_btn_emoji_selector"
+                android:button="@null"
+                android:checked="false" />
+
+            <CheckBox
+                android:id="@+id/comment_cb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_15"
+                android:layout_toRightOf="@id/face_cb"
+                android:button="@null"
+                android:drawableLeft="@drawable/comment_btn_choose_selector"
+                android:drawablePadding="@dimen/space_6"
+                android:text="@string/also_comment_video"
+                android:textColor="@color/color999999"
+                android:textSize="@dimen/space_12"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/total_count_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/space_15"
+                android:text="@string/two_hundred"
+                android:textColor="@color/color999999"
+                android:textSize="@dimen/space_12" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/total_count_tv"
+                android:text="/"
+                android:textColor="@color/color999999"
+                android:textSize="@dimen/space_12" />
+
+            <TextView
+                android:id="@+id/input_count_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/space_6"
+                android:layout_toLeftOf="@id/total_count_tv"
+                android:text="@string/zero"
+                android:textColor="@color/color999999"
+                android:textSize="@dimen/space_12" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/face_rl"
+            android:layout_below="@id/operate_rl"
+            android:layout_marginTop="@dimen/space_10"
+            android:cursorVisible="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <EditText
+                android:id="@+id/comment_et"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_56"
+                android:background="@color/transparent"
+                android:gravity="top"
+                android:hint="@string/simple_say"
+                android:inputType="textMultiLine"
+                android:maxLength="200"
+                android:paddingLeft="@dimen/space_15"
+                android:paddingRight="@dimen/space_15"
+                android:textColor="@color/color333333"
+                android:textColorHint="@color/colorBBBBBB"
+                android:textSize="@dimen/space_16" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.laka.live.ui.widget.emoji.EmoticonPickerView
+        android:id="@+id/emoticon_picker_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+</LinearLayout>

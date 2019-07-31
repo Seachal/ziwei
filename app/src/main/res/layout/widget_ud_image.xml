@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/public_photo_add_selector"/>
+
+    <com.laka.live.ui.widget.WxCircleLoading
+        android:id="@+id/upLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="5dp"
+        android:visibility="gone"
+        app:circle_radius="20dp" />
+
+    <ImageView
+        android:id="@+id/UDImageDelete"
+        android:visibility="gone"
+        android:layout_width="@dimen/space_15"
+        android:layout_height="@dimen/space_15"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/release_icon_delete" />
+
+</RelativeLayout>

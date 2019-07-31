@@ -1,0 +1,347 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+apply plugin: 'com.jakewharton.butterknife'
+
+def releaseTime() {
+    return new Date().format("yyyyMMddHHmm")
+}
+
+android {
+
+    compileSdkVersion rootProject.project.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.project.ext.android.buildToolsVersion
+
+    def currentVersionCode = tryGetVersionCode();
+    def currentVersionName = tryGetVersionName(currentVersionCode)
+    def currentVersionNameHotfix = tryGetVersionNameForHotfix()
+    signingConfigs {
+        release {
+            keyAlias 'lakalaka'
+            keyPassword 'laka2016laka'
+            storePassword 'laka2016laka'
+            storeFile file('keystore/release.jks')
+
+        }
+        debug {
+            storeFile file('keystore/debug.jks')
+        }
+    }
+
+    defaultConfig {
+        applicationId rootProject.project.ext.android.applicationId
+        minSdkVersion rootProject.project.ext.android.minSdkVersion
+        targetSdkVersion rootProject.project.ext.android.targetSdkVersion
+        versionCode currentVersionCode
+        versionName currentVersionName
+        multiDexEnabled true
+
+        //极光推送
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "451b4c9e9c83fbf4f8c6952a", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+
+//        multiDexKeepProguard file('multiDexKeep.pro') // keep specific classes using proguard syntax
+//        multiDexKeepFile file('multiDexKeep.txt') // keep specific classes
+
+        /*ndk {
+            moduleName "yuv-library"          //生成的so名字
+            abiFilters "armeabi",'armeabi-v7a'
+            ,'arm64-v8a'
+        }*/
+        ndk {
+            abiFilters "armeabi", 'armeabi-v7a'
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+    }
+
+    buildTypes {
+
+
+        release {
+            signingConfig signingConfigs.release
+            // minifyEnabled false
+            //proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            // 移除无用的resource文件
+            //  shrinkResources true
+
+            versionNameSuffix ' (Release)'
+            manifestPlaceholders = [shopkeeper_app_suffix: "Release"]
+            // 外网
+//            buildConfigField("String", "SERVER_URL", "\"http://112.74.48.33:8888/\"")
+//            buildConfigField("String", "ROOM_SERVER_HOST", "\"112.74.40.211\"")
+            buildConfigField("String", "SERVER_URL", "\"http://api.ziwei.lakatv.com/\"")
+            buildConfigField("String", "SHOPPING_SERVER_URL", "\"http://api.zwshop.lakatv.com\"")
+            buildConfigField("String", "ROOM_SERVER_HOST", "\"r.lakatv.com\"")
+            buildConfigField("String", "VERSION_NAME_HOTFIX", currentVersionNameHotfix)
+            // 推流是否为测试环境？true == 测试， false == 正式。
+            buildConfigField("boolean", "ZEGO_TEST_ENV", "false")
+            buildConfigField("String", "UPLOAD_BUCKET_IMG", "\"zwlive-img\"")
+            buildConfigField("String", "UPLOAD_BUCKET_VIDEO", "\"zwlive-video\"")
+            buildConfigField("String", "TOPIC_SHARE_PREFIX", "\"http://www.lakatv.com/ziwei/wx_share/share_mobile_topic.html?\"")
+            buildConfigField("String", "MINI_VIDEO_SHARE_PREFIX", "\"http://www.lakatv.com/ziwei/wx_share/share_mobile_miniVideo.html?\"")
+            buildConfigField("String", "NEW_SHARE_PREFIX", "\"http://www.lakatv.com/ziwei/wx_share/share_mobile_temporary.html?\"")
+        }
+
+
+        beta {
+            initWith(debug)
+            versionNameSuffix ' (Beta)'
+            manifestPlaceholders = [shopkeeper_app_suffix: "Beta"]
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "SERVER_URL", "\"http://112.74.48.33:8888/\"")
+            buildConfigField("String", "SHOPPING_SERVER_URL", "\"http://api.ziwei.lakatv.com\"")
+            buildConfigField("String", "ROOM_SERVER_HOST", "\"112.74.40.211\"")
+            buildConfigField("String", "VERSION_NAME_HOTFIX", currentVersionNameHotfix)
+            buildConfigField("boolean", "ZEGO_TEST_ENV", "true")
+        }
+
+        realDebug {
+            initWith(debug)
+            buildConfigField("String", "SERVER_URL", "\"http://api.ziwei.lakatv.com/\"")
+            buildConfigField("String", "SHOPPING_SERVER_URL", "\"http://api.zwshop.lakatv.com\"")
+            buildConfigField("String", "ROOM_SERVER_HOST", "\"r.lakatv.com\"")
+            buildConfigField("String", "VERSION_NAME_HOTFIX", currentVersionNameHotfix)
+            buildConfigField("boolean", "ZEGO_TEST_ENV", "false")
+            buildConfigField("String", "UPLOAD_BUCKET_IMG", "\"zwlive-img\"")
+            buildConfigField("String", "UPLOAD_BUCKET_VIDEO", "\"zwlive-video\"")
+            versionNameSuffix ' (RealDebug)'
+            manifestPlaceholders = [shopkeeper_app_suffix: "RealDebug"]
+        }
+
+        realPreview {
+            initWith(debug)
+            buildConfigField("String", "SERVER_URL", "\"http://api.ziwei.lakatv.com:8001/\"")
+            buildConfigField("String", "SHOPPING_SERVER_URL", "\"http://api.ziwei.lakatv.com:8000\"")
+            buildConfigField("String", "ROOM_SERVER_HOST", "\"r.lakatv.com\"")
+            buildConfigField("String", "VERSION_NAME_HOTFIX", currentVersionNameHotfix)
+            buildConfigField("boolean", "ZEGO_TEST_ENV", "false")
+            buildConfigField("String", "UPLOAD_BUCKET_IMG", "\"zwlive-img\"")
+            buildConfigField("String", "UPLOAD_BUCKET_VIDEO", "\"zwlive-video\"")
+            versionNameSuffix ' (RealPreview)'
+            manifestPlaceholders = [shopkeeper_app_suffix: "RealDebug"]
+        }
+
+        debug {
+            jniDebuggable true
+//            buildConfigField("String", "SERVER_URL", "\"https://192.168.16.9:8888/\"")
+//            buildConfigField("String", "ROOM_SERVER_HOST", "\"192.168.16.42\"")
+            buildConfigField("String", "SERVER_URL", "\"http://112.74.48.33:8888/\"")
+            buildConfigField("String", "SHOPPING_SERVER_URL", "\"http://192.168.16.9:8889\"")
+            buildConfigField("String", "ROOM_SERVER_HOST", "\"112.74.40.211\"")
+            buildConfigField("String", "VERSION_NAME_HOTFIX", currentVersionNameHotfix)
+            buildConfigField("boolean", "ZEGO_TEST_ENV", "true")
+            buildConfigField("String", "UPLOAD_BUCKET_IMG", "\"zwlive-img\"")
+            buildConfigField("String", "UPLOAD_BUCKET_VIDEO", "\"zwlive-video\"")
+            buildConfigField("String", "TOPIC_SHARE_PREFIX", "\"http://www.lakatv.com/ziwei/wx_share_cs/share_mobile_topic.html?\"")
+            buildConfigField("String", "MINI_VIDEO_SHARE_PREFIX", "\"http://www.lakatv.com/ziwei/wx_share_cs/share_mobile_miniVideo.html?\"")
+            buildConfigField("String", "NEW_SHARE_PREFIX", "\"http://www.lakatv.com/ziwei/wx_share_cs/share_mobile_temporary.html?\"")
+//            buildConfigField("String", "BASE_IMG_URL", "\"zwlive-img.oss-cn-shenzhen.aliyuncs.com/\"")
+//            buildConfigField("String", "BASE_VIDEO_URL", "\"zwlive-video.oss-cn-shenzhen.aliyuncs.com/\"")
+            versionNameSuffix ' (Debug)'
+            manifestPlaceholders = [shopkeeper_app_suffix: "Debug"]
+        }
+
+    }
+
+    greendao {
+        schemaVersion 6
+        daoPackage 'laka.live.dao'
+        targetGenDir 'src/main/java-gen'
+
+    }
+
+
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/java', 'src/main/java-gen']
+//            jni.srcDirs = ['src/main/jni', 'src/main/jni/']
+            jni.srcDirs = []
+        }
+    }
+
+    splits {
+        abi {
+            enable true
+            reset()
+            include /*'armeabi' , */ 'armeabi-v7a'
+            universalApk false
+        }
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                def fileName;
+                if (buildType.name.equals("release"))
+                    fileName = "滋味Live-" + buildType.name + "-${releaseTime()}" + ".apk"
+                else
+                    fileName = "滋味Live-" + buildType.name + ".apk"
+                output.outputFile = new File(outputFile.parent, fileName)
+            }
+        }
+    }
+
+    useLibrary 'org.apache.http.legacy'
+
+}
+
+def tryGetVersionName(def versionCode) {
+    def versionFile = file('version.properties')
+    if (versionFile.canRead()) {
+        def Properties versionProps = new Properties()
+        versionProps.load(new FileInputStream(versionFile))
+        def major = versionProps['MAJOR'].toString()
+        def minor = versionProps['MINOR'].toString()
+        def maintenance = versionProps['MAINTENANCE'].toString()
+        def versionName = String.format(java.util.Locale.US, "%s.%s.%s(.%d)",
+                major, minor, maintenance, versionCode)
+        return versionName
+    } else {
+        throw new GradleException("Could not find version.properties!")
+    }
+}
+
+def tryGetVersionCode() {
+    def versionFile = file('version.properties')
+    if (versionFile.canRead()) {
+        def Properties versionProps = new Properties()
+        versionProps.load(new FileInputStream(versionFile))
+        def versionCode = versionProps['VERSION_CODE'].toInteger()
+        def runTasks = gradle.startParameter.taskNames
+        logger.error("runTasks : " + runTasks);
+        if (':app:assembleRelease' in runTasks || 'assembleRelease' in runTasks || 'aR' in runTasks) {
+            versionProps['VERSION_CODE'] = (++versionCode).toString()
+            versionProps.store(versionFile.newWriter(), null)
+        }
+        return versionCode
+    } else {
+        throw new GradleException("Could not find version.properties!")
+    }
+}
+
+def tryGetVersionNameForHotfix() {
+    def versionFile = file('version.properties')
+    if (versionFile.canRead()) {
+        def Properties versionProps = new Properties()
+        versionProps.load(new FileInputStream(versionFile))
+        def major = versionProps['MAJOR'].toString()
+        def minor = versionProps['MINOR'].toString()
+        def maintenance = versionProps['MAINTENANCE'].toString()
+
+        def versionNameHotfix = String.format(java.util.Locale.US, "\"%s.%s.%s\"",
+                major, minor, maintenance)
+        return versionNameHotfix
+    } else {
+        throw new GradleException("Could not find version.properties!")
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+
+    //系统类库
+    compile rootProject.ext.dependencies["support-v4"]
+    compile rootProject.ext.dependencies["appcompat-v7"]
+    compile rootProject.ext.dependencies["design"]
+    compile rootProject.ext.dependencies["recyclerview"]
+    compile rootProject.ext.dependencies["ConstraintLayout"]
+    compile 'com.android.support:support-annotations:23.0.2'
+
+    //数据库
+    compile 'org.greenrobot:greendao:3.1.1'
+    compile 'org.greenrobot:greendao-generator:3.1.0'
+    compile 'com.github.yuweiguocn:GreenDaoUpgradeHelper:v1.0.1'
+
+    //网络框架
+    compile 'org.xutils:xutils:3.3.34'
+    compile 'com.google.code.gson:gson:2.3.1'
+    compile 'com.mcxiaoke.volley:library:1.0.19'
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'com.squareup.okio:okio:1.7.0'
+
+    //图片加载库
+    compile files('libs/universal-image-loader-1.9.3.jar')
+    compile 'com.facebook.fresco:fresco:0.13.0'
+    compile 'com.facebook.fresco:animated-webp:0.13.0'
+    compile 'com.facebook.fresco:webpsupport:0.13.0'
+
+    //多媒体
+
+    //compile 'com.github.CarGuo:GSYVideoPlayer:v1.6.5'
+    compile 'com.google.android.exoplayer:exoplayer:2.7.1'
+    compile 'tv.danmaku.ijk.media:ijkplayer-java:0.8.4'
+    compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.4'
+    compile 'cn.jzvd:jiaozivideoplayer:6.3.1'
+
+    //compile 'fm.jiecao:jiecaovideoplayer:5.7'
+    compile project(':libyuv')
+
+    //UI库
+    compile 'com.airbnb.android:lottie:2.2.0'
+    compile 'homhomlin.lib:ptrrv-library:1.3.1'
+    compile 'in.srain.cube:ultra-ptr:1.0.11'
+    compile 'com.contrarywind:Android-PickerView:3.2.3'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.github.sd6352051.niftydialogeffects:niftydialogeffects:1.0.0@aar'
+    compile 'com.baoyz.swipemenulistview:library:1.3.0'
+    compile 'com.zcw:togglebutton-library:1.0.0'
+    compile 'com.kyleduo.switchbutton:library:1.4.0'
+
+    //    compile rootProject.ext.dependencies["FlycoTabLayout"]
+    compile rootProject.ext.dependencies["swipeMenu"]
+    compile rootProject.ext.dependencies["MagicIndicator"]
+
+    //工具类库
+    compile 'com.coolerfall:android-http-download-manager:1.6.0'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'me.shaohui.advancedluban:library:1.3.5'
+    compile rootProject.ext.dependencies["logger"]
+    compile rootProject.ext.dependencies["qrCode"]
+    compile rootProject.ext.dependencies["butterknife"]
+    compile 'com.android.support.constraint:constraint-layout:1.1.2'
+    annotationProcessor rootProject.ext.dependencies["butterknifeCompiler"]
+
+    //内存泄漏监听起
+    //    compile rootProject.ext.dependencies["leakCanaryDebug"]
+    //    compile rootProject.ext.dependencies["leakCanaryDebugFragment"]
+    //    compile rootProject.ext.dependencies["leakCanaryRelease"]
+
+    //腾讯Bugly
+    compile 'com.tencent.bugly:crashreport:latest.release'
+    compile 'com.tencent.bugly:nativecrashreport:latest.release'
+    //热修复
+    compile('com.alibaba.sdk.android.plugins:alisdk-hotfix:1.2.0') {
+        transitive false
+    }
+    //阿里云
+    compile files('libs/aliyun-oss-sdk-android-2.3.0.jar')
+    //Zego音视频
+    compile files('libs/zegoliveroom.jar')
+    compile files('libs/zegoimagefilter.jar')
+    // compile files('libs/screencapture.jar')
+    // 极光推送SDK
+    compile 'cn.jiguang.sdk:jpush:3.1.6'
+    compile 'cn.jiguang.sdk:jcore:1.2.5'
+    //友盟
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    // 图片裁剪
+    compile 'com.soundcloud.android:android-crop:0.9.10@aar'
+    compile 'com.android.support:multidex:1.0.0'
+    //在线客服
+    compile 'com.qiyukf.unicorn:unicorn:3.14.0'
+    // QQ SDK
+    compile files('libs/open_sdk_r6019_lite.jar')
+    // 腾讯信鸽推送
+    compile files('libs/wup-1.0.0-SNAPSHOT.jar')
+    // 新浪微博SDK
+    compile files('libs/weiboSDKCore_3.1.4.jar')
+}
+

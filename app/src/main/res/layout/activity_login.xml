@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SurfaceView
+        android:id="@+id/surfaceVIew"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/login_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/splash_login_bg" />
+
+    <!-- android:layout_marginRight="-100dp"
+        android:layout_marginLeft="-100dp"-->
+
+    <com.laka.live.ui.widget.SelectorImage
+        android:id="@+id/iv_close"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right"
+        android:padding="15dp"
+        app:default_image="@drawable/class_btn_delete_n"
+        app:press_image="@drawable/class_btn_delete_h" />
+
+    <LinearLayout
+        android:id="@+id/ll_login_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:id="@+id/ll_login_wechat"
+            android:layout_width="260dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="@drawable/sel_login_bg_wechat"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/space_10"
+                android:drawableStart="@drawable/login_icon_wechat_selector"
+                android:gravity="center"
+                android:text="微信登录"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+
+        <CheckBox
+            android:id="@+id/cb_expand_other_login_ways"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp"
+            android:layout_marginTop="27dp"
+            android:background="@color/transparent"
+            android:button="@color/transparent"
+            android:drawablePadding="@dimen/space_5"
+            android:drawableRight="@drawable/sel_login_btn_login_ways"
+            android:text="其它登录方式"
+            android:clickable="true"
+            android:focusable="true"
+            android:textColor="@color/color5C554E"
+            android:textSize="14dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_other_login_ways"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="19dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_login_weibo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/space_6"
+                    android:drawableTop="@drawable/login_icon_sina_selector"
+                    android:gravity="center"
+                    android:text="微博"
+                    android:textColor="@color/color5C554E"
+                    android:textSize="11dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_login_qq"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/space_6"
+                    android:drawableTop="@drawable/login_icon_qq_selector"
+                    android:gravity="center"
+                    android:text="QQ"
+                    android:textColor="@color/color5C554E"
+                    android:textSize="11dp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_login_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/space_6"
+                    android:drawableTop="@drawable/login_icon_phone_selector"
+                    android:gravity="center"
+                    android:text="手机"
+                    android:textColor="@color/color5C554E"
+                    android:textSize="11dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="28dp"
+            android:text="登录即代表你同意滋味Live服务条款"
+            android:textColor="@color/color5C554E"
+            android:textSize="12dp" />
+
+    </LinearLayout>
+
+    <!--<TextView-->
+    <!--android:id="@+id/skip"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="right"-->
+    <!--android:paddingTop="20dp"-->
+    <!--android:paddingRight="20dp"-->
+    <!--android:textSize="15dp"-->
+    <!--android:textColor="@color/color7FFFFFFF"-->
+    <!--android:text="@string/skip"/>-->
+</merge>
+

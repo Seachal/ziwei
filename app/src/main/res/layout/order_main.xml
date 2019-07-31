@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_bg"
+    android:orientation="vertical">
+
+    <com.laka.live.shopping.widget.LoadingLayout
+        android:id="@+id/order_main_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_05"
+        android:background="@color/shopping_common_line" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.laka.live.shopping.order.OrderListView
+                android:id="@+id/order_main_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="@color/transparent"
+                android:divider="@null"
+                android:listSelector="@color/transparent"
+                android:scrollbars="none" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_53"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/space_15"
+                android:paddingRight="@dimen/space_15"
+                android:layout_marginTop="@dimen/space_5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/order_message"
+                    android:textColor="@color/color333333"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/order_main_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:hint="对这次交易的说明(选填)"
+                        android:singleLine="true"
+                        android:paddingBottom="@dimen/space_10"
+                        android:paddingLeft="@dimen/space_5"
+                        android:paddingRight="@dimen/space_10"
+                        android:paddingTop="@dimen/space_10"
+                        android:textColor="@color/color333333"
+                        android:textColorHint="@color/colorD7D7D7"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:id="@+id/order_main_message_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:visibility="gone"
+                        android:clickable="false"
+                        android:paddingBottom="@dimen/space_10"
+                        android:paddingLeft="@dimen/space_5"
+                        android:paddingRight="@dimen/space_10"
+                        android:paddingTop="@dimen/space_10"
+                        android:textColor="@color/color333333"
+                        android:textColorHint="@color/colorD7D7D7"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <!-- TA币支付部分UI -->
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_5"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <View style="@style/order_common_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/space_15"
+                    android:paddingRight="@dimen/space_15">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/order_main_ta_coin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/order_detail_title_color"
+                            android:textSize="@dimen/space_15" />
+
+                        <TextView
+                            android:id="@+id/order_main_ta_coin_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/order_detail_desc_color"
+                            android:textSize="@dimen/space_12" />
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/order_main_ta_coin_ckb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/space_15"
+                        android:layout_marginTop="@dimen/space_15"
+                        android:background="@drawable/order_main_checkbox"
+                        android:button="@android:color/transparent"
+                        android:gravity="center" />
+                </LinearLayout>
+
+                <View style="@style/order_common_line" />
+            </LinearLayout>
+            <!-- TA币支付部分UI -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/space_15">
+
+                <RelativeLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_5">
+
+                    <TextView
+                        android:id="@+id/wxPay"
+                        style="@style/order_tv_options_style"
+                        android:drawableLeft="@drawable/mall_icon_wechat"
+                        android:text="@string/order_pay_wx_text" />
+
+                    <CheckBox
+                        android:id="@+id/cb_wxPay"
+                        style="@style/order_iv_options_style"
+                        android:checked="true"
+                        android:clickable="false"
+                        android:button="@drawable/checkbox_yellow" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0.5dp">
+
+                    <TextView
+                        android:id="@+id/aliPay"
+                        style="@style/order_tv_options_style"
+                        android:drawableLeft="@drawable/mall_icon_alipay"
+                        android:text="@string/order_pay_zfb_text" />
+
+                    <CheckBox
+                        android:id="@+id/cb_aliPay"
+                        android:clickable="false"
+                        style="@style/order_iv_options_style"
+                        android:button="@drawable/checkbox_yellow" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/shopping_common_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_50"
+            android:layout_marginTop="@dimen/divider_height"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center_vertical|right"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:text="实付款："
+                    android:textStyle="bold"
+                    android:layout_marginRight="@dimen/space_5"
+                    android:textColor="@color/color333333"/>
+
+                <TextView
+                    android:id="@+id/order_main_amount_payable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorFF950B"
+                    android:layout_marginRight="@dimen/space_10"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/order_main_commit"
+                android:clickable="true"
+                android:layout_width="@dimen/space_168"
+                android:layout_height="match_parent"
+                android:background="@drawable/yellow_btn_selector"
+                android:gravity="center"
+                android:text="@string/order_commit"
+                android:textStyle="bold"
+                android:textColor="@color/color333333"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

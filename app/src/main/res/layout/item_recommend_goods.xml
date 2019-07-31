@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="@dimen/space_91"
+        android:layout_height="@dimen/space_91"
+        android:background="@color/colorE5E5E5">
+
+        <ImageView
+            android:id="@+id/goodsCover"
+            android:scaleType="centerCrop"
+            android:layout_centerInParent="true"
+            android:layout_width="@dimen/space_90"
+            android:layout_height="@dimen/space_90"
+            android:src="@drawable/pic_default" />
+
+
+        <ImageView
+            android:id="@+id/deleteGoods"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/release_icon_delete"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+</LinearLayout>

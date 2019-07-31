@@ -1,0 +1,1255 @@
+<resources xmlns:xliff="http://schemas.android.com/apk/res-auto">
+    <string name="app_name">滋味Live</string>
+    <string name="exit_application_alert">再按一次退出</string>
+    <string name="network_error_tips">断网啦，点击重试~</string>
+    <string name="empty_tips">此地空空如也~</string>
+    <string name="parse_error_tips">数据解析出错</string>
+    <string name="error_code_prefix">错误码：</string>
+    <string name="error_data_tip">数据异常</string>
+    <string name="error_url">无效路径</string>
+
+    <string name="total_price">原价%1$s味豆</string>
+    <string name="discount_price">优惠价 %1$s 味豆</string>
+
+    <string name="back">返回</string>
+    <string name="share_proxy_ratio">本课程参与课程推广计划，邀请新用户购买后即可获得最高%s的奖励金收入。</string>
+
+    <!--首页 -->
+    <string name="live_page">精品课</string>
+    <string name="video_page">短视频</string>
+    <string name="activity">活动</string>
+    <string name="my_page">我的</string>
+    <string name="shopping_mall">商城</string>
+    <string name="course_page">内容</string>
+
+    <string name="chat">私信</string>
+    <string name="my_income_we_chat">我的收益</string>
+    <string name="my_get_order_info_fail_tips">获取订单信息失败,请稍后重试</string>
+    <string name="pay_wait_tips">支付中,请稍后！</string>
+    <string name="pay_cancel_tips">取消支付</string>
+    <string name="my_level">等级</string>
+    <string name="my_coin">我的钱包</string>
+
+    <string name="setting">设置中心</string>
+    <string name="face">头像</string>
+    <string name="nick_name">昵称</string>
+    <string name="nick_name_should_not_null">昵称不能为空</string>
+    <string name="sex">性别</string>
+    <string name="region">地区</string>
+    <string name="tag">标签</string>
+    <string name="sign">签名</string>
+    <string name="id">ID</string>
+    <string name="copy">复制</string>
+    <string name="auth_info">认证信息</string>
+
+    <string name="packet_contribution_list">粉丝贡献榜</string>
+    <string name="mine_laka_id_title">我的滋味LiveID</string>
+    <string name="user_laka_id_title">滋味LiveID</string>
+    <string name="user_level_tip">Lv </string>
+
+    <string name="def_address">广东省 广州市</string>
+    <string name="favor">赞</string>
+    <string name="live">直播</string>
+    <string name="live_audience_count_tip">人观看</string>
+    <string name="replay_audience_count_tip">人看过</string>
+    <string name="follow">关注</string>
+    <string name="subscribe_user">关注</string>
+    <string name="follow_user">关注主播</string>
+    <string name="follow_you">关注了你</string>
+
+    <string name="verified_normal_start_tip">认证：</string>
+    <string name="verified_start_start_tip">明星认证：</string>
+    <string name="followed">已关注</string>
+    <string name="fans">我的粉丝</string>
+    <string name="fans_only">粉丝</string>
+
+    <string name="boy">男</string>
+    <string name="girl">女</string>
+
+    <string name="apply_now">马上申请</string>
+
+    <string name="personal_data">个人资料</string>
+
+    <string name="copy_success">复制成功</string>
+
+    <string name="save">保存</string>
+    <string name="edit">编辑</string>
+
+
+    <string name="save_changing">修改</string>
+    <string name="edit_name_tip">请输入昵称</string>
+    <string name="test_live_share_tip">测试直播不能分享</string>
+    <string name="edit_nick_name_success">修改昵称成功</string>
+    <string name="edit_nick_name_fail">修改昵称失败</string>
+    <string name="gender">性别</string>
+
+    <string name="edit_gender_success">修改性别成功</string>
+    <string name="edit_gender_fail">修改性别失败</string>
+
+    <string name="setting_face">设置头像</string>
+    <string name="take_picture">拍照</string>
+    <string name="choice_from_gallery">从相册选择</string>
+    <string name="cancel">取消</string>
+    <string name="confim">确认提现</string>
+    <string name="choice_photo_fail">获取相册失败！</string>
+    <string name="take_photo_fail">拍照失败！</string>
+    <string name="choice_photo_no_exist">获取相册图片失败！</string>
+    <string name="edit_face_success">修改头像成功</string>
+    <string name="edit_face_fail">修改头像失败</string>
+    <string name="upload_video_fail">上传视频失败</string>
+    <string name="video_over_size">视频大小超过10M，请重新选择</string>
+    <string name="video_over_time">视频时长超过1分钟，请重新选择</string>
+    <string name="video_course_over_time">视频时长超过3小时，请重新选择小于3小时的视频</string>
+    <string name="video_course_over_size">视频大小超过3GB，请重新选择小于3GB的视频</string>
+    <string name="please_choose_correct_video">请选择正确的视频文件</string>
+    <string name="edit_sidn_success">修改签名成功</string>
+    <string name="edit_sidn_fail">修改签名失败</string>
+
+    <string name="select_u_tag">选择你的专属标签</string>
+
+    <string name="chnage">换一批</string>
+
+    <string name="sure_choice">确认选择</string>
+
+    <string name="loading_data">加载中...</string>
+    <string name="this_bottom_line">这里已经是底线了</string>
+
+    <string name="load_compelete">加载完成</string>
+    <string name="load_fail">加载失败</string>
+
+    <string name="has_follow">已关注</string>
+
+    <string name="close">关闭</string>
+
+    <!-- 私信相关文字开始-->
+    <string name="no_message">没人聊过？快去撩主播吧~</string>
+    <string name="private_letter">私信</string>
+    <string name="unfollows_msg">未关注人消息</string>
+    <string name="ignore_unread">忽略未读</string>
+    <string name="info">资料</string>
+    <string name="nickName">昵称</string>
+    <string name="send_msg">发私信</string>
+    <string name="stranger_msg">陌生人消息</string>
+    <string name="laka_mishu">滋味Live小秘书</string>
+    <string name="laka_guanfang">滋味Live官方</string>
+    <string name="yesterday">昨日</string>
+
+
+    <!-- 私信相关文字结束-->
+    <!-- 登录文字开始-->
+    <string name="not_login">还没登录</string>
+    <string name="login_same_here">原来同类都在这</string>
+    <string name="login_agreement">登录即代表你同意滋味Live服务条款</string>
+    <string name="login_agreement_short">滋味Live服务条款</string>
+    <string name="wechat_login">微信登录</string>
+    <string name="other_ways_login">其他方式登录</string>
+    <string name="get_code_success">获取验证码成功</string>
+    <string name="get_code_fail">获取验证码失败</string>
+    <string name="phone_null">手机号码为空</string>
+    <string name="check_code_null">验证码为空</string>
+    <string name="login_fail">登录失败</string>
+    <string name="login_success">登录成功</string>
+    <string name="time_second">秒</string>
+    <string name="login_qq_fail">请求QQ授权失败</string>
+    <string name="login_we_chat_fail">请求微信授权失败</string>
+    <string name="login_wei_bo_fail">请求微博授权失败</string>
+    <string name="login_cancel">取消授权</string>
+    <string name="login_error_invalid_phone">手机号错误,请输入正确的手机号!</string>
+    <string name="login_error_limit_login">你已被封号!</string>
+    <string name="login_error_not_install_wei_bo">请安装微博后重试!</string>
+    <!-- 登录文字结束-->
+    <!-- 公共开始-->
+    <string name="in_mobile_net_suggest_wifi_see">您当前处于非WIFI网络，可能产生流量费用，建议切换WIFI网络观看直播</string>
+    <string name="in_mobile_net_suggest_wifi_live">您当前处于非WIFI网络，可能产生流量费用，建议切换WIFI网络直播</string>
+    <string name="in_mobile_net_be_careful">您已切换至运营商网络，请注意流量消耗</string>
+    <string name="current_mobile_net_be_careful">您当前处于运营商网络，请注意流量消耗</string>
+    <string name="change_net">切换网络</string>
+    <string name="goon_use">继续使用</string>
+    <string name="goon_see">继续观看</string>
+    <string name="goon_live">继续直播</string>
+    <string name="please_install_weixin">请先到应用市场安装微信</string>
+    <string name="please_wait">请稍候</string>
+    <string name="n_laka_zuan">%1$s味豆</string>
+    <string name="experience_add_d">经验值+%1$d</string>
+    <string name="service_not_connect">服务未连接</string>
+    <string name="crazy_loading_please_wait">画面疯狂加载中，请稍候...</string>
+    <string name="weibosdk_error">微博客户端无法连接，请打开微博客户端检查</string>
+    <string name="please_set_in_system_setting">请在系统设置中设置</string>
+    <string name="push_resume_fail">直播恢复失败，退出本次直播</string>
+    <string name="live_push_network_warn">您的网络较差，观众无法正常收看啦,快去检查网络吧。</string>
+    <string name="live_push_network_not_meat">您的网络无法满足直播的最低要求,建议切换到更好的网络下进行直播。</string>
+    <string name="live_push_network_connect_error">您的网络无法满足直播要求,建议切换到更好的网络下进行直播。</string>
+    <string name="live_push_network_suggest_not_live">您的网络较差，不建议直播哦</string>
+    <string name="live_push_network_suggest_not_see">您的网络较差，无法继续观看直播</string>
+    <string name="input_msg">输入消息...</string>
+    <string name="mystery_gift">神秘礼物</string>
+    <string name="one_ge">一个</string>
+    <string name="live_goon">就是要播</string>
+    <string name="live_next">下次再播</string>
+    <string name="cant_play_try_other">暂无法观看，试试其他主播吧</string>
+    <string name="cant_live_2g">2G网络状态下无法进行直播哦</string>
+    <string name="load_zhubo_fail"> 加载主播信息失败,请稍候再试试。</string>
+    <string name="start_live_fail">开启直播失败,请稍候再试试。</string>
+    <string name="please_choose_gift">请选择礼物</string>
+    <string name="gift_readying">礼物准备中,请稍候再赠送</string>
+    <!-- 公共结束-->
+    <!-- 连麦开始-->
+    <string name="confirm_apply_connect_zhubo">确认与主播申请连麦</string>
+    <string name="confirm_apply_connect_fans">确认与粉丝申请连麦</string>
+    <string name="receive_zhubo_apply_connect">主播请求与您连麦?</string>
+    <string name="receive_fans_apply_connect">粉丝%1$s请求与您连麦?</string>
+
+    <string name="confirm_cancel_connect_zhubo">确认与主播取消连麦</string>
+    <string name="confirm_cancel_connect_fans">确认与粉丝%1$s断开连麦</string>
+    <string name="zhubo_refuse_link_mic">主播拒绝与你连麦</string>
+    <string name="fans_refuse_link_mic">粉丝拒绝与你连麦</string><!--%1$s -->
+    <string name="link_mic_tips">连麦提示</string>
+
+    <string name="link_condition_lack">连麦条件不满足</string>
+
+    <string name="link_mic_laka_zhubo">与滋味Live主播连线互动</string>
+    <string name="apply_link_mic_laka_zhubo">已申请与滋味Live主播连线</string>
+    <string name="i_want_link">我要连线</string>
+    <string name="cancel_link">取消连线</string>
+    <!-- 连麦结束-->
+    <!-- 伴奏开始-->
+    <string name="x_n">x      %1$d</string><!-- \t -->
+    <string name="no_lrc">[600:00.00]没有找到歌词哦</string>
+    <string name="effect_none">无</string>
+
+    <string name="effect_ktv">KTV</string>
+    <string name="effect_wennuan">温暖</string>
+    <string name="effect_cixing">磁性</string>
+    <string name="effect_kongling">空灵</string>
+    <string name="effect_youyuan">悠远</string>
+    <string name="effect_mihuan">3D迷幻</string>
+    <string name="effect_laochangpian">老唱片</string>
+
+
+    <string name="effect_yuan">圆润</string>
+    <string name="effect_liuxing">流行</string>
+    <string name="effect_low">低沉</string>
+    <string name="effect_high">高亢</string>
+
+    <string name="persion_voice">人声</string>
+    <string name="bgm">伴奏</string>
+    <string name="zhibo_live">直播Live</string>
+    <string name="in_silent_mode">您可能开启了静音模式，若听不到伴奏请设置系统音量</string>
+    <string name="audio_effect">音效</string>
+    <string name="audeio_effect_change">音效调节</string>
+    <string name="bgm_not_found">找不到伴奏文件，请尝试其它伴奏</string>
+    <!-- 伴奏结束-->
+    <!--房间相关文字开始 -->
+    <string name="zhibo_connecting">直播服务连接中</string>
+    <string name="follow_le_zhubo">关注了主播</string>
+    <string name="share_le_zhibo">分享了直播</string>
+    <string name="live_push_success">发直播成功</string>
+    <string name="level">级</string>
+    <string name="none_change_channel">暂没有可换的台</string>
+    <string name="zhubo_tmp_leave">主播暂时离开，请稍后...</string>
+    <string name="zhibo_end">直播已结束</string>
+    <string name="cannot_get_zhibo">无法获取直播</string>
+    <string name="dianliangle">点亮了</string>
+    <string name="end">结束</string>
+    <string name="live_tips">直播提醒</string>
+    <string name="network_unok_suggest_change">您当前网络有点问题，建议切换网络试试</string>
+    <string name="network_unok_wait_try">您的网络罢工了，稍后再试试</string>
+    <string name="textsize_max_130">字数最多130个字</string>
+    <string name="user_in_other_room">您已在其它房间</string>
+    <string name="room_not_exist">房间不存在</string>
+    <string name="user_not_in_any_room">房间不在任何房间</string>
+
+    <string name="play_video">播放</string>
+    <string name="delete_video">删除</string>
+    <string name="take_video">拍视频</string>
+    <string name="choice_video_from_gallery">从相册选择</string>
+    <string name="mic_problem_check">您的麦克风遇到了点问题，请检查设备再试</string>
+    <string name="camera_problem_check">您的摄像头遇到了点问题，请检查设备再试</string>
+    <string name="zhubo_not_here">主播不在了</string>
+    <string name="zhubo_leave">主播暂时离开</string>
+    <string name="zhubo_return">主播回来了</string>
+    <string name="live_net_not_well">直播消息：网络不佳，请切换4G或者WIFI</string>
+    <string name="i_in_laka_live">我在滋味Live直播</string>
+    <!-- <string name="share_room_default_title">心够宽，胸够大，滋味Live直播不怕不怕</string>-->
+    <string name="share_room_default_content">来滋味Live，遇见最美的生活方式</string>
+
+    <string name="unsupport_beauty">当前机型的性能无法支持美颜功能</string>
+    <string name="live_fail">网络断连,且经多次抢救无效</string>
+    <string name="live_reconnect">正在尝试重连直播</string>
+    <string name="net_not_well">网络状况不佳</string>
+    <string name="no_live_url">没有直播地址</string>
+    <string name="no_live_streamid">没有streamId</string>
+    <string name="no_live_channel">没有channelId</string>
+    <string name="enter_live_room">进入直播间</string>
+    <string name="longzhong_dengchang">隆重登场</string>
+    <string name="request_location">正在获取定位</string>
+    <string name="forbid_open_room">你涉嫌违规，已被禁止直播</string>
+    <string name="weixin">微信</string>
+    <string name="pengyouquan">朋友圈</string>
+    <string name="qq">QQ</string>
+    <string name="qzone">QQ空间</string>
+    <string name="sinaweibo">新浪微博</string>
+    <string name="write_topic_more_people">写个带话题的标题，会被更多人看到哦</string>
+    <string name="live_cover">直播封面</string>
+    <string name="add_topic_edit">#添加话题#</string>
+    <string name="please_input_topic">请选择话题</string>
+    <string name="sure">确认</string>
+    <string name="hot_topic">热门话题</string>
+    <string name="edit_course_tip">如需修改%s，请联系客服！</string>
+    <string name="upload_cover_wait">正在上传封面，请稍候</string>
+    <string name="live_server_ready_wait">直播服务准备中，请稍候再试</string>
+    <string name="upload_cover_success">上传封面成功</string>
+    <string name="upload_cover_fail">上传封面失败</string>
+    <string name="camera_filter">滤镜</string>
+    <string name="start_live">开始直播</string>
+    <string name="add_pic">添加封面</string>
+    <string name="add_topic">#添加话题</string>
+    <string name="ta_from_huoxing">TA来自火星</string>
+    <string name="lai_le">来了</string>
+    <string name="enter_room">进入了房间</string>
+    <string name="jin_lai_le">进来了</string>
+    <string name="send_to">发送</string>
+    <string name="send_hao_danmu">发送弹幕 1钻石/条</string>
+    <string name="hasno_camera_or_record_permission">没有摄像头或录音权限</string>
+    <string name="camera_permission">摄像头权限</string>
+    <string name="mic_permission">麦克风权限</string>
+    <string name="locate_permission">地理位置权限</string>
+    <string name="live_finish">直播结束</string>
+    <string name="need_recharge">当前余额不足，充值才能送礼物</string>
+    <string name="go_recharge_page">去充值</string>
+    <string name="go_recharge_page_title">充值</string>
+    <string name="link">连</string>
+    <string name="laka_coin">主播收益</string>
+    <string name="laka_no">主播ID:</string>
+    <string name="ziwei_id">滋味LiveID  |  </string>
+    <string name="kazuan">钻石:</string>
+    <string name="current_weidou">当前味豆数量</string>
+    <string name="weidou_used_to_session">味豆可用于课堂中的消费</string>
+    <string name="go_recharge">去充值 ></string>
+    <string name="report">举报</string>
+    <string name="no_interesting">不感兴趣</string>
+    <string name="live_manager">管理员</string>
+    <string name="manager_list">管理员列表</string>
+    <string name="live_manager_setting">管理</string>
+    <string name="privatechat">私聊</string>
+    <string name="sendgift">送礼物</string>
+    <string name="zengsong">赠送</string>
+    <string name="send">送</string>
+    <string name="homepage">主页</string>
+    <string name="live_title_hint">分享这一刻的心情</string>
+    <string name="live_begin_tag_tips">想不到就来个标签，有意想不到的效果</string>
+    <string name="change_tag_group">换一组</string>
+    <string name="say_something">说点什么...</string>
+    <string name="please_enter_content">请输入内容</string>
+    <string name="interface_initialization">界面初始化中</string>
+    <string name="at_login">登录中</string>
+    <string name="login_failed">登录失败</string>
+    <string name="login_outdate">登录过期，重新登录</string>
+    <string name="at_logout">登出中</string>
+    <string name="at_on_camera">打开摄像头中</string>
+    <string name="on_camera_failed">打开摄像头失败</string>
+    <string name="at_off_camera">关闭摄像头中</string>
+    <string name="off_camera_failed">关闭摄像头失败</string>
+    <string name="at_switch_front_camera">换用前置摄像头中</string>
+    <string name="switch_front_camera_failed">换用前置摄像头失败</string>
+    <string name="at_switch_back_camera">换用后置摄像头中</string>
+    <string name="switch_back_camera_failed">换用后置摄像头失败</string>
+    <string name="at_close_room">关闭房间中</string>
+    <string name="notify_network_timeout">超时异常</string>
+    <string name="notify_network_error">网络无法联通，请检查网络</string>
+    <string name="notify_no_network">网络无连接，请检查网络</string>
+    <string name="goodde">好的</string>
+    <string name="back_homepage">返回首页</string>
+    <string name="change_channal">换台</string>
+    <string name="save_video">保留视频</string>
+    <string name="save_video_success">保留视频成功</string>
+    <string name="save_video_fail">保留视频失败</string>
+    <string name="weibosdk_demo_not_support_api_hint">微博客户端不支持 SDK 分享或微博客户端未安装或微博客户端是非官方版本。</string>
+    <string name="live_room_host_exit_tip">确定退出直播吗？</string>
+    <string name="live_room_user_exit_tip">确定退出观看直播吗？</string>
+    <string name="live_room_exit_tip">退出</string>
+
+    <string name="zhibo_notice">直播消息：我们提倡绿色直播，封面和直播内容含吸烟、低俗、引诱、暴露等都将被屏蔽热门或封停账号，网警24小时在线巡查哦!</string>
+    <string name="user_pop_default_sign">主播不懂地球语</string>
+    <string name="user_pop_default_area">主播来自火星</string>
+
+    <string name="in_switch_camera">摄像头切换中，请稍候</string>
+    <string name="man_see_cnt">人看过</string>
+    <string name="share">分享</string>
+    <string name="share_to">分享到</string>
+    <string name="wenxin_tips">温馨提示</string>
+    <string name="you_forbid_live">您被禁止直播了</string>
+
+    <string name="get_photo_fail">读取照片失败，请重试</string>
+
+    <string name="receive_gift">收礼</string>
+    <string name="network_notice">网络提示</string>
+    <string name="using_mobile_network_goon">当前正在使用移动网络,是否继续?</string>
+    <string name="goon">继续</string>
+    <string name="stop">停止</string>
+    <string name="play_replay_fail">播放录像失败</string>
+    <string name="user_not_here">用户不在了</string>
+
+    <string name="reset">重置</string>
+    <!--房间相关文字结束 -->
+
+    <string name="hot">推荐</string>
+    <string name="newest">最新</string>
+    <string name="tab_living">直播</string>
+    <string name="tab_video">视频</string>
+    <string name="tab_news">资讯</string>
+    <string name="tab_topic">话题</string>
+    <string name="music_search_hint">搜索歌曲名或歌手</string>
+    <string name="search_hint">搜索视频标题、关键字</string>
+    <string name="clear_search_history">清空搜索历史</string>
+    <string name="search">搜索</string>
+    <string name="people_all_in_search">热门搜索</string>
+    <string name="people_history_in_search">搜索历史</string>
+    <string name="change">换一拨</string>
+
+    <string name="have_not_select_tag">还没选择标签</string>
+
+    <string name="highlight_replays">精彩回放</string>
+    <string name="newest_video">最新视频</string>
+    <string name="watching_replay">观看回放</string>
+    <string name="weekly_ticket_income">本周收益(个)</string>
+    <string name="month_ticket_income">本月收益</string>
+
+    <string name="can_be_withdrawal_amount">可用收益</string>
+    <string name="withdrawal_amount">提现金额</string>
+    <string name="frozen_money">冻结收益</string>
+    <string name="today_can_be_withdrawal_amount">可提现收益(元)</string>
+    <string name="today_can_be_withdrawal_amount_has_done">今日可提现金额已用完</string>
+    <string name="today_can_be_withdrawal_amount_not_enough">今日可提现金额不足</string>
+    <string name="common_problems">常见问题</string>
+    <string name="wechat_withdrawal">申请提现</string>
+    <string name="for_diamond">兑换到钱包</string>
+    <string name="first_wechat_withdrawal_bind">首次提现微信绑定</string>
+
+    <string name="my_income">我的收益</string>
+    <string name="transaction_record">交易记录</string>
+    <string name="account_balance">账户余额:</string>
+    <string name="please_choice_need_pay_way">请选择需要支付方式</string>
+    <string name="wechat">微信</string>
+    <string name="alipay">支付宝</string>
+    <string name="wechat_pay">微信支付</string>
+    <string name="alipay_pay">支付宝支付</string>
+    <string name="please_choice_need_top_up_money">请选择需要充值金额</string>
+
+    <string name="how_people">%d人</string>
+    <string name="contribution_list">贡献榜</string>
+
+    <string name="contribution">贡献</string>
+    <string name="msg_to_sb">跟TA悄悄话</string>
+
+    <string name="default_sign">这个人很神秘，什么都没有留下…</string>
+    <string name="more">更多</string>
+    <string name="shield">拉黑</string>
+    <string name="has_shield">已拉黑</string>
+    <string name="shield_success">拉黑成功</string>
+    <string name="shield_fail">拉黑失败</string>
+    <string name="cancel_shield_success">已取消拉黑</string>
+    <string name="cancel_shield_fail">取消拉黑失败</string>
+
+    <string name="report_success">举报成功</string>
+    <string name="report_fail">举报失败</string>
+
+    <string name="pay_record">充值记录</string>
+    <string name="year_month_format">%1$d年%2$d月</string>
+    <string name="withdrawal">申请提现</string>
+    <string name="withdrawal_tips">每天限额%1$s元, 每日限提现%2$d次，每月15号和30号审核,节假日延后"</string>
+    <string name="pay_laka_coins">充值 %d 个咔啦币</string>
+    <string name="money_num">￥%s</string>
+    <string name="about_us">关于我们</string>
+    <string name="back_mine">我的</string>
+    <string name="live_only_wifi">仅WIFI环境下开直播</string>
+    <string name="clear_cache">清理缓存</string>
+    <string name="msg_to_remind">消息提醒</string>
+    <string name="feedback">反馈</string>
+    <string name="help_tips">如需帮助,可联系微信bkbhousekeeper</string>
+    <string name="logout">退出登录</string>
+    <string name="clear_cache_success">成功清理缓存</string>
+    <string name="user_protocol">隐私政策</string>
+    <string name="check_update">检查更新</string>
+    <string name="advice_feedback">意见反馈</string>
+    <string name="about_laka">关于啦咔</string>
+    <string name="version_info">版本 v%s</string>
+    <string name="help_center">帮助中心</string>
+    <string name="pay_help">支付帮助</string>
+    <string name="copy_right">Copyright ©2013 - 2016 LAKATV. All Rights Reserved</string>
+    <string name="company_name">广州啦咔网络技术有限公司</string>
+    <string name="no_disturbing_in_night">免打扰</string>
+    <string name="no_disturbing_tip">晚上11点至早上9点不会收到</string>
+    <string name="my_follow_live_start_remind">关注用户直播提醒</string>
+    <string name="sb_follow_me">关注我提醒</string>
+    <string name="msg_remind">消息提醒</string>
+    <string name="upgrade">升级</string>
+    <string name="sd_card_not_find">sd卡异常</string>
+    <string name="downloading">正在下载</string>
+    <string name="check_fail">检验失败</string>
+    <string name="download_fail">下载失败</string>
+    <string name="submit">提交</string>
+    <string name="contact">联系方式</string>
+    <string name="feedback_hint">部分问题反馈，我们将通过账号[滋味Live官方问题反馈]与您联系，请留意私信哦。</string>
+    <string name="contact_hint">请输入您的微信/QQ/电话</string>
+    <string name="contact_us">联系客服</string>
+    <string name="our_telephone_number">0755-8888888</string>
+    <string name="feedback_null_tips">反馈内容不能为空</string>
+    <string name="feedback_success">反馈成功</string>
+
+    <string name="follow_success">关注成功</string>
+    <string name="follow_fail">关注失败</string>
+    <string name="cancel_follow_success">取消关注成功</string>
+    <string name="cancel_follow_fail">取消关注失败</string>
+
+    <string name="bind_wechat_first_step">第一步&#x0020;&#x0020;请绑定微信</string>
+    <string name="bind_wechat_first_step_tip">绑定的微信将为你的提现账户</string>
+
+    <string name="bind_wechat_second_step">第二步&#x0020;&#x0020;搜索并关注</string>
+    <string name="bind_wechat_second_step_tip">微信公众号: "滋味Live"</string>
+
+    <string name="bind_wechat_success">绑定微信成功</string>
+    <string name="bind_wechat_fail">绑定微信失败</string>
+    <string name="bind_success">绑定完成继续提现</string>
+    <string name="bind">立即绑定</string>
+    <string name="bind_phone">绑定手机</string>
+    <string name="phone_number">手机号</string>
+    <string name="please_input_phone_verify_code">请输入短信验证码</string>
+    <string name="get_pvc">获取验证码</string>
+    <string name="get_pvc_error">获取验证码失败</string>
+    <string name="error_phone_number_tips">请输入有效手机号码</string>
+    <string name="get_pvc_after_seconds">%ds 后重新获取</string>
+    <string name="error_phone_verify_code_tips">请输入有效验证码</string>
+    <string name="bind_phone_success">绑定手机成功</string>
+    <string name="pvc_error">很抱歉，您的验证码无效，可尝试重新获取</string>
+    <string name="bind_phone_fail">我们碰到点小麻烦，程序猿哥哥正在努力解决，请稍后再试</string>
+    <string name="pay_success_tips">支付成功</string>
+    <string name="pay_fail_tips">支付失败</string>
+    <string name="live_replay">等级</string>
+    <string name="replay">回放</string>
+    <string name="replay_count">个回放</string>
+    <string name="replay_trans_coding_tips">视频正在转码中</string>
+    <string name="replay_trans_coding">保存中</string>
+    <string name="today_tips">今天</string>
+    <string name="yesterday_tips">昨天</string>
+    <string name="live_replay_count_tips">个课堂</string>
+    <string name="count_people">%d人</string>
+    <string name="please_install_wechat">请安装微信后重试!</string>
+    <string name="send_out">送出</string>
+    <string name="receive">收到</string>
+
+    <string name="withdrawal_success">提现申请已提交~</string>
+    <string name="withdrawal_fail">提现失败</string>
+    <string name="withdrawal_cash_count">提现金额</string>
+
+    <string name="exchange_count">兑换数额</string>
+    <string name="exchange_tips">兑换数量必须为10的倍数</string>
+    <string name="exchange_too_max_tips">余额不足</string>
+    <string name="exchange_sure">确认兑换</string>
+    <string name="exchange_success">兑换成功</string>
+
+    <string name="if_prepaid_problems_tips">假如充值出现问题, 请立即联系微信bkbhousekeeper</string>
+    <string name="contact_us_tel">联系客服 0755-88888888</string>
+
+    <string name="product_not_exist">该商品不存在!</string>
+    <string name="checking">审核中</string>
+    <string name="success">成功</string>
+    <string name="fail">失败</string>
+    <string name="check_failed">审核失败</string>
+    <string name="withdrawal_str">提现%s</string>
+    <string name="exchange_not_enough">余额不足</string>
+    <string name="exchange_error">兑换错误</string>
+    <string name="delete">删除</string>
+    <string name="foot_end_tip">没有惹，快去撩新主播</string>
+    <string name="search_result_null_tip">什么都没找到去热门看看吧~</string>
+    <string name="has_no_new_version_tip">当前已经是最新版本</string>
+    <string name="home_not_live_tip">当前无直播，等你上头条</string>
+    <string name="home_not_video_tip">当前无视频，等你上头条</string>
+    <string name="home_not_news_tip">当前无资讯，等你上头条</string>
+    <string name="home_not_follow_live_tip">当前没有关注主播直播</string>
+    <string name="my_replay_null_tip">暂时没有直播，现在去录一个吧</string>
+    <string name="other_replay_null_tip">Ta还没有直播哦~</string>
+    <string name="my_follow_null_tip">没有惹，快去撩新主播~</string>
+    <string name="other_follow_null_tip">Ta好像不喜欢关注人</string>
+    <string name="my_fans_null_tip">还没有粉丝, 快去直播互动吧~</string>
+    <string name="other_fans_null_tip">Ta还没有粉丝，快去抢个沙发</string>
+    <string name="user_info_null_tip">暂时还没有信息</string>
+    <string name="rmb_num">￥ %d</string>
+    <string name="rmb">￥</string>
+
+    <string name="transo_info">交易明细</string>
+    <string name="course_income">课程收益</string>
+    <string name="goods_income">商品收益</string>
+
+    <string name="total_income">总收入</string>
+    <string name="live_income">直播收入</string>
+    <string name="video_income">视频收入</string>
+    <string name="recommend_income">推荐收入</string>
+    <string name="agent_income">代理收入</string>
+
+    <string name="buy_user">购买用户</string>
+    <string name="buy_time">购买时间</string>
+    <string name="user_pay">用户支付</string>
+    <string name="goods_recommend_user">商品推荐人</string>
+    <string name="agent_user">代理用户</string>
+    <string name="course_anchor">课程主播</string>
+    <string name="anchor_income">主播收入</string>
+
+    <string name="def_income">¥0</string>
+    <string name="income_money">¥%1$s</string>
+    <string name="income_money_type">%1$s¥%2$s</string>
+    <string name="income_add">+%1$s</string>
+    <string name="income_add_string">+%1$s</string>
+
+    <string name="course_income_detail">课程收益明细</string>
+    <string name="goods_income_detail">商品收益明细</string>
+    <string name="date">日期</string>
+    <string name="buyer">购买者</string>
+    <string name="buy_price">购买价格</string>
+    <string name="market_income">推销收入</string>
+
+    <!--管理员-->
+    <string name="hot_live_list_default_location">TA来自火星</string>
+    <string name="live_manager_list_title">管理员列表</string>
+    <string name="live_manager_cancel">取消</string>
+    <string name="live_manager_to_be_manager">设为管理员</string>
+    <string name="live_manager_add_to_be_manager">添加管理员</string>
+    <string name="live_manager_cancel_manager">取消管理</string>
+    <string name="live_manager_to_limit_comment">禁言</string>
+    <string name="live_manager_sure_limit_comment">确认禁言</string>
+    <string name="live_manager_cancel_limit_comment">取消禁言</string>
+    <string name="live_manager_has_enough_tip">咦，你房间的管理员名额已满！</string>
+    <string name="live_manager_has_enough_cancel">不设置了</string>
+    <string name="live_manager_forbidden_tip">"确认对$nickname$进行禁言处理，禁言用户在本次直播中将无法评论与发送弹幕"</string>
+    <string name="live_manager_default_nick_name">昵称不见了</string>
+    <string name="live_manager_data_error_code">数据异常</string>
+    <string name="live_manager_be_forbidden">被禁言</string>
+    <string name="live_manager_be_cancel_forbidden">被取消禁言</string>
+    <string name="live_manager_already_be_forbidden">该用户已经被禁言</string>
+    <string name="live_manager_user_not_in_room">用户不在房间</string>
+    <string name="live_manager_already_be_admin">用户已经是管理员</string>
+    <string name="live_manager_not_be_admin">用户不是管理员</string>
+    <string name="live_manager_admin_is_too_much">管理员名额已满</string>
+    <string name="live_manager_user_not_be_forbidden">用户未被禁言</string>
+    <string name="live_manager_current_user_count">当前管理员：(</string>
+    <string name="live_manager_add_admin_success">添加管理员成功</string>
+    <string name="live_manager_cancel_admin_success">取消管理员成功</string>
+    <string name="live_manager_forbidden_success">禁言成功</string>
+    <string name="live_manager_cancel_forbidden_success">取消禁言成功</string>
+    <string name="live_manager_to_be_admin_tip">被设成管理员</string>
+    <string name="live_manager_cancel_admin_tip">被取消管理员权限</string>
+    <string name="live_manager_title">管理员</string>
+
+    <!--关注功能-->
+    <string name="follow_self_error_tip">不能关注自己哦！</string>
+    <string name="follow_button_content">关注</string>
+    <string name="follow_button_is_already_follow">已关注</string>
+    <string name="follow_user_is_not_exist">该用户不存在</string>
+    <string name="follow_cancel_user_not_exist">该用户不存在</string>
+    <string name="follow_block_user">已拉黑该用户，请先取消拉黑再关注</string>
+    <string name="follow_be_block">已被对方拉黑，无法关注</string>
+    <string name="can_not_block_myself">不能拉黑自己</string>
+    <!--私聊-->
+    <string name="chat_with_self_error_tip">不能和自己私聊哦！</string>
+    <!--Fresco-->
+    <string name="fresco_image_res_head">res://drawable/</string>
+    <!--common string-->
+    <string name="yes">确定</string>
+    <!--排行榜-->
+    <string name="ranking_send_tab_title">送礼</string>
+    <string name="ranking_accept_tab_title">收礼</string>
+    <string name="ranking_fans_tab_title">粉丝</string>
+    <string name="ranking_day_tab_title">日榜</string>
+    <string name="ranking_all_tab_title">总榜</string>
+    <string name="ranking_coins">
+        <Data><![CDATA[<font color=#777777>钻石</font>]]></Data>
+    </string>
+    <string name="ranking_coins_host">
+        <Data><![CDATA[<font color=#777777>滋味Live币</font>]]></Data>
+    </string>
+    <string name="ranking_fans">
+        <Data><![CDATA[<font color=#777777>粉丝</font>]]></Data>
+    </string>
+    <!--更多话题-->
+    <string name="more_topic_title">更多话题</string>
+    <string name="topic_append_str">#</string>
+    <string name="original">原图</string>
+    <string name="amatory">恋爱</string>
+    <string name="miss_etikate">Miss Etikate</string>
+    <string name="soft_elegance_1">Soft Elegance 1</string>
+    <string name="soft_elegance_2">Soft Elegance 2</string>
+    <string name="gray">灰度</string>
+    <string name="nostalgia">怀旧</string>
+
+    <string name="thousand">%s万</string>
+    <string name="replay_count_room">%s个回放</string>
+    <string name="people_on_see">%s人在看</string>
+    <string name="people_has_see">%s人看过</string>
+
+    <string name="feature">特色</string>
+    <string name="more_topic">更多话题</string>
+
+    <!--我的-->
+    <string name="account_title">我的滋味Live</string>
+    <string name="account_other_user_title">个人主页</string>
+    <string name="replay_all_check">全选</string>
+    <string name="replay_cancel_all_check">取消</string>
+    <string name="replay_have_checked">已选#count#个</string>
+    <string name="replay_close_edit">关闭</string>
+    <string name="replay_delete_button">删除</string>
+    <string name="replay_delete_failed_tips">删除失败，请稍后重试</string>
+    <string name="replay_sure_delete_start_tip">确认删除</string>
+    <string name="replay_sure_delete_end_tip">个回放?</string>
+    <string name="replay_count_tip">人看过</string>
+    <string name="account_exit_app">退出登录</string>
+    <string name="account_exit_app_tip">确定退出登录？</string>
+    <string name="search_living">直播中</string>
+    <string name="found">发现</string>
+    <string name="newest_live">最新直播</string>
+    <string name="user_info_pull_block_tip">拉黑</string>
+    <string name="user_info_pull_block_default_name">该用户</string>
+    <string name="user_info_pull_block_tip_content">确定拉黑 “#user#” ？</string>
+    <string name="topic_format">#%s#</string>
+    <string name="user_info_living_toast_tip">你正在直播,请关闭后再进行操作！</string>
+    <string name="user_info_seeing_toast_tip">你正在观看直播,请关闭后再进行操作！</string>
+    <string name="user_info_sure_report_start_tip">确定要举报</string>
+    <string name="user_info_sure_report_live_tip">主播</string>
+    <string name="user_info_sure_report_user_tip">用户</string>
+    <string name="user_info_sure_report_end_tip">吗？</string>
+    <string name="user_info_verify_start_tips">认证：</string>
+    <string name="do_not_show_location">不显示地理位置</string>
+    <string name="user_info_user_id_start_tips">ID:</string>
+
+    <string name="sex_boy">男生</string>
+    <string name="sex_girl">女生</string>
+    <string name="sex_unknown">未知</string>
+
+    <string name="open_flash_flight">开闪光灯</string>
+    <string name="close_flash_flight">关闪光灯</string>
+    <string name="flip">翻转</string>
+    <string name="open_beauty_filter">开美颜</string>
+    <string name="close_beauty_filter">关美颜</string>
+
+    <!--更新-->
+    <string name="update_tips">更新</string>
+    <string name="check_update_fail">检查更新失败,请稍后重试!</string>
+    <string name="install_apk_fail">安装失败</string>
+    <string name="install_apk_not_exist">安装文件不存在</string>
+    <string name="install_apk_invalid_save_path">获取存储路径失败</string>
+    <!--photo-->
+    <string name="photo_save">保存到相册</string>
+    <string name="photo_saving">保存中...</string>
+    <string name="loading_failed">囧 加载失败</string>
+    <string name="loading">加载中...</string>
+    <string name="save_nothing">不保存</string>
+    <string name="save_success">保存成功</string>
+    <string name="save_failed">保存失败</string>
+
+    <string name="send_gift_format">%1$s: %2$s</string>
+
+    <string-array name="gift_content">
+        <item>送一支玫瑰</item>
+        <item>送一支冰棍</item>
+        <item>送一个香蕉</item>
+        <item>送豪华飞机啦</item>
+        <item>送一颗药</item>
+        <item>送一个爱心</item>
+        <item>送生日蛋糕咯</item>
+        <item>送一枚钻戒</item>
+        <item>送一个香吻</item>
+        <item>送一个雪糕</item>
+        <item>送一杯椰汁</item>
+        <item>送一只狗狗</item>
+        <item>送一个包包</item>
+        <item>送一大束玫瑰花</item>
+        <item>送豪华跑车咯</item>
+        <item>送一瓶香水</item>
+    </string-array>
+
+    <string name="music_empty_tip">还没有歌曲, 推荐你大家都在唱的</string>
+
+    <string name="music_search_empty_tip">无匹配结果, 推荐你大家都在唱的</string>
+
+    <string name="singer_content">歌手:&#160;&#160;%s</string>
+
+    <string name="recommend_zhubo">推荐主播</string>
+    <string name="skip">跳过</string>
+    <string name="batch_follow">一键关注</string>
+
+    <string name="can_not_find_gallery">找不到图库</string>
+
+    <string name="pull_down_to_refresh">下拉刷新</string>
+    <string name="go_to_refresh">松手刷新</string>
+    <string name="refreshing">正在刷新</string>
+    <string name="hot_rent">热门租位</string>
+
+    <string name="normal_rank_empty_tip">主播加把劲，快去撩土豪吧~</string>
+    <string name="send_rank_empty_tip">土豪你怎么还不出现~</string>
+    <string name="no_storage_permission_tip">无法写入SD卡，请去设置中打开权限</string>
+    <string name="clear">清空</string>
+    <string name="connect_mic_list">连麦列表</string>
+    <string name="online_audience">在线观众</string>
+    <string name="open_connect_mic">打开连麦</string>
+    <string name="close_connect_mic">关闭连麦</string>
+    <string name="refuse">拒绝</string>
+    <string name="invite_connect_mic">邀请连麦</string>
+    <string name="waiting_for_connect_mic">等待连麦</string>
+    <string name="confirm_connect_mic">确认连麦</string>
+    <string name="close_connect">断开连接</string>
+    <string name="click_connect_mic_waiting_state_tip">等待粉丝确认连麦！</string>
+    <string name="in_connect_mic_tip">您最多只能与1名粉丝连麦！</string>
+    <string name="audience_count"><Data><![CDATA[ 观众<font color=#F65843>%d人</font> ]]> </Data></string>
+    <string name="refuse_connect_mic_success">拒绝连麦成功！</string>
+    <string name="can_not_clear_connect_mic_tip">您当前在连麦中，不能清空连麦列表！</string>
+    <string name="connect_mic_list_empty_tip">暂无连麦列表，可邀请在线观众连麦哦~</string>
+    <string name="connectting_mic">连麦中</string>
+    <item name="key_duration" type="id" />
+    <item name="local_url" type="id" />
+    <item name="is_do_blur" type="id" />
+    <string name="someone_is_requesting_to_broadcast"><xliff:g id="value">%1$s</xliff:g>:&#160;正在请求连麦</string>
+    <string name="request_of_broadcast_has_been_allowed"><xliff:g id="value">%1$s</xliff:g>:&#160;连麦请求被通过</string>
+    <string name="request_of_broadcast_has_been_denied"><xliff:g id="value">%1$s</xliff:g>:&#160;连麦请求被拒绝</string>
+    <string name="live_quality">当前质量:&#160;<xliff:g id="value">%1$s</xliff:g></string>
+    <string name="live_quality_fps_and_bitrate">;&#160;帧率:<xliff:g id="fps">%1$.2f</xliff:g>;&#160;比特率:<xliff:g id="bitrate">%2$.2f</xliff:g>Kb/s</string>
+    <string name="full_screen">全屏播放</string>
+    <string name="exit_full_screen">退出全屏</string>
+
+    <string name="homepage_title">滋味Live</string>
+
+    <!--homepage-->
+    <string name="free_session">免费课程</string>
+    <string name="hot_news">热门资讯</string>
+    <string name="follow_news">关注动态</string>
+    <string name="my_purchase">我的购买</string>
+    <string name="living">正在直播</string>
+    <string name="pre_start">即将开始</string>
+    <string name="more_en">more</string>
+    <string name="already_living">直播已进行</string>
+    <string name="start_time">开播时间</string>
+    <string name="push_time">发布时间</string>
+    <string name="counter_down_time">倒计时</string>
+    <string name="a_set">套</string>
+    <string name="cut_off">折</string>
+    <string name="weidou">味豆</string>
+    <string name="buyer_count">已购%1$s人</string>
+    <string name="session_number">%1$s节课</string>
+    <string name="see_all">查看全部</string>
+    <string name="free">免费</string>
+    <string name="duration">时长</string>
+    <string name="time_undetermined">开播时间待定</string>
+    <string name="recommend_course">推荐课程</string>
+    <string name="publish_course">发布%1$s</string>
+
+    <!--follow_news-->
+    <string name="how_many_session">节课</string>
+    <string name="original_price">原价%1$s</string>
+
+    <!-- 一些通用词汇 -->
+    <string name="course_summary">课程简介</string>
+    <string name="course_formula">课程配方</string>
+
+
+    <!--福利社模块-->
+    <string name="shopping_price">¥%1$s</string>
+    <string name="shopping_sale_volume">销量：%1$s</string>
+
+    <string name="shopping_topic_window_default_title">限时福利</string>
+
+    <string name="shopping_category_brand">明星商品</string>
+    <string name="shopping_category_expr">关键体验指标</string>
+    <string name="shopping_get_it">呀戳中我了~</string>
+    <string name="shopping_get_it_bottom">戳中您的玩具如果上架会有通知哦</string>
+
+    <string name="shopping_category_clear">清空</string>
+    <string name="shopping_network_error_retry">网络异常,请刷新重试</string>
+
+    <string name="shopping_product_title">商品详情</string>
+    <string name="shopping_goods_comment_window_title">宝贝测评</string>
+    <string name="shopping_product_seven_day_return">7天无理由退货</string>
+    <string name="shopping_product_private_package">隐私包装</string>
+    <string name="shopping_product_true_product">正品保证</string>
+    <string name="shopping_product_detail_title">商品详情</string>
+    <string name="shopping_product_comment_title">用户评测</string>
+    <string name="shopping_product_recommended_title">相关商品</string>
+    <string name="shopping_product_no_recommend">暂无推荐</string>
+    <string name="shopping_goods_comments_more">查看更多测评</string>
+    <string name="shopping_goods_expr_average">平均满意度</string>
+    <string name="shopping_goods_invalidate_tips">亲，已下架商品不能加入购物车哦</string>
+    <string name="shopping_goods_invalidate">已下架</string>
+    <string name="shopping_goods_more_than_max_num_tip">不能超过库存</string>
+
+
+    <string name="shopping_product_anony">匿名</string>
+    <string name="shopping_product_bottom_secretary">客服</string>
+    <string name="shopping_product_bottom_collect">收藏</string>
+    <string name="shopping_product_add_shopping_cart">加入购物车</string>
+    <string name="shopping_goods_buy_now">立即购买</string>
+    <string name="shopping_product_add_shopping_car_remind_text">请选择一项商品</string>
+    <string name="shopping_product_share_content">我觉得这个不错，推荐给你</string>
+    <string name="shopping_top_list_detail_share_content">最走心情趣榜单-她他社出品 @她他社</string>
+
+    <string name="shopping_car_title">购物车</string>
+    <string name="shopping_car_panic_right_text">后结束</string>
+    <string name="shopping_car_goods_spec_text">规格：</string>
+    <string name="shopping_car_goods_count_text">x</string>
+    <string name="shopping_car_goods_cost_all">合计：</string>
+    <string name="shopping_car_goods_operation_account">结算</string>
+    <string name="shopping_car_goods_operation_delete">删除</string>
+    <string name="shopping_car_error_type_too_much">一次性加入购物车数量过多</string>
+    <string name="shopping_car_error_type_less">商品不足</string>
+    <string name="shopping_car_error_type_no_have">没有此商品</string>
+    <string name="shopping_car_error_type_fail">加入购物车失败</string>
+    <string name="shopping_car_add_success">添加购物车成功</string>
+    <string name="shopping_car_no_goods_tip">你的购物车空空如也~</string>
+    <string name="shopping_car_go_to_see">去逛逛</string>
+    <string name="shopping_car_invalid_title">失效商品</string>
+    <string name="shopping_car_invalid_tip">该商品已失效，请重新采购</string>
+
+    <string name="shopping_common_more">更多</string>
+    <string name="shopping_change">换一换</string>
+    <string name="shopping_what">这是啥</string>
+    <string name="shopping_like">戳中惹</string>
+    <string name="shopping_unlike">不感冒</string>
+    <string name="shopping_search_hint">搜你想要的</string>
+    <string name="shopping_categories_title">全部分类</string>
+    <string name="shopping_category_top_list_title">榜单列表</string>
+    <string name="shopping_top_list_detail_more">更多榜单 &gt;</string>
+
+    <string name="order_main">确认订单</string>
+    <string name="order_main_ta_coin">使用TA币抵现(#TA#TA币可抵#price#元)</string>
+    <string name="order_main_ta_coin_desc">最多抵扣总价#percentage#</string>
+    <string name="order_desc_ta_coin_desc">TA币抵扣</string>
+    <string name="order_logistics">查看物流</string>
+    <string name="order_logistics_follow">物流跟踪</string>
+    <string name="order_detail_title">订单详情</string>
+    <string name="order_failed_main">订单提醒</string>
+    <string name="order_goods_spec_name">规格：%1$s</string>
+    <string name="order_goods_receiver">收货人：%1$s</string>
+    <string name="order_goods_address">收货地址：%1$s</string>
+    <string name="order_goods_sum_title">商品总计</string>
+    <string name="order_goods_freight">运费</string>
+    <string name="order_goods_total_cost">订单总额</string>
+    <string name="order_free_shipping">包邮</string>
+    <string name="order_message">买家留言：</string>
+    <string name="order_no_address">您还没有设置收货地址，请点击这里设置！</string>
+    <string name="order_no_address_msg">您还没有设置收货地址，请先设置一个！</string>
+    <string name="order_commit">提交订单</string>
+    <string name="order_deal_with_fail_hint">操作失败</string>
+    <string name="order_main_payable">
+        <Data><![CDATA[实付款：<font color=#ff5560>¥%1$s</font> ]]> </Data>
+    </string>
+    <string name="order_amount_payable">
+        <Data><![CDATA[实付款：<font color=#ff5560>¥%1$s</font>（已含运费）]]> </Data>
+    </string>
+    <string name="order_main_usage_coin_count">"本次支付最多使用#count#个TA币"</string>
+    <string name="order_pay_zfb_text">支付宝</string>
+    <string name="order_pay_wx_text">微支付</string>
+    <string name="order_pay_cancel_text">取消</string>
+    <string name="order_pay_pos_text">去支付</string>
+    <string name="order_pay_select_text">选择支付方式</string>
+    <string name="order_main_ta_coin_title">使用TA币</string>
+    <string name="order_failed_tips1">订单已提交，等待支付...</string>
+    <string name="order_failed_tips2">请尽快支付，未支付订单，可在“我”中查找</string>
+    <string name="order_failed_tips3">快递单无任何商品信息，隐私发货</string>
+    <string name="order_detail">查看订单</string>
+    <string name="order_success_send_time">我们将24小时之内为您发货！</string>
+    <string name="order_success_thank">她他社感谢您的甄选</string>
+    <string name="order_success_back">返回商城</string>
+    <string name="order_success_tips">付款成功后，滋味Live不会以付款异常、卡单、系统升级为由联系您。请勿泄漏银行卡号、手机验证码，否则会造成钱款损失。谨防电话诈骗！</string>
+    <string name="order_success_payable">
+        <Data><![CDATA[付款金额：<font color=#ff5560>¥%1$s</font>]]> </Data>
+    </string>
+    <string name="order_failed_payable">
+        <Data><![CDATA[您需支付：<font color=#ff5560>¥%1$s</font>]]> </Data>
+    </string>
+    <string name="order_pay_go">正在跳转</string>
+    <string name="order_pay_init">正在初始化订单</string>
+    <string name="order_pay_load">正在提交</string>
+    <string name="order_state_changed">已刷新订单状态</string>
+    <string name="order_state_changed_del">已成功删除</string>
+    <string name="order_coin_msg">亲~已超过使用量限制</string>
+    <string name="order_item_delete_hint_text">确定要删掉这个订单吗?</string>
+    <string name="order_item_delete_hint_title">删除订单</string>
+    <string name="order_item_cancel_hint_text">确定要取消这个订单吗?</string>
+    <string name="order_item_cancel_hint_title">取消订单</string>
+
+    <string name="order_post_error_604">商品库存不足，请重新购买</string>
+    <string name="order_post_error_605">商品已失效,请刷新购物车</string>
+    <string name="order_post_error_606">结算价格错误</string>
+    <string name="order_post_error_607">服务器繁忙，请稍后再试</string>
+    <string name="order_post_error_608">支付类型错误</string>
+    <string name="order_post_error_643">TA币不足哦!</string>
+
+    <string name="order_address_title">收货人信息</string>
+    <string name="order_address_name">收货人：</string>
+    <string name="order_address_phone">手机号码：</string>
+    <string name="order_address_area">省市区：</string>
+    <string name="order_address_address">详细地址：</string>
+    <string name="order_address_save">保存</string>
+    <string name="order_address_select">请选择</string>
+    <string name="order_review_push">发布</string>
+    <string name="order_address_finish">完成</string>
+    <string name="order_detail_message">买家留言</string>
+    <string name="order_address_error1">收件人姓名不能为空</string>
+    <string name="order_address_error2">手机号不能为空</string>
+    <string name="order_address_error3">请输入正确的手机号</string>
+    <string name="order_address_error4">请选择省市区</string>
+    <string name="order_address_error5">详细地址不能为空</string>
+
+    <string name="order_detail_state2">等待买家付款</string>
+    <string name="order_detail_state3">等待卖家发货</string>
+    <string name="order_detail_state4">还有%1$s自动确认收货</string>
+    <!--   <string name="order_detail_state4"><Data><![CDATA[等待买家收货<br/><small>还有%1$s自动确认收货</small>]]></Data></string> -->
+    <string name="order_detail_state5">已取消</string>
+    <string name="order_detail_state7">交易完成</string>
+    <string name="order_detail_state6">交易完成</string>
+    <string name="order_detail_logistics_no">已发%1$s物流\n运单号：%2$s\n暂无下一步信息，请主人稍等</string>
+
+    <string name="order_detail_goods_price">¥ %1$s</string>
+    <string name="order_detail_goods_count">x%1$s</string>
+    <string name="order_detail_order_no">订单编号：%1$s</string>
+    <string name="order_detail_order_create">订单时间：%1$s</string>
+    <string name="order_detail_goods_total">
+        <Data><![CDATA[<font color=#595959>应付款：</font><font color=#FC1255>¥ %1$s</font>]]></Data>
+    </string>
+    <string name="order_detail_total_time">%1$s后订单失效将被取消</string>
+    <string name="order_detail_already_invalid">订单已失效并被取消</string>
+    <!--   <string name="order_detail_total_time">
+        <Data><![CDATA[<font color=#FC1255>%1$s后订单失效将被取消</font>]]></Data>
+    </string> -->
+    <string name="recommends_tip">
+        <Data><![CDATA[已添加<font color=#ff950b>%1$d</font>件推荐商品]]></Data>
+    </string>
+
+    <string name="order_state2">待付款</string>
+    <string name="order_state3">待发货</string>
+    <string name="order_state4">待收货</string>
+    <string name="order_list_title">订单列表</string>
+    <string name="order_tab_all_title">全部</string>
+    <string name="order_tab_evaluate_tab_title">已完成</string>
+    <string name="order_item_price_title">实付：</string>
+    <string name="order_item_wait_pay_cancel">取消订单</string>
+    <string name="order_item_wait_pay_ok">去付款</string>
+    <string name="order_item_wait_deliver">提醒发货</string>
+    <string name="order_item_wait_receiving">确认收货</string>
+    <string name="order_item_cancel">已取消</string>
+    <string name="order_item_finish">已完成</string>
+    <string name="order_hint_deliver">已提醒客服发货，感谢反馈~</string>
+    <string name="order_logistics_state0">在途</string>
+    <string name="order_logistics_state1">揽件</string>
+    <string name="order_logistics_state2">疑难</string>
+    <string name="order_logistics_state3">签收</string>
+    <string name="order_logistics_state4">退签</string>
+    <string name="order_logistics_state5">派件</string>
+    <string name="order_logistics_state6">退回</string>
+    <string name="order_logistics_state7">没有物流信息</string>
+
+    <string name="order_btn_cancel">取消订单</string>
+    <string name="order_btn_pay">付款去</string>
+    <string name="order_btn_get">确认收货</string>
+    <string name="order_btn_delete">删除</string>
+    <string name="order_btn_review">大王请点评</string>
+    <string name="order_review_error1">商品不存在</string>
+    <string name="order_review_error2">已经评论过了</string>
+    <string name="order_review_error4">主人，请至少给一颗星星吧！</string>
+    <string name="order_review_success">点评成功</string>
+    <string name="order_review_hint">给人家点评一下嘛</string>
+    <string name="order_review_anony">匿名评论</string>
+    <string name="order_review_btn">去点评</string>
+    <string name="order_review_btn_finish">已点评</string>
+    <string name="order_review_send_evaluate">发测评</string>
+    <string name="order_review_edit_evaluate">编辑测评</string>
+
+    <string name="order_logistics_other_goods">查看其余%1$s件</string>
+    <string name="order_logistics_no">运单编号：%1$s</string>
+    <string name="order_logistics_state">物流状态：%1$s</string>
+
+    <string name="order_operation_title">提示</string>
+    <string name="order_operation_subtext">是否确定执行此操作？</string>
+    <string name="goods_already_receiver">订单已自动确认收货</string>
+
+    <!--x_recycler_view-->
+    <string name="header_hint_normal">下拉刷新</string>
+    <string name="header_hint_release">释放刷新</string>
+    <string name="foot_loading">正在加载</string>
+    <string name="no_more_loading">已加载全部数据</string>
+    <string name="refresh_done">刷新完成</string>
+
+    <string name="sex_panel_papa">啪啪</string>
+    <string name="sex_panel_record">记录</string>
+    <string name="sex_panel_community">社区</string>
+    <string name="sex_panel_sort">排名</string>
+    <string name="sex_panel_man_first_title">难道是传说中的</string>
+    <string name="sex_panel_man_second_title">一夜七次郎 &gt;,&lt;</string>
+    <string name="sex_panel_woman_first_title">看起来是个</string>
+    <string name="sex_panel_woman_second_title">&gt;磨人的小妖精呢&lt;</string>
+
+    <string name="trial_main_title">免费试用</string>
+    <string name="trial_detail_price">价格:</string>
+    <string name="trial_detail_num">数量:</string>
+    <string name="trial_detail_apply">人已申请</string>
+    <string name="trial_apply_cost">申请费用</string>
+    <string name="trial_apply_unit">TA币</string>
+    <string name="trial_apply_declaration">申请宣言</string>
+    <string name="trial_apply_declaration_content_hint">请填写申请宣言</string>
+    <string name="trial_apply_state_audit">审核中</string>
+    <string name="trial_apply_state_passed">已通过 请在订单中查看</string>
+    <string name="trial_apply_state_refer">未通过</string>
+    <string name="trial_apply_state_pass">已通过</string>
+    <string name="trial_apply_state_sign">已签收 点击发测评</string>
+    <string name="trial_apply_state_end">已结束 查看我的测评</string>
+    <string name="trial_apply_list_title">我的试用</string>
+    <string name="trial_apply_title">试用申请</string>
+    <string name="trial_apply_detail_title">试用申请详情</string>
+    <string name="trial_apply_goods_title">试用商品详情</string>
+    <string name="trial_user_state_apply">立即申请</string>
+    <string name="trial_user_state_applyed">申请中</string>
+    <string name="trial_user_state_apply_success">申请成功</string>
+    <string name="trial_user_state_apply_fail">申请失败</string>
+    <string name="trial_state_apply_auditing">审核名单中</string>
+    <string name="trial_state_apply_experience">体验中</string>
+    <string name="trial_state_apply_finished">已结束</string>
+    <string name="trial_apply_commit">提交</string>
+    <string name="trial_apply_commit_toast">申请宣言不能为空！</string>
+    <string name="trial_apply_commit_toast_size_info">申请宣言字数不够</string>
+    <string name="trial_apply_commit_code_null">试用商品不存在或已下架</string>
+    <string name="trial_apply_commit_code_finish">试用商品已结束申请</string>
+    <string name="trial_apply_commit_code_applyed">用户已申请过</string>
+    <string name="trial_apply_commit_code_not_enough">用户他币数量不足</string>
+    <string name="trial_apply_audit_state_title">审核状态：</string>
+    <string name="trial_apply_success_title">人申请成功</string>
+    <string name="trial_apply_if_use_title">是否用过情趣用品</string>
+    <string name="trial_apply_use_title">用过情趣用品</string>
+    <string name="trial_apply_no_use_title">没用过情趣用品</string>
+    <string name="trial_apply_if_use_info">(是否用过都可以，请如实填写)</string>
+    <string name="trial_apply_coin_info">TA币不足</string>
+    <string name="trial_apply_level_limit_info">等级不足</string>
+    <string name="trial_apply_good_detail_title">试用商品说明</string>
+
+    <string name="trial_list_apply_title">申请中</string>
+    <string name="trial_list_use_title">审核/体验中</string>
+    <string name="trial_list_end_title">已结束</string>
+
+    <string name="trial_btn_apply">申请试用</string>
+    <string name="trial_btn_examine">审核名单中</string>
+    <string name="trial_btn_use">体验中</string>
+    <string name="trial_btn_end">测评报告(#count#)</string>
+    <string name="trial_apply_count">试用数量：#count#</string>
+
+    <string name="data_error">数据异常</string>
+    <string name="data_no_data">囧 空内容</string>
+
+    <!--homepage-->
+    <string name="homepage_loading">加载中...</string>
+    <string name="homepage_network_error">网络异常</string>
+    <string name="homepage_network_error_retry">网络异常,点击重试</string>
+    <string name="homepage_data_error">数据异常</string>
+    <string name="homepage_data_empty">糟糕，什么都没有~</string>
+    <string name="community_invalided_token">登陆已失效，请重新登陆</string>
+    <string name="community_prohibit_login">你已经被禁止登录，请与客服人员联系</string>
+    <string name="community_frozen_account">你帐号已经被冻结了，请与客服人员联系</string>
+    <string name="community_device_frozen_account">你设备已经被冻结了，请与客服人员联系</string>
+    <string name="community_data_not_exist">数据不存在</string>
+    <string name="account_personal_level_action">说明</string>
+
+    <string name="collect_collected">已收藏</string>
+    <string name="collect_cancel_collect_success">已取消</string>
+    <string name="collect_collect_failed">收藏失败</string>
+    <string name="collect_cancel_failed">取消收藏失败</string>
+    <string name="ta_coin_title">我的TA币</string>
+
+    <string name="account_alert_dialog_title">客服热线</string>
+    <string name="account_alert_dialog_message">是否拨打客服热线？\r\n时间：9:00~21:00</string>
+    <string name="account_alert_dialog_positive">放弃</string>
+    <string name="account_alert_dialog_negative">拨打</string>
+    <string name="account_alert_dialog_uri">tel:4000049269</string>
+    <string name="no_network">没有网络,检查下网络吧！</string>
+    <string name="search_goods_price">￥%1$s</string>
+    <string name="search_goods_evaluate">测评数(#evaluate#)</string>
+    <string name="account_setting_helper_mail">请选择邮件类应用</string>
+
+    <!--搜索-->
+    <string name="search_hot_goods_title">大家都在搜</string>
+    <string name="search_history_title">最近搜索</string>
+    <string name="search_history_delete">清除搜索记录</string>
+    <string name="search_history_delete_confirm">确定要清除搜索历史吗？</string>
+    <string name="search_input_hint">请输入搜索内容</string>
+    <string name="classify_comprehensive">综合</string>
+    <string name="classify_evaluate">有测评</string>
+    <string name="classify_sales">销量</string>
+    <string name="classify_new">最新</string>
+    <string name="classify_price">价格</string>
+    <string name="classify_empty_hint">没有找到与“#goods#”相关的商品</string>
+    <string name="classify_empty_hot_title">24小时热门搜索</string>
+
+    <!--收藏-->
+    <string name="collect_window_title">我的收藏</string>
+    <string name="collect_edit">编辑</string>
+    <string name="collect_edit_finish">完成</string>
+    <string name="collect_checkall">全选</string>
+    <string name="collect_delete">删除</string>
+    <string name="collect_no_article">您还没有收藏的文章</string>
+    <string name="collect_no_product">您还没有收藏的商品</string>
+    <string name="collect_no_post">您还没有收藏的帖子</string>
+    <string name="collect_article">文章</string>
+    <string name="collect_post">帖子</string>
+    <string name="collect_product">商品</string>
+    <string name="collect_delete_confirm_text">您确定删除这#del_count#个收藏?</string>
+    <string name="collect_delete_fail">删除失败</string>
+
+    <!--商城-->
+    <string name="shopping">商城</string>
+    <string name="shopping_buyer_count">%1$d人购买</string>
+    <string name="shopping_stock">库存:</string>
+    <string name="shopping_selected">已选:</string>
+    <string name="shopping_spec">规格</string>
+    <string name="shopping_buy_count">购买数量</string>
+    <string name="shopping_sure_add_car">确认加入购物车</string>
+    <string name="shopping_sure_buy">确认购买</string>
+
+    <!--评论-->
+    <string name="simple_say">简单说几句...</string>
+    <string name="publish">发布</string>
+    <string name="also_comment_video">同时评论到讨论区</string>
+    <string name="zero">0</string>
+    <string name="two_hundred">200</string>
+
+    <string name="reply"> 回复 </string>
+    <string name="please_input_comment">请输入评论内容!</string>
+
+    <string name="expand">全文</string>
+    <string name="un_expand">收起</string>
+
+    <string name="look_more_reply">查看全部%1$d条回复</string>
+    <string name="reply_r_blank">回复 </string>
+
+    <string name="all_reply">全部回复</string>
+    <string name="detail">详情</string>
+
+    <string name="all_comments">全部讨论</string>
+
+    <!--闪屏-->
+    <string name="splash_pass">跳过</string>
+    <!-- 内容 -->
+    <string name="title_content">内容</string>
+
+    <!--小视频-->
+    <string name="scan_title_hint">在电脑上打开下面网址</string>
+    <string name="scan_web_hint">http://ziwei.com</string>
+    <string name="capture_text_hint">扫描页面上的二维码</string>
+    <string name="video_home_tab_follow">关注</string>
+    <string name="video_home_tab_recommend">推荐</string>
+    <string name="video_home_tab_new">最新</string>
+    <string name="video_like_hint">赞 · %s</string>
+    <string name="video_comment_hint">评论 · %s</string>
+    <string name="video_shop_hint">商品 · %s</string>
+    <string name="video_function_comment">讨论区</string>
+    <string name="video_function_good">商品</string>
+
+    <!--素材库-->
+    <string name="material_store">素材库</string>
+    <string name="upload_video">上传视频</string>
+    <string name="material_store_empty">暂无视频素材~</string>
+
+
+</resources>

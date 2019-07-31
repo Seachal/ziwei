@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/layout_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_288">
+
+    <LinearLayout
+        android:id="@+id/head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/alpha40_color0E0E13"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/setting_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/space_14"
+                    android:paddingLeft="@dimen/space_14"
+                    android:paddingRight="@dimen/space_20"
+                    android:paddingTop="@dimen/space_14"
+                    android:src="@drawable/title_icon_setup_selector"/>
+
+                <TextView
+                    android:layout_width="@dimen/space_0"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/account_title"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/space_18"/>
+
+                <ImageView
+                    android:id="@+id/share_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/space_14"
+                    android:paddingLeft="@dimen/space_20"
+                    android:paddingRight="@dimen/space_14"
+                    android:paddingTop="@dimen/space_14"
+                    android:src="@drawable/title_icon_edit_selector"/>
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/space_62">
+
+                <include layout="@layout/layout_userinfo_names"/>
+            </FrameLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/count_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/space_15">
+            <include
+                android:id="@+id/live_count"
+                style="@style/my_count_info"
+                layout="@layout/user_count_info_item"/>
+
+            <View style="@style/my_vertical_divider"/>
+
+            <include
+                android:id="@+id/follow_count"
+                style="@style/my_count_info"
+                layout="@layout/user_count_info_item"/>
+
+            <View style="@style/my_vertical_divider"/>
+
+            <include
+                android:id="@+id/fans_count"
+                style="@style/my_count_info"
+                layout="@layout/user_count_info_item"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="240dp"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_tips"
+        android:layout_centerHorizontal="true"
+        android:text="@string/link_mic_laka_zhubo"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"/>
+
+    <ImageView
+        android:layout_centerInParent="true"
+        android:src="@drawable/public_pic_empty"
+        android:layout_width="245dp"
+        android:layout_height="89dp" />
+
+    <Button
+        android:id="@+id/btn_add_link"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="12dp"
+        android:textColor="@color/white"
+        android:text="@string/i_want_link"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/round_f65843"/>
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/space_15">
+
+    <TextView
+        android:id="@+id/product_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_35"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="2"
+        android:paddingLeft="@dimen/space_15"
+        android:paddingRight="@dimen/space_15"
+        android:textColor="@color/shopping_category_color" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/product_head_img"
+        android:layout_width="@dimen/space_33"
+        android:layout_height="@dimen/space_33"
+        android:layout_marginTop="@dimen/space_10"
+        fresco:roundedCornerRadius="@dimen/space_20" />
+</LinearLayout>

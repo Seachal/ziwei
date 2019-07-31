@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/choice_image_item_height"
+            android:gravity="center"
+            android:text="@string/setting_face"
+            android:textColor="@color/color999999"
+            android:textSize="12dp"
+            android:background="@drawable/choice_image_title_bg"/>
+
+        <View style="@style/horizontal_divider"/>
+
+        <TextView
+            android:id="@+id/take_piature"
+            android:text="@string/take_picture"
+            android:background="@drawable/choice_image_mid_selector"
+            style="@style/choice_image_high_item" />
+
+        <View style="@style/horizontal_divider"/>
+
+        <TextView
+            android:id="@+id/choice_from_gallery"
+            android:text="@string/choice_from_gallery"
+            android:background="@drawable/choice_image_bottom_selector"
+            style="@style/choice_image_high_item" />
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_marginTop="5.3dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/cancel"
+            android:background="@drawable/choice_image_cancel_selector"
+            style="@style/choice_image_high_item" />
+    </LinearLayout>
+</FrameLayout>

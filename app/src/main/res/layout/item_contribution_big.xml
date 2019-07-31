@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="116dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/face"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="44.3dp"
+        android:layout_centerVertical="true"
+        app:roundAsCircle="true"
+        app:placeholderImage="@drawable/blank_icon_avatar"/>
+
+    <ImageView
+        android:id="@+id/frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-0.6dp"
+        android:layout_marginLeft="20.6dp"
+        android:layout_marginRight="22dp"
+        android:src="@drawable/mine_icon_top01"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/frame"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="28.3dp"
+        android:text="name"
+        android:textSize="15dp"
+        android:drawablePadding="5dp"
+        android:drawableRight="@drawable/mine_icon_women"/>
+
+    <com.laka.live.ui.widget.LevelText
+        android:id="@+id/level"
+        android:layout_toRightOf="@id/name"
+        android:layout_marginTop="32.3dp"
+        style="@style/user_level"/>
+
+    <TextView
+        android:id="@+id/contribution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/frame"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="3.5dp"
+        android:layout_below="@id/name"
+        android:textSize="12dp"
+        android:text="@string/contribution"/>
+
+    <TextView
+        android:id="@+id/tickets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/contribution"
+        android:layout_marginTop="3.5dp"
+        android:layout_below="@id/name"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="12dp"
+        android:text="10000"/>
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/frame"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/contribution"
+        android:text="摸摸大"
+        android:textSize="12dp"
+        android:singleLine="true"
+        android:ellipsize="end"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_alignParentBottom="true"
+        style="@style/horizontal_divider"/>
+</RelativeLayout>

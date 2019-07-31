@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/space_13"
+    android:paddingRight="@dimen/space_13">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/space_12">
+
+        <TextView
+            android:id="@+id/ta_coin_income_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/shopping_items_title_color"
+            android:textSize="@dimen/space_14"/>
+
+        <TextView
+            android:id="@+id/ta_coin_income_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/pink"
+            android:textSize="@dimen/space_14"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/ta_coin_income_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:paddingTop="@dimen/space_10"
+        android:textColor="@color/record_new_date_view_text_normal"
+        android:textSize="@dimen/space_14"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/space_12"
+        android:paddingTop="@dimen/space_12">
+
+        <TextView
+            android:id="@+id/ta_coin_income_create_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/record_new_date_view_text_normal"
+            android:textSize="@dimen/space_11"/>
+
+        <TextView
+            android:id="@+id/ta_coin_income_indate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/record_new_date_view_text_normal"
+            android:textSize="@dimen/space_11"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

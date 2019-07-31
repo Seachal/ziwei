@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/head_height"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:onClick="onClick"
+        android:clickable="true"
+        android:src="@drawable/nav_icon_back" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/space_29"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical">
+
+        <CheckedTextView
+            android:id="@+id/live_tab"
+            style="@style/home_tab"
+            android:textColor="@color/home_tab_text_color_selector"
+            android:background="@drawable/left_corners_5_solid_black" />
+
+        <CheckedTextView
+            android:id="@+id/video_tab"
+            style="@style/home_tab"
+            android:background="@drawable/home_tab_selector"
+            android:textColor="@color/home_tab_text_color_selector" />
+
+        <CheckedTextView
+            android:id="@+id/news_tab"
+            style="@style/home_tab"
+            android:textColor="@color/home_tab_text_color_selector"
+            android:background="@drawable/right_corners_5_solid_black" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/head_divider"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 预告视频 -->
+    <RelativeLayout
+        android:id="@+id/rl_trailer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px400"
+        android:visibility="visible">
+
+        <ImageView
+            style="@style/clickable"
+            android:id="@+id/trailerCover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/blank_icon_bigimages" />
+
+        <TextView
+            android:id="@+id/player"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/detail_btn_play"
+            android:drawableLeft="@drawable/detail_btn_play2"
+            android:drawablePadding="@dimen/space_5"
+            android:gravity="center"
+            android:paddingBottom="@dimen/space_8"
+            android:paddingLeft="@dimen/space_18"
+            android:paddingRight="@dimen/space_18"
+            android:paddingTop="@dimen/space_8"
+            android:text="预告"
+            android:textColor="@color/white"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+    <!-- 预告视频 -->
+
+    <TextView
+        android:id="@+id/courseName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_15"
+        android:layout_marginRight="@dimen/space_15"
+        android:layout_marginTop="@dimen/space_15"
+        android:text=""
+        android:textColor="@color/color333333"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_10"
+        android:layout_marginLeft="@dimen/space_15"
+        android:layout_marginRight="@dimen/space_15"
+        android:layout_marginTop="@dimen/space_10">
+
+        <com.laka.live.ui.widget.course.DiscountTimeView
+            android:id="@+id/discountTimeView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/white" />
+
+        <com.laka.live.ui.widget.course.CoursePriceView
+            android:id="@+id/coursePriceView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/courseTopics"
+        android:layout_width="@dimen/space_310"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_10"
+        android:layout_marginLeft="@dimen/space_15"
+        android:layout_marginRight="@dimen/space_15"
+        android:orientation="horizontal"
+        android:visibility="gone" />
+
+
+</LinearLayout>

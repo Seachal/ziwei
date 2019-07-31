@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="115dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_110"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdv_logo"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_margin="@dimen/space_15"
+        android:layout_gravity="center_vertical"
+        app:placeholderImage="@drawable/blank_icon_bigimages" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_20"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="快递公司"
+            android:textColor="@color/color333333"
+            android:textSize="@dimen/space_14" />
+
+        <TextView
+            android:id="@+id/tv_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_10"
+            android:text="运单编号"
+            android:textColor="@color/color999999"
+            android:textSize="@dimen/space_13" />
+
+        <TextView
+            android:id="@+id/tv_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_7"
+            android:text="物流状态"
+            android:textColor="@color/color999999"
+            android:textSize="@dimen/space_13" />
+    </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/colorF5F5F5" />
+</LinearLayout>

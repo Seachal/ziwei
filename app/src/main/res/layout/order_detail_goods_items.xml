@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="horizontal"
+              android:paddingTop="@dimen/space_5">
+
+    <LinearLayout
+        android:id="@+id/order_detail_goods"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_10"><!--   android:background="@color/shopping_bg" -->
+
+        <RelativeLayout
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="top">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdv_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+               />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/rect_1dp_e5e5e5"
+                android:scaleType="fitXY"/>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/space_10">
+
+                <LinearLayout
+                    android:id="@+id/ll_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_goods_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:textColor="@color/color333333"
+                        android:textSize="14dp"
+                        android:text="商品名称"/>
+
+                    <TextView
+                        android:id="@+id/tv_goods_spec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_5"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:textColor="@color/color848484"
+                        android:textSize="12dp"
+                        android:text="规格"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_below="@+id/ll_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+
+                    <com.laka.live.shopping.widget.PriceView
+                        android:id="@+id/tv_goods_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:CarttextColor="@color/colorFF950B"
+                        app:bold="true"
+                        app:decimalSize="16dp"
+                        app:intSize="16dp"
+                        app:moneySize="16dp"
+                        app:strike="false"
+                        android:text="单价"/>
+
+                    <TextView
+                        android:id="@+id/tv_goods_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:textColor="@color/shopping_items_other_color"
+                        android:textSize="@dimen/space_12"
+                        android:text="数量"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/chat_message_layout"
+    style="@style/ActivityBackground">
+
+
+    <LinearLayout
+        android:id="@+id/ll_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <com.laka.live.ui.widget.HeadView
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:headText="@string/send_msg"
+            custom:tipText="@string/info"
+            />
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/rl_good"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            >
+            <RelativeLayout
+                android:id="@+id/rl_pic"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                >
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/iv_pic"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:scaleType="centerCrop"
+                    custom:placeholderImage="@drawable/blank_icon_banner"
+                    custom:placeholderImageScaleType="centerCrop" />
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/rect_1dp_e5e5e5"
+                    android:scaleType="fitXY"/>
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_alignTop="@+id/rl_pic"
+                android:layout_toRightOf="@+id/rl_pic"
+                android:layout_marginLeft="15dp"
+                android:textSize="13dp"
+                android:textColor="@color/color333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:minLines="2"
+                android:text="商品名"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_toRightOf="@+id/rl_pic"
+                android:layout_below="@+id/tv_name"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp">
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¥ 0"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorFF950b"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"/>
+            </RelativeLayout>
+
+
+            <com.laka.live.ui.widget.SelectorButton
+                android:id="@+id/btn_send_goods"
+                android:layout_width="78dp"
+                android:layout_height="25dp"
+                android:text="发送宝贝"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/rl_pic"
+                android:textColor="@color/colorFF950B"
+                android:textSize="13dp"
+                custom:color="@color/colorFF950B"
+                custom:radius="@dimen/space_20"
+                custom:stroke="true"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <com.laka.live.ui.widget.chatKeyboard.KJChatKeyboard
+        android:id="@+id/chat_msg_input_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+    <!--<ListView
+        android:id="@+id/chat_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/chat_msg_input_box"
+        android:layout_below="@id/header"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:dividerHeight="30dp"
+        android:fastScrollEnabled="false"
+        android:listSelector="@android:color/transparent"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="none"
+        android:transcriptMode="alwaysScroll"
+        />
+
+         <android.support.v7.widget.RecyclerView
+        android:layout_above="@id/chat_msg_input_box"
+        android:layout_below="@id/header"
+        android:id="@+id/chat_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="false"
+        android:scrollbars="none" />
+
+         <com.laka.live.ui.widget.PageListLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorEFF0F7"/>-->
+
+
+
+    <in.srain.cube.views.ptr.PtrClassicFrameLayout
+        android:id="@+id/ptr_loadmore_widget"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/chat_msg_input_box"
+        android:layout_below="@+id/ll_header">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/chat_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="false"
+        android:scrollbars="none" />
+    </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+</RelativeLayout>

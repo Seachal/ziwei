@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/ActivityBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.laka.live.ui.widget.HeadView
+        android:id="@+id/head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:headText="@string/my_income"
+        app:tipColor="@color/color333333"
+        app:tipText="@string/transaction_record" />
+
+    <RelativeLayout
+        android:id="@+id/data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/head_layout"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/income_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/space_50"
+                android:text="@string/weekly_ticket_income"
+                android:textColor="@color/color333333"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/weekly_tickets_income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/space_50"
+                android:layout_marginTop="@dimen/px10"
+                android:text="0"
+                android:textColor="@color/colorF76720"
+                android:textSize="50dp" />
+
+            <View
+                style="@style/horizontal_divider"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/withdrawal_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_93"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/income_layout"
+            android:layout_gravity="bottom"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/px10"
+                android:layout_marginRight="@dimen/px10"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawablePadding="@dimen/px10"
+                    android:drawableRight="@drawable/btn_blue_explain"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/frozen_money"
+                    android:textColor="@color/color555555"
+                    android:textSize="@dimen/sp35" />
+
+                <TextView
+                    android:id="@+id/money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/px10"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="0"
+                    android:textColor="@color/color333333"
+                    android:textSize="21dp" />
+            </LinearLayout>
+
+
+            <View
+                style="@style/vertical_divider"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical" />
+
+            <include
+                android:id="@+id/cash_withdrawal_layout"
+                layout="@layout/withdrawal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/px10"
+                android:layout_marginRight="@dimen/px10"
+                android:layout_weight="1" />
+
+            <View
+                style="@style/vertical_divider"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical" />
+
+            <include
+                android:id="@+id/today_cash_withdrawal_layout"
+                layout="@layout/withdrawal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/px10"
+                android:layout_marginRight="@dimen/px10"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+
+        <View
+            style="@style/horizontal_divider"
+            android:layout_below="@id/withdrawal_layout" />
+
+        <TextView
+            android:id="@+id/common_problems"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:padding="15dp"
+            android:text="@string/common_problems"
+            android:textColor="@color/color848484"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/wechat_withdrawal"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_above="@+id/for_diamond"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/mine_btn_01_selector"
+            android:text="@string/wechat_withdrawal"
+            android:textColor="@color/color333333"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/for_diamond"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_above="@id/common_problems"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="@dimen/px30"
+            android:background="@drawable/mine_btn_02_selector"
+            android:text="@string/for_diamond"
+            android:textColor="@drawable/text_black_selector"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
+
+    <com.laka.live.ui.widget.LoadingLayout
+        android:id="@+id/loading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+</LinearLayout>

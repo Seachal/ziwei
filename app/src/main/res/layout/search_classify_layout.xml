@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.sjy.ttclub.search.widget.SearchInputView
+        android:id="@+id/search_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View style="@style/account_new_line_style"/>
+
+    <com.sjy.ttclub.search.widget.SearchClassifyTitleView
+        android:id="@+id/classify_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_46"
+        android:visibility="gone"/>
+
+    <View style="@style/account_new_line_style"/>
+
+    <com.sjy.ttclub.search.widget.SearchPagerView
+        android:id="@+id/classify_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

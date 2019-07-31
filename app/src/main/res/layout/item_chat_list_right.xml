@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:custom="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <TextView android:layout_centerHorizontal="true"
+        android:id="@+id/chat_item_date"
+        style="@style/chat_item_date"
+        android:layout_gravity="center_horizontal"
+        android:text="4月1日"
+        android:visibility="visible"/>
+
+    <RelativeLayout android:layout_below="@+id/chat_item_date"
+        android:id="@+id/rl_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/chat_item_avatar"
+            style="@style/chat_item_avatar"
+            android:layout_alignParentRight="true"
+            custom:roundAsCircle="true"/>
+
+        <RelativeLayout
+            android:id="@+id/chat_item_layout_content"
+            style="@style/chat_item_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="4dp"
+            android:layout_toLeftOf="@id/chat_item_avatar">
+
+            <RelativeLayout
+                android:id="@+id/rl_item_chat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/chat_to_bg_selector">
+
+                <LinearLayout
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/space_10"
+                    android:paddingLeft="@dimen/space_6"
+                    android:paddingRight="@dimen/space_10"
+                    >
+
+                    <TextView
+                        android:id="@+id/chat_item_content_text"
+                        style="@style/chat_item_text_content"
+                        android:textIsSelectable="true"
+                        android:text="test"
+                        android:paddingTop="@dimen/space_10"/>
+                    <TextView
+                        android:visibility="gone"
+                        android:layout_below="@+id/chat_item_content_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13dp"
+                        android:textColor="@color/colorFF950B"
+                        android:text="查看详情"
+                        android:id="@+id/tv_good_detail"
+                        android:layout_marginTop="5dp"/>
+                </LinearLayout>
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/chat_item_content_image"
+                    style="@style/chat_item_image_content" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_item_gift"
+                android:layout_width="wrap_content"
+                android:layout_height="84dp"
+                android:background="@drawable/dm_icon_red_right"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="9dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_gift_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="送给你一艘豪华游艇"
+                    android:textColor="@color/colorFFE478"
+                    android:textSize="13dp"/>
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/iv_gift"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_toRightOf="@+id/tv_gift_content"
+                    android:src="@drawable/gifts_rose"
+                    android:scaleType="centerInside"/>
+
+                <TextView
+                    android:id="@+id/tv_send_gift"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="3.3dp"
+                    android:text="赠送礼物"
+                    android:textColor="@color/colorDD594D"
+                    android:textSize="12dp"/>
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignRight="@+id/iv_gift"
+                    android:layout_marginBottom="3.6dp"
+                    android:src="@drawable/dm_icon_gift"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/chat_item_fail"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignBottom="@id/chat_item_layout_content"
+            android:layout_toLeftOf="@+id/chat_item_layout_content"
+            android:background="@drawable/msg_state_failed"
+            android:focusable="false"
+            android:visibility="visible"/>
+
+        <ProgressBar
+            android:id="@+id/chat_item_progress"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:indeterminateDrawable="@drawable/chat_sending_anim"
+            android:indeterminateBehavior="repeat"
+            android:layout_alignBottom="@id/chat_item_layout_content"
+            android:layout_toLeftOf="@+id/chat_item_layout_content"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</RelativeLayout>

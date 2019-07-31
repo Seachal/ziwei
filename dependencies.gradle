@@ -1,0 +1,145 @@
+def supportVersion = "26.0.0-alpha1"
+def constraintLayoutVersion = "1.1.0-beta5"
+def JetPackVersion = "1.1.1"
+def RxJava = "2.1.3"
+def RxAndroid = "2.0.1"
+def RxLifeCycle = "2.2.0"
+def RxCacheConvert = "0.0.3"
+def RetrofitVersion = "2.2.0"
+def OkHttpVersion = "3.7.0"
+def gsonVersion = "2.8.2"
+def daggerVersion = "2.4"
+def ARouterVersion = "1.2.2"
+def ARouterAnnotationVersion = "1.1.3"
+def GreenDaoVersion = "3.2.2"
+def GreenDaoUpdateVersion = "v1.3.0"
+
+//Glide
+def glideVersion = "4.7.1"
+def ButterKnifeVersion = "8.4.0"
+def leakCanaryVersion = "1.6.1"
+def loggerVersion = "1.3"
+
+//UIFramge
+def percentLayoutVersion = "1.0.1"
+def autoLayoutVersion = "1.4.5"
+def swipeMenuVersion = "V1.3.0"
+def galleryFinalVersion = "1.0.9"
+def spinKitVersion = "1.1.0'"
+def smartRefreshVersion = "1.1.0-alpha-9"
+def swipeBackFragmentVersion = "0.4.0"
+
+def pingVersion = "2.1.17"
+
+
+project.ext {
+    android = [
+            compileSdkVersion: 26,
+            buildToolsVersion: "26.0.1",
+            applicationId    : "com.laka.taste",
+            minSdkVersion    : 17,
+            targetSdkVersion : 23
+    ]
+
+    dependencies = [
+            //android-support
+            "support-v4"             : "com.android.support:support-v4:${supportVersion}",
+            "appcompat-v7"           : "com.android.support:appcompat-v7:${supportVersion}",
+            "design"                 : "com.android.support:design:${supportVersion}",
+            "recyclerview"           : "com.android.support:recyclerview-v7:${supportVersion}",
+            "cardview"               : "com.android.support:cardview-v7:${supportVersion}",
+            "palette"                : "com.android.support:palette-v7:${supportVersion}",
+            "ConstraintLayout"       : "com.android.support.constraint:constraint-layout:${constraintLayoutVersion}",
+
+            //architecture
+            "lifeCycleRuntime"       : "android.arch.lifecycle:extensions:$JetPackVersion",
+            "lifeCycleCommon"        : "android.arch.lifecycle:common:$JetPackVersion",
+            "lifeCycleCompiler"      : "android.arch.lifecycle:compiler:$JetPackVersion",
+
+            //rx
+            "RxJava"                 : "io.reactivex.rxjava2:rxjava:${RxJava}",
+            "RxAndroid"              : "io.reactivex.rxjava2:rxandroid:${RxAndroid}",
+            "RxLifeCycle"            : "com.trello.rxlifecycle2:rxlifecycle-android:${RxLifeCycle}",
+            "RxLifeCycleComponents"  : "com.trello.rxlifecycle2:rxlifecycle-components:${RxLifeCycle}",
+            "RxCache"                : "com.github.VictorAlbertos.RxCache:runtime:1.8.1-2.x",
+            "RxCacheConvert"         : "com.github.VictorAlbertos.Jolyglot:gson:${RxCacheConvert}",
+
+            //retrofit
+            "retrofit"               : "com.squareup.retrofit2:retrofit:${RetrofitVersion}",
+//            "retrofitAdapter"      : "com.squareup.retrofit2:adapter-rxjava:${RetrofitVersion}",  这个库只支持rxjava1.0
+            "retrofitAdapter"        : "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0",
+            "retrofitGsonConverter"  : "com.squareup.retrofit2:converter-gson:${RetrofitVersion}",
+
+            //Http
+            "okhttp"                 : "com.squareup.okhttp3:okhttp:${OkHttpVersion}",
+            "okhttpUtils"            : "com.zhy:okhttputils:2.6.2",
+            "okhttp3Interceptor"     : "com.squareup.okhttp3:logging-interceptor:${OkHttpVersion}",
+            "gson"                   : "com.google.code.gson:gson:${gsonVersion}",
+
+            //dagger
+            "dagger"                 : "com.google.dagger:dagger:${daggerVersion}",
+            "daggerCompiler"         : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            "javaAnnotation"         : "org.glassfish:javax.annotation:10.0-b28",
+
+            //ARouter
+            "ARouter"                : "com.alibaba:arouter-api:${ARouterVersion}",
+            "ARouterCompiler"        : "com.alibaba:arouter-compiler:${ARouterAnnotationVersion}",
+
+            //GreenDao
+            "greenDao"               : "org.greenrobot:greendao:${GreenDaoVersion}",
+            "greenDaoHelper"         : "com.github.yuweiguocn:GreenDaoUpgradeHelper:${GreenDaoUpdateVersion}",
+
+            //Glide
+            "glide"                  : "com.github.bumptech.glide:glide:${glideVersion}",
+            "glideTransformation"    : "jp.wasabeef:glide-transformations:3.0.1",
+            "glideUIImage"           : "jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1",
+            //"glideCompiler"        : "com.github.bumptech.glide:compiler:${glideVersion}",
+
+            //ButterKnife
+            "butterknife"            : "com.jakewharton:butterknife:${ButterKnifeVersion}",
+            "butterknifeCompiler"    : "com.jakewharton:butterknife-compiler:${ButterKnifeVersion}",
+
+            //EventBus
+            "EventBus"               : "org.greenrobot:eventbus:3.0.0",
+
+            //Others--Utils
+            "leakCanaryDebug"        : "com.squareup.leakcanary:leakcanary-android:${leakCanaryVersion}",
+            "leakCanaryDebugFragment": "com.squareup.leakcanary:leakcanary-support-fragment:${leakCanaryVersion}",
+            "leakCanaryRelease"      : "com.squareup.leakcanary:leakcanary-android-no-op:${leakCanaryVersion}",
+            "logger"                 : "com.orhanobut:logger:${loggerVersion}",
+            "Luban"                  : "top.zibin:Luban:1.1.1",
+            "qrCode"                 : "cn.bingoogolapple:bga-qrcode-zbar:1.2.1",
+
+            //UIFrame
+            "PercentLayout"          : "com.zhy:percent-support-extends:${percentLayoutVersion}",
+            "AutoLayout"             : "com.zhy:autolayout:${autoLayoutVersion}",
+            "swipeMenu"              : "com.github.mcxtzhang:SwipeDelMenuLayout:${swipeMenuVersion}",
+            "galleryFinal"           : "cn.finalteam:galleryfinal:1.4.8.7",
+            "spinKit"                : "com.github.ybq:Android-SpinKit:1.1.0",
+            "FlowLayout"             : "com.hyman:flowlayout-lib:1.1.2",
+            "WheelView"              : "cn.aigestudio.wheelpicker:WheelPicker:1.1.2",
+            "VLayout"                : "com.alibaba.android:vlayout:1.2.8",
+            "Banner"                 : "com.youth.banner:banner:1.4.9",
+            "CircleImage"            : "de.hdodenhof:circleimageview:2.1.0",
+            "SmartRefresh"           : "com.scwang.smartrefresh:SmartRefreshLayout:${smartRefreshVersion}",
+            "ImageSelector"          : "com.yancy.imageselector:imageselector:1.3.3",
+            "PickerView"             : "com.contrarywind:Android-PickerView:3.2.5",
+            "BRVAH"                  : "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30",
+            "XRecycleView"           : "com.jcodecraeer:xrecyclerview:1.3.2",
+            "CityPicker"             : "liji.library.dev:citypickerview:3.1.6",
+            "MPChart"                : "com.github.PhilJay:MPAndroidChart:v3.0.1",
+            "FlycoTabLayout"         : "com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar",
+            "MagicIndicator"         : "com.github.hackware1993:MagicIndicator:1.5.0",
+            "SwipeBackFragment"      : "me.yokeyword:swipebackfragment:${swipeBackFragmentVersion}",
+
+            //ThirdSDK
+            "QiNiu"                  : "com.qiniu:qiniu-android-sdk:7.2.+",
+            "UMengAnalytics"         : "com.umeng.analytics:analytics:latest.integration",
+            "PingCore"               : "com.pingxx:pingpp-core:${pingVersion}",
+            "PingUI"                 : "com.pingxx:pingpp-ui:${pingVersion}",
+            "PingWx"                 : "com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+",
+            "PingALIPAY"             : "com.pingxx:pingpp-alipay:${pingVersion}",
+            "PingQPAY"               : "com.pingxx:pingpp-qpay:${pingVersion}",
+            "PingUPACP"              : "com.pingxx:pingpp-upacp:${pingVersion}"
+    ]
+}

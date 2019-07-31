@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.laka.live.ui.widget.chatKeyboard.InputRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.laka.live.ui.widget.SelectorImageButton
+        android:id="@+id/btn_close"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="11dp"
+        app:default_image="@drawable/live_btn_close"
+        app:press_image="@drawable/live_btn_close_press" />
+
+
+    <com.laka.live.ui.widget.SelectorImageButton
+        android:id="@+id/btn_camera"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="11dp"
+        app:default_image="@drawable/live_btn_camera_flip"
+        app:press_image="@drawable/live_btn_camera_flip_press" />
+
+    <com.laka.live.ui.widget.SelectorImageButton
+        android:id="@+id/btn_beauty"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="11dp"
+        android:layout_toRightOf="@id/btn_camera"
+        app:default_image="@drawable/live_btn_beaut"
+        app:press_image="@drawable/live_btn_beauty_press" />
+
+    <com.laka.live.ui.widget.SelectorImageButton
+        android:id="@+id/btn_filter"
+        android:layout_width="@dimen/live_prepare_top_icon_height"
+        android:layout_height="@dimen/live_prepare_top_icon_height"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="11dp"
+        android:layout_toRightOf="@id/btn_beauty"
+        android:background="@drawable/live_begin_btn_filter_selector"
+        android:visibility="gone" />
+
+    <com.laka.live.ui.widget.SelectorImageButton
+        android:id="@+id/btn_location"
+        android:layout_width="28dp"
+        android:layout_height="@dimen/live_prepare_top_icon_height"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="11dp"
+        android:layout_toRightOf="@id/btn_beauty"
+        android:visibility="gone"
+        app:default_image="@drawable/live_btn_location_nomal"
+        app:press_image="@drawable/live_btn_location_highlighted" />
+
+    <TextView
+        android:id="@+id/tv_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/btn_location"
+        android:text="@string/ta_from_huoxing"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:id="@+id/ll_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="40dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/rl_addpic"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/round_18px_black20_50_selector"
+                android:visibility="gone">
+
+
+                <ImageView
+                    android:id="@+id/iv_add"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="43dp"
+                    android:src="@drawable/live_btn_addphoto_selector" />
+
+                <TextView
+                    android:id="@+id/tv_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_add"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/live_cover"
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/iv_cover"
+
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    app:placeholderImage="@drawable/blank_icon_avatar"
+                    app:roundedCornerRadius="18px" />
+            </RelativeLayout>
+
+
+            <EditText
+                android:id="@+id/et_focus"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="invisible" />
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="27dp"
+                android:layout_marginRight="27dp"
+                android:layout_marginTop="43dp"
+                android:background="@color/transparent"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="left"
+                android:hint="@string/write_topic_more_people"
+                android:maxLines="2"
+                android:shadowColor="@color/black"
+                android:shadowDx="0"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textCursorDrawable="@drawable/release_live_title_white_cursor"
+                android:textSize="18dp"
+                android:visibility="gone" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="14dp"
+                android:src="@color/white50"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_addtopic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="14dp"
+                android:shadowColor="@color/black"
+                android:shadowDx="0"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="@string/add_topic_edit"
+                android:textColor="@color/text_2d770_2cd77050_selector"
+                android:textSize="18dp"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_share"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="63dp"
+                android:gravity="center">
+
+                <com.laka.live.ui.widget.SelectorImageButton
+                    android:id="@+id/btn_share_qq"
+                    android:layout_width="@dimen/live_prepare_share_icon_height"
+                    android:layout_height="@dimen/live_prepare_share_icon_height"
+                    android:layout_marginRight="15dp"
+                    app:default_image="@drawable/live_btn_qq_default"
+                    app:press_image="@drawable/live_btn_qq_press" />
+
+
+                <com.laka.live.ui.widget.SelectorImageButton
+                    android:id="@+id/btn_share_qzone"
+                    android:layout_width="@dimen/live_prepare_share_icon_height"
+                    android:layout_height="@dimen/live_prepare_share_icon_height"
+                    android:layout_marginRight="15dp"
+                    app:default_image="@drawable/live_btn_kj_default"
+                    app:press_image="@drawable/live_btn_kj_press" />
+
+
+                <com.laka.live.ui.widget.SelectorImageButton
+                    android:id="@+id/btn_share_wx"
+                    android:layout_width="@dimen/live_prepare_share_icon_height"
+                    android:layout_height="@dimen/live_prepare_share_icon_height"
+                    android:layout_marginRight="15dp"
+                    app:default_image="@drawable/live_btn_wechat_default"
+                    app:press_image="@drawable/live_btn_wechat_press" />
+
+                <com.laka.live.ui.widget.SelectorImageButton
+                    android:id="@+id/btn_share_timeline"
+                    android:layout_width="@dimen/live_prepare_share_icon_height"
+                    android:layout_height="@dimen/live_prepare_share_icon_height"
+                    android:layout_marginRight="15dp"
+                    app:default_image="@drawable/live_btn_pyq_default"
+                    app:press_image="@drawable/live_btn_pyq_press" />
+
+                <com.laka.live.ui.widget.SelectorImageButton
+                    android:id="@+id/btn_share_sina"
+                    android:layout_width="@dimen/live_prepare_share_icon_height"
+                    android:layout_height="@dimen/live_prepare_share_icon_height"
+                    app:default_image="@drawable/live_btn_weibo_default"
+                    app:press_image="@drawable/live_btn_weibo_press" />
+
+                <com.laka.live.ui.widget.SelectorImageButton
+                    android:id="@+id/btn_share_position"
+                    android:layout_width="@dimen/live_prepare_share_icon_height"
+                    android:layout_height="@dimen/live_prepare_share_icon_height"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/home_btn_share_position_selector"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/start_live"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/btn_long_selector"
+                android:text="@string/start_live"
+                android:textColor="@color/color333333"
+                android:textSize="15dp" />
+
+            <!-- 直播测试时的提示 -->
+            <LinearLayout
+                android:id="@+id/testLiveTip"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/live_tips_bg_top" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/live_tips_bg"
+                    android:gravity="center"
+                    android:text="可通过搜索“直播测试”或者老师个人主页查看到测试直播"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</com.laka.live.ui.widget.chatKeyboard.InputRelativeLayout>
+
+    <!--
+
+       <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="156dp"
+            android:background="@color/color22212Da20">
+
+
+            <EditText
+                android:layout_marginTop="27dp"
+                android:id="@+id/title"
+                android:layout_width="240dp"
+                android:layout_height="51dp"
+                android:background="@color/transparent"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:hint="@string/live_title_hint"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="20dp"
+                android:maxLines="2"/>
+
+            <ImageView
+                android:id="@+id/divider_code"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@id/title"
+                android:background="@color/white50"
+                android:scaleType="fitXY"
+                android:layout_marginTop="26dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/divider_code"
+                android:gravity="center">
+
+                <LinearLayout android:id="@+id/ll_addpic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/live_begin_btn_addpic_selector" />
+
+                    <TextView
+                        android:textSize="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:text="@string/add_pic"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="1px"
+                    android:layout_height="40dp"
+                    android:background="@color/white50"
+                    android:scaleType="fitXY" />
+
+                <LinearLayout android:id="@+id/ll_addtopic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+
+                    <TextView
+                        android:textSize="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:text="@string/add_topic"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+     <TextView android:visibility="gone"
+            android:layout_marginTop="20dp"
+            android:textSize="14dp"
+            android:text="@string/live_begin_tag_tips"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    <com.laka.live.ui.widget.tagCloud.TagCloudLayout
+            android:layout_marginTop="10dp"
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tagSpacing="10dp"
+            app:lineSpacing="10dp"/>
+
+
+        <LinearLayout android:gravity="center"
+            android:layout_marginTop="17dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/ll_change_tag">
+
+            <TextView
+                android:textSize="12dp"
+                android:text="@string/change_tag_group"
+                android:textColor="@color/white_50white_selector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView android:src="@drawable/live_btn_refresh_selector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+
+         <EditText android:visibility="gone"
+            android:id="@+id/et_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="输入房间号"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"/>
+        <Button  android:visibility="gone"
+            android:id="@+id/see_live"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:text="测试观看直播"/>
+
+        <Button  android:visibility="gone"
+            android:id="@+id/to_login"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="去登陆"/>
+        <Button  android:visibility="gone"
+            android:id="@+id/btn_replay"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="测试看回放"/>-->

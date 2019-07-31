@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ll_bg"
+        android:background="@drawable/live_bg_loading"
+        android:orientation="horizontal" />
+
+    <!--     <TextureView
+            android:id="@+id/texture_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"/> -->
+    <com.laka.live.zego.widgets.ViewLive
+        android:id="@+id/vl_big_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:isBigView="true"/>
+    <!--   <include
+          android:id="@+id/av_video_layer_ui"
+          layout="@layout/qav_video_layer_ui"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent" />-->
+    <include
+        layout="@layout/view_release_live"
+        android:id="@+id/view_release_live"
+        android:visibility="gone"/>
+
+    <com.laka.live.ui.widget.ScrollbleViewPager
+        android:id="@+id/vp_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+
+    <!-- <include
+        android:id="@+id/room_content"
+        layout="@layout/view_room_content"/> -->
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rl_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent20">
+
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:background="@drawable/material_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_dialog_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="23dp"
+                android:layout_marginTop="23dp"
+                android:text="@string/go_recharge_page_title"
+                android:textColor="@color/dialog_title_color"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/tv_dialog_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="23dp"
+                android:layout_marginRight="23dp"
+                android:layout_marginTop="23dp"
+                android:text="@string/need_recharge"
+                android:textColor="@color/dialog_text_color"
+                android:textSize="14dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="23dp"
+                android:layout_marginTop="23dp"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_dialog_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/material_button"
+                    android:text="@string/cancel"
+                    android:textColor="@color/dialog_button_default_text_color"
+                    android:textSize="16dp" />
+
+                <Button
+                    android:id="@+id/btn_dialog_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/material_button"
+                    android:text="@string/go_recharge_page"
+                    android:textColor="@color/dialog_button_highlight_text_color"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_pause_live_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black60"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_live_close"
+            android:layout_width="28dp"
+            android:layout_height="46dp"
+            android:layout_above="@+id/ll_content"
+            android:layout_alignRight="@+id/ll_content"
+            android:src="@drawable/live_window_btn_close" />
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/round_12px_white"
+            android:minHeight="130dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:text="您可以选择暂停直播(最多1小时)或者结束直播"
+                android:textColor="@color/color333333"
+                android:textSize="14dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="23dp"
+                android:layout_marginRight="23dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_finish_live"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/live_window_btn_stop"
+                    android:text="结束直播"
+                    android:textColor="@color/color848484"
+                    android:textSize="15dp" />
+
+                <Button
+                    android:id="@+id/btn_pause_live"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/live_window_btn_pause"
+                    android:text="暂停直播"
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</FrameLayout>
+

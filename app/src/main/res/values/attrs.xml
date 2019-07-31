@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 通用属性 -->
+    <attr name="bold" format="boolean" />
+
+    <declare-styleable name="RoundAngleImageView">
+        <attr name="roundWidth" format="dimension" />
+        <attr name="roundHeight" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="SwipeBackLayout">
+        <attr name="edge_size" format="dimension" />
+        <attr name="edge_flag">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+            <enum name="bottom" value="2" />
+            <enum name="all" value="3" />
+        </attr>
+        <attr name="shadow_left" format="reference" />
+        <attr name="shadow_right" format="reference" />
+        <attr name="shadow_bottom" format="reference" />
+    </declare-styleable>
+
+    <attr name="SwipeBackLayoutStyle" format="reference" />
+    <declare-styleable name="WxCircleLoading">
+
+        <attr name="outer_layout_circle_color" format="color" />
+        <attr name="outer_layout_circle_stroke_width" format="dimension" />
+        <attr name="triangle_color" format="color" />
+        <attr name="circle_radius" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="SelectorButton">
+
+        <!-- 圆角角度 -->
+        <attr name="radius" format="dimension" />
+        <!-- 是否要圆角 -->
+        <attr name="is_radius" format="boolean" />
+        <!-- 背景颜色(如果为中空,则是边框线的颜色) -->
+        <attr name="color" format="color" />
+        <!-- 按压效果颜色 -->
+        <attr name="press_color" format="color" />
+        <!-- 按压时的文本颜色 -->
+        <attr name="press_text_color" format="color" />
+        <!-- 是否中空 -->
+        <attr name="stroke" format="boolean" />
+        <!-- 按压时是否只改变描边颜色 -->
+        <attr name="onlyStrokeColor" format="boolean" />
+        <!-- 四个角的圆角 -->
+        <attr name="topLeftRadius" format="dimension" />
+        <attr name="topRightRadius" format="dimension" />
+        <attr name="bottomLeftRadius" format="dimension" />
+        <attr name="bottomRightRadius" format="dimension" />
+
+    </declare-styleable>
+
+
+    <declare-styleable name="SelectorImage">
+        <!-- 默认图片 -->
+        <attr name="default_image" format="reference" />
+        <!-- 按压图 -->
+        <attr name="press_image" format="reference" />
+        <!-- 默认图片 -->
+        <attr name="default_bg_image" format="reference" />
+        <!-- 按压图 -->
+        <attr name="press_bg_image" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="AnimationView">
+        <!-- 动画资源id -->
+        <attr name="drawable_id" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="LimitEditText">
+        <!-- 属性的命名和作用跟EditText的一样 -->
+        <attr name="hint" format="string" />
+        <attr name="textColor" format="color" />
+        <attr name="maxLength" format="integer" />
+        <attr name="textColorHint" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="DoubleTextView">
+        <!-- 顶部的数量 -->
+        <attr name="count" format="integer" />
+        <!-- 底部的类型 -->
+        <attr name="type" format="string" />
+    </declare-styleable>
+    <declare-styleable name="Lrc">
+        <attr name="textSize" format="dimension" />
+        <attr name="normalTextColor" format="reference|color" />
+        <attr name="currentTextColor" format="reference|color" />
+        <attr name="currentNormalColor" format="reference|color" />
+        <attr name="dividerHeight" format="dimension" />
+        <attr name="rows" format="integer" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ChatMessageView">
+        <attr name="mode" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="PullToZoomView">
+        <attr name="headerView" format="reference" />
+        <attr name="contentView" format="reference" />
+        <attr name="zoomView" format="reference" />
+        <attr name="isHeaderParallax" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="HeadView">
+        <attr name="headText" format="string" />
+        <attr name="headColor" format="color" />
+        <attr name="headSize" format="dimension" />
+        <attr name="headBg" format="reference" />
+        <attr name="tipText" format="string" />
+        <attr name="tipColor" format="color" />
+        <attr name="tipSize" format="dimension" />
+        <attr name="tipBackground" format="reference" />
+        <attr name="showDivider" format="boolean" />
+        <attr name="backIcon" format="reference" />
+        <attr name="backText" format="string" />
+        <attr name="backTextColor" format="color" />
+        <attr name="rightIcon" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="MyInfoItemView">
+        <attr name="leftIcon" format="reference" />
+        <attr name="key" format="string" />
+        <attr name="value" format="string" />
+        <attr name="valueColor" format="color" />
+        <attr name="keyColor" format="color" />
+        <attr name="keySize" format="dimension" />
+        <attr name="valueSize" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="border_overlay" format="boolean" />
+    </declare-styleable>
+
+
+    <!--描边字体-->
+    <declare-styleable name="StrokeTextView">
+        <attr name="stroke_border_color" format="color" />
+        <attr name="stroke_border_width" format="dimension" />
+    </declare-styleable>
+
+    <!--描边字体-->
+    <declare-styleable name="StrokedTextView">
+        <attr name="strokeColor" format="color" />
+        <attr name="strokeWidth" format="dimension" />
+        <attr name="strokeTextColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="TagCloudLayout">
+        <attr name="lineSpacing" format="dimension" />
+        <attr name="tagSpacing" format="dimension" />
+        <!-- 是否是固定布局 -->
+        <attr name="isFixed" format="boolean" />
+        <attr name="columnSize" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="InputFrame">
+        <attr name="keyText" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="PullScrollView">
+        <attr name="header" format="reference" />
+        <attr name="headerHeight" format="dimension" />
+        <attr name="headerVisibleHeight" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="MusicLoading">
+        <attr name="margin" format="dimension" />
+        <attr name="bigLineWidth" format="dimension" />
+        <attr name="littleLineWidth" format="dimension" />
+        <attr name="lineColor" format="color" />
+        <attr name="duration" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="ViewLive">
+        <attr name="isBigView" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="PriceView">
+        <attr name="priceColor" format="color" />
+        <attr name="weidouColor" format="color" />
+        <attr name="originalColor" format="color" />
+        <attr name="freeColor" format="color" />
+        <attr name="priceTextSize" format="dimension" />
+        <attr name="weidouTextSize" format="dimension" />
+        <attr name="originalTextSize" format="dimension" />
+        <attr name="freeTextSize" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CartPriceValue">
+        <attr name="Cartvalue" format="reference|string" />
+        <attr name="CarttextColor" format="reference|color" />
+        <attr name="CarttextSize" format="reference|dimension" />
+        <attr name="moneySize" format="reference|dimension" />
+        <attr name="intSize" format="reference|dimension" />
+        <attr name="decimalSize" format="reference|dimension" />
+        <attr name="strike" format="boolean" />
+        <attr name="prefix" format="string" />
+        <attr name="withEndZero" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="MaterialRippleLayout">
+        <attr name="mrl_rippleColor" format="color" localization="suggested" />
+        <attr name="mrl_rippleDimension" format="dimension" localization="suggested" />
+        <attr name="mrl_rippleOverlay" format="boolean" localization="suggested" />
+        <attr name="mrl_rippleAlpha" format="float" localization="suggested" />
+        <attr name="mrl_rippleDuration" format="integer" localization="suggested" />
+        <attr name="mrl_rippleFadeDuration" format="integer" localization="suggested" />
+        <attr name="mrl_rippleHover" format="boolean" localization="suggested" />
+        <attr name="mrl_rippleBackground" format="color" localization="suggested" />
+        <attr name="mrl_rippleDelayClick" format="boolean" localization="suggested" />
+        <attr name="mrl_ripplePersistent" format="boolean" localization="suggested" />
+        <attr name="mrl_rippleInAdapter" format="boolean" localization="suggested" />
+        <attr name="mrl_rippleRoundedCorners" format="dimension" localization="suggested" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ShoppingCarTopView">
+        <attr name="gap" format="integer" />
+        <attr name="animDuration" format="integer" />
+    </declare-styleable>
+
+
+    <declare-styleable name="RattingBar">
+        <attr name="isIndicator" format="boolean" />
+        <attr name="starNum" format="integer" />
+        <attr name="onDrawable" format="reference" />
+        <attr name="offDrawable" format="reference" />
+        <attr name="rating" format="float" />
+        <attr name="starSize" format="dimension" />
+        <attr name="starGap" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="ReplyListView">
+        <attr name="item_color" format="color" />
+        <attr name="item_selector_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="ExpandTextView">
+        <attr name="showLines" format="integer" />
+        <attr name="contentTextColor" format="color" />
+        <attr name="contentTextSize" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CountDownProgressBar">
+
+        <!-- 默认圆实心的颜色 -->
+        <attr name="circle_solid_color" format="color" />
+        <!-- 默认圆边框的颜色 -->
+        <attr name="circle_stroke_color" format="color" />
+        <!-- 默认圆边框的宽度 -->
+        <attr name="circle_stroke_width" format="dimension" />
+        <!-- 默认圆的半径 -->
+        <attr name="circler_radius" format="dimension" />
+        <!-- 进度条的颜色 -->
+        <attr name="progress_color" format="color" />
+        <!-- 进度条的宽度 -->
+        <attr name="progress_width" format="dimension" />
+        <!-- 文字的颜色 -->
+        <attr name="text_color" format="color" />
+        <!-- 文字的字体大小 -->
+        <attr name="text_size" format="dimension" />
+        <!--文字内容-->
+        <attr name="text_value" format="string" />
+    </declare-styleable>
+
+    <!--公共参数提到外面-->
+    <attr name="pstsIndicatorColor" format="color" />
+    <attr name="pstsUnderlineColor" format="color" />
+    <attr name="pstsDividerColor" format="color" />
+    <attr name="pstsIndicatorHeight" format="dimension" />
+    <attr name="pstsUnderlineHeight" format="dimension" />
+    <attr name="pstsDividerPadding" format="dimension" />
+    <attr name="pstsTabPaddingLeftRight" format="dimension" />
+    <attr name="pstsScrollOffset" format="dimension" />
+    <attr name="pstsTabBackground" format="reference" />
+    <attr name="pstsShouldExpand" format="boolean" />
+    <attr name="pstsTextAllCaps" format="boolean" />
+
+    <declare-styleable name="PagerSlidingTabStrip">
+        <attr name="pstsIndicatorColor" />
+        <attr name="pstsUnderlineColor" />
+        <attr name="pstsDividerColor" />
+        <attr name="pstsIndicatorHeight" />
+        <attr name="pstsUnderlineHeight" />
+        <attr name="pstsDividerPadding" />
+        <attr name="pstsTabPaddingLeftRight" />
+        <attr name="pstsScrollOffset" />
+        <attr name="pstsTabBackground" />
+        <attr name="pstsShouldExpand" />
+        <attr name="pstsTextAllCaps" />
+    </declare-styleable>
+
+    <declare-styleable name="HomeTabItemView">
+        <attr name="bottomText" format="string" />
+        <attr name="topImage" format="reference" />
+    </declare-styleable>
+
+</resources>

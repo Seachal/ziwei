@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/discountTimeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_10"
+        android:gravity="center"
+        android:textColor="@color/color848484"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/dFirst"
+                style="@style/courses_discount_time_view" />
+
+            <TextView
+                android:id="@+id/dSecond"
+                style="@style/courses_discount_time_view" />
+
+            <TextView
+                android:layout_width="@dimen/space_22"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="天"
+                android:textColor="@color/color848484"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/hours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/hFirst"
+                style="@style/courses_discount_time_view" />
+
+            <TextView
+                android:id="@+id/hSecond"
+                style="@style/courses_discount_time_view" />
+
+            <TextView
+                android:layout_width="@dimen/space_22"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="时"
+                android:textColor="@color/color848484"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/minutes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/mFirst"
+                style="@style/courses_discount_time_view" />
+
+            <TextView
+                android:id="@+id/mSecond"
+                style="@style/courses_discount_time_view" />
+
+            <TextView
+                android:layout_width="@dimen/space_22"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="分"
+                android:textColor="@color/color848484"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/seconds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/sFirst"
+                style="@style/courses_discount_time_view" />
+
+            <TextView
+                android:id="@+id/sSecond"
+                style="@style/courses_discount_time_view" />
+
+            <TextView
+                android:layout_width="@dimen/space_22"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="秒"
+                android:textColor="@color/color848484"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

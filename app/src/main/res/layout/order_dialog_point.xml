@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_ta_coin_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_10"
+            android:textColor="@color/order_detail_title_color" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/order_main_ta_coin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_15"
+            android:background="@drawable/order_main_ta_coin_bg"
+            android:gravity="center_vertical"
+            android:numeric="integer"
+            android:padding="@dimen/space_10"
+            android:singleLine="true"
+            android:textColor="@color/black_dark"
+            android:textSize="@dimen/space_13" />
+    </RelativeLayout>
+</LinearLayout>

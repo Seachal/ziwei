@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_topbar_zhubo"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="10dp">
+
+        <LinearLayout
+            android:background="@drawable/round_8px_white_stroke"
+            android:id="@+id/rl_effect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingLeft="10dp" android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/live_btn_music_debug_selector"/>
+            <TextView
+                android:layout_marginLeft="4dp"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/audio_effect" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/round_8px_white_stroke"
+            android:layout_toRightOf="@+id/rl_effect"
+            android:id="@+id/rl_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingLeft="10dp" android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/live_btn_music_pclose_selector"/>
+            <TextView
+                android:layout_marginLeft="4dp"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/end" />
+        </LinearLayout>
+
+        <com.laka.live.ui.widget.lrcView.LrcView
+            android:layout_below="@+id/rl_effect"
+            android:id="@+id/lyricView"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@color/transparent"
+            app:currentTextColor="@color/color31C27C"
+            app:currentNormalColor="@color/white"
+            app:dividerHeight="6dip"
+            app:normalTextColor="@color/white60"
+            app:rows="2"
+            app:textSize="16dp"
+            />
+    </RelativeLayout>

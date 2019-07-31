@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:text="@string/live_manager"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:textColor="@color/color2E2E2E"
+        android:textSize="14dp"
+        android:background="@color/colorEFEFF7"/>
+
+    <View
+        android:id="@+id/divider"
+        style="@style/horizontal_divider"
+        android:layout_marginLeft="@dimen/space_14" />
+
+    <com.laka.live.account.OnlineUserInfoItemView
+        android:id="@+id/item_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/rank_bg">
+
+
+
+    <com.laka.live.ui.widget.HeadView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:headText="@string/contribution_list"
+        app:headColor="@color/white"
+        app:headBg="@color/transparent"
+        app:showDivider="false"
+        app:backTextColor="@color/white"
+        app:backIcon="@drawable/title_icon_back02_selector"
+        app:backText="@string/back"/>
+
+    <com.laka.live.ui.widget.PageListLayout
+        android:id="@+id/list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"/>
+</LinearLayout>

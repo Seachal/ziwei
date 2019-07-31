@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:padding="@dimen/px20"
+            android:src="@drawable/title_icon_back"
+            android:text="@string/back"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp35" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:clickable="true"
+            android:padding="@dimen/px20"
+            android:text="添加课程"
+            android:textColor="@color/color2E2E2E"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="@dimen/px20"
+            android:text="提交"
+            android:textColor="@color/color2E2E2E"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <View
+        style="@style/horizontal_divider"
+        android:layout_below="@+id/titleBar" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/titleBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <!-- 课程封面 -->
+            <RelativeLayout
+                android:id="@+id/rl_course_cover"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px400"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/blurImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/course_header_bg" />
+
+                <ImageView
+                    android:id="@+id/blurLayout"
+                    android:layout_width="@dimen/space_140"
+                    android:layout_height="@dimen/space_50"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/border_white" />
+
+                <TextView
+                    android:id="@+id/blurText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableLeft="@drawable/btn_icon_follow"
+                    android:drawablePadding="@dimen/space_5"
+                    android:gravity="center"
+                    android:text="课程封面"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <com.laka.live.ui.widget.WxCircleLoading
+                    android:id="@+id/circleLoading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:padding="5dp"
+                    android:visibility="gone"
+                    app:circle_radius="25dp" />
+
+                <com.laka.live.ui.widget.SelectorImage
+                    android:id="@+id/deleteCover"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:padding="@dimen/space_10"
+                    android:visibility="gone"
+                    app:default_image="@drawable/class_btn_delete_n"
+                    app:press_image="@drawable/class_btn_delete_h" />
+
+            </RelativeLayout>
+            <!-- 课程封面 -->
+
+            <!-- 课程视频 -->
+            <LinearLayout
+                android:id="@+id/videoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_1"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/space_15"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/addVideo"
+                    android:layout_width="@dimen/space_100"
+                    android:layout_height="@dimen/space_100"
+                    android:layout_marginTop="@dimen/space_6"
+                    android:background="@drawable/add_video_bg_selector">
+
+                    <TextView
+                        android:id="@+id/videoText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawablePadding="@dimen/space_10"
+                        android:drawableTop="@drawable/class_icon_add"
+                        android:padding="15dp"
+                        android:text="课程视频"
+                        android:textColor="@color/colorA9A9A9"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/courseVideo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/player"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="center"
+                        android:src="@drawable/class_icon_play"
+                        android:visibility="gone" />
+
+                    <com.laka.live.ui.widget.WxCircleLoading
+                        android:id="@+id/videoLoading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:padding="5dp"
+                        android:visibility="gone"
+                        app:circle_radius="20dp" />
+
+                </RelativeLayout>
+
+                <com.laka.live.ui.widget.SelectorImage
+                    android:id="@+id/deleteVideo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-10dp"
+                    android:visibility="gone"
+                    app:default_image="@drawable/class_btn_delete_small_n"
+                    app:press_image="@drawable/class_btn_delete_small_h" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="@dimen/space_12"
+                    android:text="视频&lt;3GB\n时长&lt;3小时"
+                    android:textColor="@color/colorBFBFBF"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+            <!-- 课程视频 -->
+
+            <!-- 课程标题 -->
+            <com.laka.live.ui.widget.LimitEditText
+                android:id="@+id/courseTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_93"
+                app:hint="输入课程标题"
+                app:maxLength="30"
+                app:textColorHint="@color/colorBFBFBF" />
+            <!-- 课程标题 -->
+
+            <View
+                style="@style/horizontal_divider"
+                android:layout_height="@dimen/space_5" />
+
+            <!-- 课程价格和时间 -->
+            <LinearLayout
+                android:id="@+id/priceView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="@dimen/space_15">
+
+                <!-- 课程价格 -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="课程价格："
+                        android:textColor="@color/color333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/textView2"
+                        android:layout_toRightOf="@+id/textView2"
+                        android:text="(1味豆=1元)"
+                        android:textColor="@color/color848484"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@+id/coursePrice"
+                        android:layout_width="@dimen/space_55"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toLeftOf="@+id/priceTv"
+                        android:layout_toStartOf="@+id/priceTv"
+                        android:background="@drawable/corners_5_stroke_yellow"
+                        android:gravity="center"
+                        android:hint="0"
+                        android:inputType="numberDecimal"
+                        android:paddingBottom="@dimen/space_5"
+                        android:paddingLeft="@dimen/space_5"
+                        android:paddingRight="@dimen/space_5"
+                        android:paddingTop="@dimen/space_5"
+                        android:singleLine="true"
+                        android:textColor="@color/color333333"
+                        android:textColorHint="@color/color848484"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/priceTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/corners_5_solid_yellow"
+                        android:gravity="center"
+                        android:onClick="onClick"
+                        android:paddingBottom="@dimen/space_5"
+                        android:paddingLeft="@dimen/space_10"
+                        android:paddingRight="@dimen/space_10"
+                        android:paddingTop="@dimen/space_5"
+                        android:text="味豆"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                </RelativeLayout>
+                <!-- 课程价格 -->
+
+                <!-- 开播时间 -->
+                <RelativeLayout
+                    android:id="@+id/airTimeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_15">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="开播时间："
+                        android:textColor="@color/color333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/airTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/textView4"
+                        android:layout_toRightOf="@+id/textView4"
+                        android:drawablePadding="@dimen/space_5"
+                        android:drawableRight="@drawable/icon_more_n"
+                        android:gravity="right"
+                        android:text="请选择"
+                        android:textColor="@color/color848484"
+                        android:textSize="13sp" />
+
+                </RelativeLayout>
+                <!-- 开播时间 -->
+
+            </LinearLayout>
+            <!-- 课程价格和时间 -->
+
+            <View
+                style="@style/horizontal_divider"
+                android:layout_height="@dimen/space_5" />
+
+            <!-- 课程简介 -->
+            <EditText
+                android:id="@+id/courseSummary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:gravity="top"
+                android:hint="输入课程简介"
+                android:maxLength="5000"
+                android:paddingLeft="@dimen/space_15"
+                android:paddingRight="@dimen/space_15"
+                android:paddingTop="@dimen/space_20"
+                android:textColor="@color/color333333"
+                android:textColorHint="@color/colorBFBFBF"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/summaryTextCount"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_41"
+                android:gravity="end|center_vertical"
+                android:paddingEnd="@dimen/space_15"
+                android:text="0/5000"
+                android:textColor="@color/colorBFBFBF"
+                android:textSize="12sp" />
+            <!-- 课程简介 -->
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/space_15"
+                android:paddingLeft="@dimen/space_15"
+                android:paddingRight="@dimen/space_15"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/summaryPhotoGallery"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal" />
+            </HorizontalScrollView>
+
+            <View
+                style="@style/horizontal_divider"
+                android:layout_height="@dimen/space_5" />
+
+            <!-- 课程配方 -->
+            <EditText
+                android:id="@+id/courseFormula"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:gravity="top"
+                android:hint="输入课程配方(选填，粉丝购买后才可以查看)\n如：\n鸡蛋：6个\n牛奶：100g\n细砂糖：90g"
+                android:maxLength="5000"
+                android:paddingLeft="@dimen/space_15"
+                android:paddingRight="@dimen/space_15"
+                android:paddingTop="@dimen/space_20"
+                android:textColor="@color/color333333"
+                android:textColorHint="@color/colorBFBFBF"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/formulaTextCount"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_41"
+                android:gravity="end|center_vertical"
+                android:paddingEnd="@dimen/space_15"
+                android:text="0/5000"
+                android:textColor="@color/colorBFBFBF"
+                android:textSize="12sp" />
+
+            <com.laka.live.ui.widget.UDImageView
+                android:id="@+id/formulaImage"
+                android:layout_width="@dimen/space_80"
+                android:layout_height="@dimen/space_80"
+                android:layout_margin="@dimen/space_15"
+                android:visibility="gone" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/space_15"
+                android:paddingLeft="@dimen/space_15"
+                android:paddingRight="@dimen/space_15"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/formulaPhotoGallery"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal" />
+            </HorizontalScrollView>
+
+            <!-- 课程配方 -->
+
+            <View
+                style="@style/horizontal_divider"
+                android:layout_height="@dimen/space_5" />
+
+            <!-- 推荐商品 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/space_15">
+
+                <RelativeLayout
+                    android:id="@+id/addView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space_13"
+                    android:layout_marginLeft="@dimen/space_15"
+                    android:layout_marginRight="@dimen/space_15"
+                    android:layout_marginTop="@dimen/space_15"
+                    android:background="@drawable/add_goods_bg_selector"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawableLeft="@drawable/class_icon_add"
+                        android:drawablePadding="@dimen/space_5"
+                        android:text="添加推荐商品(选填)"
+                        android:textColor="@color/colorA9A9A9"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/courseCover"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/goodsLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space_10"
+                    android:layout_marginTop="@dimen/space_15"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/goodsGallery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false" />
+
+                    <RelativeLayout
+                        android:id="@+id/addGoods"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        android:paddingBottom="@dimen/space_6"
+                        android:paddingTop="@dimen/space_10">
+
+                        <TextView
+                            android:id="@+id/recommendTip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_gravity="left"
+                            android:text="已添加6件推荐商品"
+                            android:textColor="@color/color333333"
+                            android:textSize="14sp" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right"
+                            android:drawablePadding="@dimen/space_5"
+                            android:drawableRight="@drawable/icon_more_n"
+                            android:text="继续添加"
+                            android:textColor="@color/color848484"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <!-- 推荐商品 -->
+
+            <View
+                style="@style/horizontal_divider"
+                android:layout_height="@dimen/space_5"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 删除课程 -->
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <View
+            style="@style/horizontal_divider"
+            android:background="@color/colorE5E5E5" />
+
+        <TextView
+            android:id="@+id/deleteCourse"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_60"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/white_bg_selector"
+            android:gravity="center"
+            android:text="删除课程"
+            android:textColor="@color/colorFFC608"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+    <!-- 删除课程 -->
+
+</RelativeLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              style="@style/ActivityBackground"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:animateLayoutChanges="true"
+              android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_45"
+        android:animateLayoutChanges="true"
+        android:background="@color/colorFAFAFA">
+
+        <com.laka.live.ui.widget.HeadView
+            android:id="@+id/replay_title_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:headText="@string/replay"
+            app:tipText="@string/edit"/>
+
+        <LinearLayout
+            android:id="@+id/replay_tools_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <com.laka.live.ui.widget.AlphaTextView
+                android:id="@+id/replay_all_check_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/space_10"
+                android:text="@string/replay_all_check"
+                android:textColor="@color/color333333"
+                android:textSize="@dimen/space_15"/>
+
+            <TextView
+                android:id="@+id/replay_checked_tip"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/space_10"
+                android:textColor="@color/color2E2E2E"
+                android:textSize="@dimen/space_17"/>
+
+            <com.laka.live.ui.widget.AlphaTextView
+                android:id="@+id/replay_close_edit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/space_10"
+                android:text="@string/replay_close_edit"
+                android:textColor="@color/colorF65843"
+                android:textSize="@dimen/space_15"/>
+        </LinearLayout>
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.laka.live.ui.widget.PullToRefreshRecyclerView
+            android:id="@+id/replay_recycle_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <com.laka.live.ui.widget.LoadingLayout
+            android:id="@+id/replay_loading_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"/>
+    </FrameLayout>
+
+    <com.laka.live.ui.widget.AlphaTextView
+        android:id="@+id/replay_delete_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:padding="@dimen/space_10"
+        android:text="@string/replay_delete_button"
+        android:textColor="@color/colorF65843"
+        android:textSize="@dimen/space_17"
+        android:visibility="gone"/>
+</LinearLayout>

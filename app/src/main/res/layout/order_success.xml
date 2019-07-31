@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_110"
+        android:background="@drawable/mine_img_transport"
+        android:gravity="left|center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/space_30">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="买家已付款"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_5"
+            android:text="您的包裹正在打包当中"
+            android:textColor="@color/white"
+            android:textSize="13dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_15"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_receiver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color333333"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_15"
+            android:textColor="@color/color333333"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_10"
+            android:clickable="false"
+            android:ellipsize="end"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:maxLines="2"
+            android:textColor="@color/color333333"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/horizontal_divider"
+        android:layout_height="1dp" />
+
+    <!-- 旧代码隐藏 -->
+    <TextView
+        android:id="@+id/order_success_send_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_30"
+        android:layout_marginTop="@dimen/space_15"
+        android:drawableLeft="@drawable/order_form_dot"
+        android:drawablePadding="@dimen/space_20"
+        android:gravity="center"
+        android:textColor="@color/black_light"
+        android:textSize="@dimen/space_15"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/order_success_arrive_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_30"
+        android:layout_marginTop="@dimen/space_10"
+        android:drawableLeft="@drawable/order_form_dot"
+        android:drawablePadding="@dimen/space_20"
+        android:textColor="@color/black_light"
+        android:textSize="@dimen/space_15"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/order_success_communicate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_15"
+        android:layout_marginLeft="@dimen/space_30"
+        android:layout_marginTop="@dimen/space_10"
+        android:drawableLeft="@drawable/order_form_dot"
+        android:drawablePadding="@dimen/space_20"
+        android:gravity="center"
+        android:textColor="@color/black_light"
+        android:textSize="@dimen/space_15"
+        android:visibility="gone" />
+    <!-- 旧代码隐藏 -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_15"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="总价："
+            android:textColor="@color/color333333"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <com.laka.live.shopping.widget.PriceView
+            android:id="@+id/goodsPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:CarttextColor="@color/colorFF950B"
+            app:bold="true"
+            app:decimalSize="17sp"
+            app:intSize="17sp"
+            app:moneySize="17sp" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_15"
+        android:layout_marginLeft="@dimen/space_15"
+        android:layout_marginRight="@dimen/space_15"
+        android:layout_marginTop="@dimen/space_8">
+
+        <com.laka.live.ui.widget.SelectorButton
+            android:id="@+id/order_detail"
+            android:layout_width="@dimen/space_80"
+            android:layout_height="@dimen/space_28"
+            android:layout_marginRight="@dimen/space_10"
+            android:layout_toLeftOf="@+id/order_back_to_shopping"
+            android:text="@string/order_detail"
+            android:textColor="@color/color848484"
+            android:textSize="13sp"
+            app:color="@color/color848484"
+            app:press_color="@color/white_focus"
+            app:radius="@dimen/space_20"
+            app:stroke="true" />
+
+        <com.laka.live.ui.widget.SelectorButton
+            android:id="@+id/order_back_to_shopping"
+            android:layout_width="@dimen/space_80"
+            android:layout_height="@dimen/space_28"
+            android:layout_alignParentRight="true"
+            android:text="@string/order_success_back"
+            android:textColor="@color/color848484"
+            android:textSize="13sp"
+            app:color="@color/color848484"
+            app:press_color="@color/white_focus"
+            app:radius="@dimen/space_20"
+            app:stroke="true" />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/horizontal_divider"
+        android:layout_height="@dimen/space_5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/space_15">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="安全提醒"
+            android:textColor="@color/color333333"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_11"
+            android:text="@string/order_success_tips"
+            android:textColor="@color/colorFF950B"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

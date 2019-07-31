@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_mini_video_function"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="false">
+
+
+    <!--<android.support.constraint.ConstraintLayout-->
+    <!--android:id="@+id/cl_mini_video_anim"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--app:layout_constraintHeight_percent="0.6">-->
+
+    <FrameLayout
+        android:id="@+id/fl_video_function_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@color/white">
+
+        <net.lucode.hackware.magicindicator.MagicIndicator
+            android:id="@+id/indicator_video_function"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="@dimen/space_20" />
+
+        <ImageView
+            android:id="@+id/iv_mini_video_function_close"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:padding="@dimen/space_10"
+            android:src="@drawable/live_pop_close_selector" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.06dp"
+            android:layout_gravity="bottom"
+            android:background="@color/divider_color" />
+
+    </FrameLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_video_function"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fl_video_function_top" />
+    <!--</android.support.constraint.ConstraintLayout>-->
+
+
+    <com.laka.live.ui.widget.chatKeyboard.KJChatKeyboardComment
+        android:id="@+id/kjChatKeyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:visibility="gone" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+    style="@style/ActivityBackground">
+
+    <com.laka.live.ui.widget.HeadView
+        android:id="@+id/head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:headText="@string/gender"
+        custom:tipText="@string/save" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/space_10"
+        android:background="@color/white">
+
+        <View style="@style/horizontal_divider"/>
+
+        <CheckedTextView
+            android:id="@+id/boy_item"
+            style="@style/my_check_item"
+            android:text="@string/boy" />
+
+        <View style="@style/horizontal_divider_margin_left_15dp" />
+
+        <CheckedTextView
+            android:id="@+id/gril_item"
+            style="@style/my_check_item"
+            android:text="@string/girl" />
+
+
+        <View style="@style/horizontal_divider" />
+    </LinearLayout>
+
+</LinearLayout>

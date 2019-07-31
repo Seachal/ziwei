@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/head_ll"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/space_15"
+    android:orientation="vertical">
+
+    <View style="@style/head_divider" />
+</LinearLayout>

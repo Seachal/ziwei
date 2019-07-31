@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="26dp"
+    android:background="@drawable/home_bg_label_selector"
+    android:id="@+id/tag_btn"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:gravity="center"
+    android:text="标签"
+    android:textColor="@color/tag_live_selector"
+    android:textSize="12dp">
+</Button>

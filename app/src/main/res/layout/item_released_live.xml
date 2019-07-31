@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/px30"
+    android:paddingRight="@dimen/px30"
+    android:orientation="horizontal">
+
+    <CheckBox
+        android:id="@+id/selected"
+        android:visibility="gone"
+        android:button="@color/transparent"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/px15"
+        android:background="@drawable/checkbox_yellow"/>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/userFace"
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@+id/selected"
+        android:layout_toEndOf="@+id/selected"
+        android:layout_width="@dimen/px150"
+        android:layout_height="@dimen/px150"
+        android:layout_marginTop="@dimen/px30"
+        android:layout_marginBottom="@dimen/px30"
+        app:placeholderImageScaleType="centerCrop"
+        app:placeholderImage="@drawable/blank_icon_avatar" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px150"
+        android:layout_alignTop="@+id/userFace"
+        android:layout_marginLeft="@dimen/px15"
+        android:layout_marginRight="@dimen/px15"
+        android:layout_toRightOf="@+id/userFace"
+        android:layout_toEndOf="@+id/userFace">
+
+        <TextView
+            android:id="@+id/title"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="15sp"
+            android:textColor="@color/color333333"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="风靡全球的小清新--可爱又好喝的柠檬果汁" />
+
+        <LinearLayout
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="直播中"
+                style="@style/strokeCorner2"
+                android:background="@drawable/corners_stroke_green"
+                android:textColor="@color/color3BC36B" />
+
+            <TextView
+                android:id="@+id/subscribe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textSize="13sp"
+                android:drawablePadding="@dimen/space_5"
+                android:drawableLeft="@drawable/share_icon_eyes"
+                android:textColor="@color/color999999"
+                android:layout_marginLeft="@dimen/px15"
+                android:text="789人已购买" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_toLeftOf="@+id/money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2017年12月15日 14:32"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textSize="13sp"
+                android:textColor="@color/color999999"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:drawablePadding="@dimen/px15"
+                android:drawableLeft="@drawable/share_icon_clock"/>
+
+            <TextView
+                android:id="@+id/money"
+                android:text="100钻"
+                android:textSize="13sp"
+                android:textColor="@color/color333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/space_5"
+                android:gravity="center_vertical"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:drawableRight="@drawable/price_icon_diamonds"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_below="@+id/userFace"
+        style="@style/horizontal_divider"/>
+
+</RelativeLayout>

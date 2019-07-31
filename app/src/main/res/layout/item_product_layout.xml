@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/list_item_selector">
+
+    <TextView
+        android:id="@+id/count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:drawableLeft="@drawable/jyjl_icon_bean"
+        android:drawablePadding="@dimen/activity_horizontal_margin"
+        android:text="60"
+        android:textColor="@color/color333333"
+        android:textSize="15dp" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="@dimen/space_70"
+        android:layout_height="@dimen/space_22"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/space_15"
+        android:background="@drawable/product_item_btn_selector"
+        android:text="¥ 6"
+        android:textColor="@color/white"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_toLeftOf="@id/btn"
+        android:layout_toRightOf="@id/count"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="tips"
+        android:textColor="@color/colorAAAAAA"
+        android:textSize="11dp" />
+
+    <View
+        android:id="@+id/divider"
+        style="@style/horizontal_divider"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="14dp" />
+</RelativeLayout>

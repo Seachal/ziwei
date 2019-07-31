@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="@dimen/space_5"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@color/colorF8F8F8" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/divider"
+        android:background="@color/white">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/thumb_sdv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:actualImageScaleType="centerCrop"
+            app:failureImage="@drawable/blank_icon_bigimages"
+            app:failureImageScaleType="centerCrop"
+            app:layout_constraintDimensionRatio="w,1:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:placeholderImage="@drawable/blank_icon_bigimages"
+            app:placeholderImageScaleType="centerCrop"
+            app:roundBottomLeft="false"
+            app:roundBottomRight="false" />
+
+        <com.laka.live.ui.widget.TimeLimitTextView
+            android:id="@+id/title_tv"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/space_56"
+            android:layout_marginLeft="@dimen/space_15"
+            android:layout_marginRight="@dimen/space_15"
+            android:layout_marginTop="@dimen/space_15"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="4sp"
+            android:maxLines="2"
+            android:textColor="@color/color333333"
+            android:textSize="@dimen/space_14"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/thumb_sdv" />
+
+        <LinearLayout
+            android:id="@+id/time_info_ll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_10"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_tv">
+
+            <TextView
+                android:id="@+id/time_flag_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_15"
+                android:textColor="@color/color848484"
+                android:textSize="@dimen/space_12" />
+
+            <View
+                android:id="@+id/status_divider"
+                android:layout_width="1px"
+                android:layout_height="@dimen/space_11"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/space_10"
+                android:layout_marginRight="@dimen/space_10"
+                android:background="@color/color999999" />
+
+            <Chronometer
+                android:id="@+id/time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color848484"
+                android:textSize="@dimen/space_12" />
+
+            <com.laka.live.ui.widget.AnimationView
+                android:id="@+id/living_ware_view"
+                android:layout_width="@dimen/space_10"
+                android:layout_height="@dimen/space_8"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/space_5"
+                app:drawable_id="@drawable/living_wave_anim" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/user_info_ll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_25"
+            android:layout_marginLeft="@dimen/space_15"
+            android:layout_marginRight="@dimen/space_15"
+            android:layout_marginTop="@dimen/space_15"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/time_info_ll">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/head_sdv"
+                android:layout_width="@dimen/space_17"
+                android:layout_height="@dimen/space_17"
+                app:actualImageScaleType="centerCrop"
+                app:failureImage="@drawable/blank_icon_bigimages"
+                app:failureImageScaleType="centerCrop"
+                app:placeholderImage="@drawable/blank_icon_bigimages"
+                app:placeholderImageScaleType="centerCrop"
+                app:roundAsCircle="true" />
+
+            <TextView
+                android:id="@+id/nickname_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_10"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/color848484"
+                android:textSize="@dimen/space_12" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_5"
+            android:background="@color/colorF5F5F5"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/live_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/space_12"
+        android:layout_marginTop="@dimen/space_5"
+        android:src="@drawable/home_live_mark"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
+    <string-array name="share_default_title">
+        <item>美味生活，就在滋味LIVE</item>
+        <item>来滋味Live，遇见最美的生活方式</item>
+        <item>来滋味Live，与美味生活不期而遇</item>
+        <item>生活妙不可言，就在滋味Live</item>
+    </string-array>
+
+    <string-array name="live_quality">
+        <item>优</item>
+        <item>良</item>
+        <item>中</item>
+        <item>差</item>
+    </string-array>
+</resources>

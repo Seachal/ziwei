@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@android:id/background"
+        ><!-- android:drawable="@drawable/live_special_bar_bg"-->
+        <shape>
+            <corners android:radius="20dp"/>
+            <stroke
+                android:width="2dp"
+                android:color="@color/transparent"/>
+            <solid android:color="@color/transparent"/>
+
+        </shape>
+    </item>
+
+    <item
+        android:id="@android:id/progress"
+        ><!-- android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"-->
+        <clip android:drawable="@drawable/live_special_bar_progress"
+           >
+        </clip>
+    </item>
+
+</layer-list>

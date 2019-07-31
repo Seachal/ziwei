@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_80"
+        android:background="@drawable/video_bottom_mask"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!--播放器-->
+    <RelativeLayout
+        android:id="@+id/rl_mini_video_player"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <!--视频播放控件-->
+        <com.laka.live.player.MyExoPlayerPlus
+            android:id="@+id/exo_player"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
+
+        <!--视频默认图-->
+        <ImageView
+            android:id="@+id/iv_mini_video_cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/ll_mini_video_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.laka.live.ui.widget.LoadLoadingView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_5"
+                android:text="加载中..."
+                android:textColor="@color/white"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--用户信息-->
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_mini_video_user_info"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_64"
+        android:paddingRight="@dimen/space_20">
+
+        <ImageView
+            android:id="@+id/iv_mini_video_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/space_10"
+            android:paddingLeft="@dimen/space_15"
+            android:paddingRight="@dimen/space_15"
+            android:paddingTop="@dimen/space_10"
+            android:src="@drawable/nav_icon_back_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/iv_mini_video_avatar"
+            android:layout_width="@dimen/space_40"
+            android:layout_height="@dimen/space_40"
+            app:actualImageScaleType="centerCrop"
+            app:failureImage="@drawable/blank_icon_bigimages"
+            app:failureImageScaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/iv_mini_video_back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:placeholderImage="@drawable/blank_icon_bigimages"
+            app:placeholderImageScaleType="centerCrop"
+            app:roundAsCircle="true" />
+
+        <TextView
+            android:id="@+id/tv_mini_video_user_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_10"
+            android:layout_marginRight="@dimen/space_16"
+            android:ellipsize="end"
+            android:lineSpacingExtra="7sp"
+            android:lines="1"
+            android:text="Monki老师"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@+id/iv_mini_video_avatar"
+            app:layout_constraintRight_toLeftOf="@+id/mini_video_follow_view"
+            app:layout_constraintTop_toTopOf="@+id/iv_mini_video_avatar" />
+
+        <TextView
+            android:id="@+id/tv_mini_video_create_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_10"
+            android:lineSpacingExtra="7sp"
+            android:text="7.28 13:00"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_mini_video_avatar"
+            app:layout_constraintLeft_toRightOf="@+id/iv_mini_video_avatar"
+            app:layout_constraintTop_toBottomOf="@+id/tv_mini_video_user_name" />
+
+        <com.laka.live.video.ui.widget.follow.FollowView
+            android:id="@+id/mini_video_follow_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/space_20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/iv_mini_video_more"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_mini_video_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/space_10"
+            android:paddingTop="@dimen/space_10"
+            android:src="@drawable/icon_video_more"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <!--额外点击功能块-->
+    <RelativeLayout
+        android:id="@+id/rl_mini_video_touch"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/cl_mini_video_info"
+        app:layout_constraintTop_toBottomOf="@+id/cl_mini_video_user_info" />
+
+    <!--播放状态按钮-->
+    <ImageView
+        android:id="@+id/iv_mini_video_play"
+        android:layout_width="@dimen/space_80"
+        android:layout_height="@dimen/space_80"
+        android:padding="@dimen/space_20"
+        android:src="@drawable/jz_click_play_selector"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--播放控制器-->
+    <LinearLayout
+        android:id="@+id/ll_mini_video_seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/space_10"
+        android:paddingLeft="@dimen/space_10"
+        android:paddingRight="@dimen/space_20"
+        android:paddingTop="@dimen/space_10"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/cl_mini_video_info">
+
+        <ImageView
+            android:id="@+id/iv_mini_video_play_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/selector_mini_video_play" />
+
+        <TextView
+            android:id="@+id/tv_mini_video_current_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="10sp"
+            android:text="00:00"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+        <SeekBar
+            android:id="@+id/seek_mini_video_progress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_5"
+            android:layout_marginRight="@dimen/space_6"
+            android:layout_weight="1"
+            android:maxHeight="2dp"
+            android:progressDrawable="@drawable/seek_bar_white_style"
+            android:thumb="@drawable/white_circle_15dp" />
+
+        <TextView
+            android:id="@+id/tv_mini_video_total_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="10sp"
+            android:text="00:00"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+    <!--小视频相关信息-->
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_mini_video_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tv_mini_video_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_17"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lineSpacingExtra="2sp"
+            android:paddingLeft="@dimen/space_20"
+            android:paddingRight="@dimen/space_20"
+            android:shadowColor="#000000"
+            android:shadowDx="1"
+            android:shadowDy="1.7"
+            android:shadowRadius="2"
+            android:text="#上完课你就是【蛋黄酥/螺旋酥】大神了#"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/view_mini_video_line" />
+
+        <View
+            android:id="@+id/view_mini_video_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white30"
+            app:layout_constraintBottom_toTopOf="@+id/cl_mini_video_function" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_mini_video_function"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:id="@+id/ll_mini_video_like"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/space_10"
+                app:layout_constraintBottom_toTopOf="@+id/progress_mini_video"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/ll_mini_video_comment">
+
+                <ImageView
+                    android:id="@+id/iv_mini_video_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/selector_mini_video_like" />
+
+                <TextView
+                    android:id="@+id/tv_mini_video_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_2"
+                    android:gravity="center_horizontal"
+                    android:lineSpacingExtra="10sp"
+                    android:text="@string/video_like_hint"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_mini_video_comment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/space_10"
+                app:layout_constraintBottom_toTopOf="@+id/progress_mini_video"
+                app:layout_constraintHorizontal_weight="1.6"
+                app:layout_constraintLeft_toRightOf="@id/ll_mini_video_like"
+                app:layout_constraintRight_toLeftOf="@+id/ll_mini_video_recommend">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/selector_mini_video_comment" />
+
+                <TextView
+                    android:id="@+id/tv_mini_video_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_2"
+                    android:gravity="center_horizontal"
+                    android:lineSpacingExtra="10sp"
+                    android:text="@string/video_comment_hint"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_mini_video_recommend"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/space_10"
+                app:layout_constraintBottom_toTopOf="@+id/progress_mini_video"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@id/ll_mini_video_comment"
+                app:layout_constraintRight_toRightOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_mini_video_recommend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/selector_mini_video_shop" />
+
+                <TextView
+                    android:id="@+id/tv_mini_video_recommend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_2"
+                    android:gravity="center_horizontal"
+                    android:lineSpacingExtra="10sp"
+                    android:text="@string/video_shop_hint"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progress_mini_video"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#abcdef"
+                android:progressDrawable="@drawable/seek_bar_white_style"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

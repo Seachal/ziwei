@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black">
+
+
+    <com.laka.live.zego.widgets.ViewLive
+        android:id="@+id/vl_big_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:isBigView="false"/>
+
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:src="@drawable/live_btn_close"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="6dp"/>
+</RelativeLayout>
+

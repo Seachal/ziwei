@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_mini_video_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <com.laka.live.video.ui.widget.videopager.ScrollVideoPagerView
+        android:id="@+id/mini_video_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/mask"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_26"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/nav_pic_mask"
+        android:scaleType="fitXY" />
+
+    <!--谈论区和商品-->
+    <com.laka.live.video.ui.widget.videopop.VideoFunctionView
+        android:id="@+id/view_function_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.6" />
+
+    <!--评论内容输入-->
+    <com.laka.live.ui.widget.chatKeyboard.KJChatKeyboardComment
+        android:id="@+id/kjChatKeyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+</android.support.constraint.ConstraintLayout>

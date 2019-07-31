@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:custom="http://schemas.android.com/apk/res-auto"
+              android:background="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="255dp"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/audeio_effect_change"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/color333333"/>
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/live_pop_close_selector"
+            android:layout_width="26dp"
+            android:layout_height="26dp" />
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:background="@drawable/bg_audio_effect_bar"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/btn_none"
+            android:textSize="12dp"
+            android:textColor="@color/f65843_white_text_selector"
+            android:background="@drawable/btn_effect_left_selector"
+            android:text="@string/effect_none"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/btn_yuan"
+            android:textSize="12dp"
+            android:textColor="@color/f65843_white_text_selector"
+            android:background="@drawable/btn_effect_center_selector"
+            android:text="@string/effect_ktv"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/btn_liuxing"
+            android:textSize="12dp"
+            android:textColor="@color/f65843_white_text_selector"
+            android:background="@drawable/btn_effect_center_selector"
+            android:text="@string/effect_cixing"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/btn_low"
+            android:textSize="12dp"
+            android:textColor="@color/f65843_white_text_selector"
+            android:background="@drawable/btn_effect_center_selector"
+            android:text="@string/effect_youyuan"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/btn_high"
+            android:textSize="12dp"
+            android:textColor="@color/f65843_white_text_selector"
+            android:background="@drawable/btn_effect_right_selector"
+            android:text="@string/effect_laochangpian"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="36dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+        <TextView
+            android:text="@string/persion_voice"
+            android:textSize="14dp"
+            android:textColor="@color/color666666"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <SeekBar android:layout_marginLeft="12dp"
+            android:id="@+id/seekbar_voice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="2dp"
+            android:thumb="@drawable/live_icon_music_debug"
+            android:progressDrawable="@drawable/seekbar_yellow_style"
+            android:max="150"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+        <TextView
+            android:text="@string/bgm"
+            android:textSize="14dp"
+            android:textColor="@color/color666666"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <SeekBar android:layout_marginLeft="12dp"
+            android:id="@+id/seekbar_bgm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="2dp"
+            android:thumb="@drawable/live_icon_music_debug"
+            android:progressDrawable="@drawable/seekbar_yellow_style"
+            android:max="100"/>
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/divider"
+        style="@style/horizontal_divider"
+        android:layout_marginTop="29dp"/>
+
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:text="@string/reset"
+        android:background="@color/transparent"
+        android:textColor="@color/color333333"
+        android:textSize="16dp" />
+
+
+
+</LinearLayout>

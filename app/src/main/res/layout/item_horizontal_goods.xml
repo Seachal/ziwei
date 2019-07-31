@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorE5E5E5"
+        android:padding="0.5dp">
+
+        <ImageView
+            android:id="@+id/goodsCover"
+            android:layout_width="@dimen/space_167"
+            android:layout_height="@dimen/space_167"
+            android:scaleType="centerCrop"
+            android:src="@drawable/blank_icon_bigimages" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/goodsName"
+        android:layout_width="@dimen/space_167"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_5"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:paddingLeft="@dimen/space_14"
+        android:paddingRight="@dimen/space_14"
+        android:textColor="@color/color333333"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/goodsPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_14"
+        android:layout_marginTop="@dimen/space_5"
+        android:textColor="@color/colorFF950B"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

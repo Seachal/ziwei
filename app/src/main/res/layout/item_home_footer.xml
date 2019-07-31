@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/space_65">
+
+    <TextView
+        android:id="@+id/see_all_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawableEnd="@drawable/home_icon_seeall"
+        android:drawablePadding="@dimen/space_11"
+        android:drawableRight="@drawable/home_icon_seeall"
+        android:padding="@dimen/space_10"
+        android:text="@string/see_all"
+        android:textColor="@color/color848484"
+        android:textSize="@dimen/space_12" />
+
+</RelativeLayout>

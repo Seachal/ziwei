@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_5"
+        android:background="@color/divider_F5F5F5" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_65"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/title_tv"
+            style="@style/item_home_title"
+            android:text="@string/hot_topic" />
+
+        <include
+            android:id="@+id/more_layout"
+            layout="@layout/layout_home_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="2px"-->
+    <!--android:background="@color/colorE5E5E5" />-->
+
+    <com.laka.live.ui.widget.PageListLayout
+        android:id="@+id/page_list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_100"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/space_20"
+        android:paddingTop="@dimen/space_4" />
+</LinearLayout>

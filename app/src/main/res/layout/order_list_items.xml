@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_5">
+
+
+        <RelativeLayout
+            android:id="@+id/rl_pic"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="left">
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/items_order_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+              />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/rect_1dp_e5e5e5"
+                android:scaleType="fitXY"/>
+        </RelativeLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/space_5">
+
+            <LinearLayout
+                android:id="@+id/ll_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/space_20">
+
+                <TextView
+                    android:id="@+id/items_order_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|left"
+                    android:textColor="@color/shopping_items_title_color"
+                    android:textSize="@dimen/space_13"
+                    android:maxLines="2"
+                    android:minLines="2"/>
+
+                <TextView
+                    android:id="@+id/tv_goods_spec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_5"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textColor="@color/color848484"
+                    android:textSize="12dp"
+                    android:text="规格"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|left"
+                android:layout_marginBottom="@dimen/space_5"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/items_order_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/deep_black"
+                    android:textSize="@dimen/space_13"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/items_order_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_10"
+                    android:textColor="@color/shopping_items_other_color"
+                    android:textSize="@dimen/space_11"/>
+
+                <com.laka.live.ui.widget.AlphaTextView
+                    android:id="@+id/order_deal_with"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/space_7"
+                    android:drawableRight="@drawable/order_arrow"
+                    android:padding="@dimen/space_10"
+                    android:textColor="@color/pink"
+                    android:textSize="@dimen/space_13"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/default_bg">
+
+    <LinearLayout
+        android:id="@+id/layout_address_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_5"
+        android:background="@drawable/shopping_selector_option"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_10">
+
+        <ImageView
+            android:id="@+id/icon_location"
+            android:layout_width="@dimen/space_20"
+            android:layout_height="wrap_content"
+            android:src="@drawable/order_logistic_icon_address" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layout_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/space_5"
+                android:paddingLeft="@dimen/space_10"
+                android:paddingRight="@dimen/space_10">
+
+                <TextView
+                    android:id="@+id/tv_receiver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/color848484"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/tv_mobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color848484"
+                    android:textSize="13dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:ellipsize="end"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:maxLines="2"
+                android:padding="@dimen/space_10"
+                android:textColor="@color/color848484"
+                android:textSize="13dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/tv_address_add"
+            android:layout_width="@dimen/space_20"
+            android:layout_height="wrap_content"
+            android:src="@drawable/order_logistic_icon_arrow"
+            android:visibility="visible" />
+
+    </LinearLayout>
+</LinearLayout>

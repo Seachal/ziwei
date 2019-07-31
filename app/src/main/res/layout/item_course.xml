@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/space_15"
+    android:paddingTop="@dimen/space_10">
+
+    <CheckBox
+        android:id="@+id/selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/space_15"
+        android:background="@drawable/checkbox_yellow"
+        android:button="@color/transparent"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/numLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/courseNum1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/detail_tag_class"
+            android:gravity="center"
+            android:paddingBottom="@dimen/space_1"
+            android:paddingLeft="@dimen/space_5"
+            android:paddingRight="@dimen/space_14"
+            android:paddingTop="@dimen/space_1"
+            android:text="课堂01"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/courseNum2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_5"
+            android:text="SECTION01"
+            android:textColor="@color/colorDFDFDF"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/userFaceLayout"
+        android:layout_width="@dimen/space_123"
+
+        android:layout_height="@dimen/space_70"
+        android:layout_below="@+id/numLayout"
+        android:layout_marginBottom="@dimen/px30"
+        android:layout_marginTop="@dimen/space_5"
+        android:layout_toEndOf="@+id/selected"
+        android:layout_toRightOf="@+id/selected">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/userFace"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:placeholderImage="@drawable/blank_icon_banner"
+            app:placeholderImageScaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/live_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/space_5"
+            android:layout_marginTop="@dimen/space_5"
+            android:src="@drawable/home_live_mark"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/cancelLayout"
+        android:layout_width="@dimen/space_123"
+        android:layout_height="@dimen/space_70"
+        android:layout_marginBottom="@dimen/px30"
+        android:layout_marginTop="@dimen/space_5"
+        android:layout_toEndOf="@+id/selected"
+        android:layout_toRightOf="@+id/selected"
+        android:background="@color/whiteHalfAlpha"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/cancelTv"
+            android:layout_width="@dimen/space_54"
+            android:layout_height="@dimen/space_54"
+            android:layout_centerInParent="true"
+            android:background="@drawable/oval_black"
+            android:gravity="center"
+            android:padding="@dimen/space_8"
+            android:text="课堂已取消"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/userFaceLayout"
+        android:layout_alignTop="@+id/userFaceLayout"
+        android:layout_marginLeft="@dimen/space_15"
+        android:layout_marginRight="@dimen/space_15"
+        android:layout_toRightOf="@+id/userFaceLayout"
+        android:gravity="center_vertical">
+
+        <com.laka.live.ui.widget.TimeLimitTextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/color333333"
+            android:textSize="17sp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/title"
+            android:layout_marginTop="@dimen/space_10">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/color848484"
+                    android:textSize="11sp" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="1px"
+                    android:layout_height="@dimen/space_10"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/space_5"
+                    android:layout_marginRight="@dimen/space_5"
+                    android:layout_toRightOf="@+id/status"
+                    android:background="@color/color999999" />
+
+                <Chronometer
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toRightOf="@+id/divider"
+                    android:drawablePadding="@dimen/px15"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/color848484"
+                    android:textSize="11sp" />
+
+                <com.laka.live.ui.widget.AnimationView
+                    android:id="@+id/animation"
+                    android:layout_width="@dimen/space_10"
+                    android:layout_height="@dimen/space_10"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/space_5"
+                    android:layout_marginTop="@dimen/space_1"
+                    android:layout_toRightOf="@+id/time"
+                    android:visibility="gone"
+                    app:drawable_id="@drawable/living_wave_anim" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_5"
+                android:paddingBottom="@dimen/space_3"
+                android:textColor="@color/colorFF950B"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        style="@style/horizontal_divider"
+        android:layout_below="@+id/userFaceLayout" />
+
+</RelativeLayout>

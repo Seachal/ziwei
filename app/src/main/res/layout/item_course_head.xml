@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px400"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/blurImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_living_bg" />
+
+        <ImageView
+            android:id="@+id/blurLayout"
+            android:layout_width="@dimen/space_140"
+            android:layout_height="@dimen/space_50"
+            android:layout_centerInParent="true"
+            android:src="@drawable/border_white" />
+
+        <TextView
+            android:id="@+id/blurText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@drawable/btn_icon_follow"
+            android:drawablePadding="@dimen/space_5"
+            android:gravity="center"
+            android:text="预告视频(选填)"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <com.laka.live.ui.widget.WxCircleLoading
+            android:id="@+id/circleLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="5dp"
+            android:visibility="gone"
+            app:circle_radius="25dp" />
+
+        <TextView
+            android:id="@+id/player"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/detail_btn_play"
+            android:drawableLeft="@drawable/detail_btn_play2"
+            android:gravity="center"
+            android:paddingBottom="@dimen/space_8"
+            android:paddingLeft="@dimen/space_18"
+            android:paddingRight="@dimen/space_18"
+            android:paddingTop="@dimen/space_8"
+            android:drawablePadding="@dimen/space_5"
+            android:text="预告"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/blurLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/space_10"
+            android:text="文件&lt;10M   时长&lt;1min"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+
+        <com.laka.live.ui.widget.SelectorImage
+            android:id="@+id/deleteTrailer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/space_10"
+            app:default_image="@drawable/class_btn_delete_n"
+            app:press_image="@drawable/class_btn_delete_h" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/topics"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_70"
+        android:background="@color/white"
+        android:gravity="center"
+        android:hint="# 添加话题，让更多人看到课堂 #"
+        android:padding="@dimen/space_15"
+        android:textColor="@color/color333333"
+        android:textColorHint="@color/colorFFC401"
+        android:textSize="15sp" />
+
+    <View
+        style="@style/horizontal_divider"
+        android:layout_height="@dimen/space_10" />
+
+</LinearLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.laka.live.shopping.widget.MaterialRippleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mrl_rippleAlpha="0.1"
+        app:mrl_rippleInAdapter="false">
+
+        <LinearLayout
+            android:id="@+id/product_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/space_15"
+            android:paddingRight="@dimen/space_15"
+            android:paddingTop="@dimen/space_10">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/product_img"
+                android:layout_width="@dimen/space_125"
+                android:layout_height="@dimen/space_125"
+                android:layout_marginBottom="@dimen/space_10" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/space_15"
+                    android:paddingTop="@dimen/space_10">
+
+                    <TextView
+                        android:id="@+id/product_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:paddingRight="@dimen/space_10"
+                        android:textColor="@color/deep_black"
+                        android:textSize="@dimen/space_14" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_5"
+                        android:gravity="left|center"
+                        android:orientation="horizontal">
+
+                        <com.laka.live.shopping.widget.RatingBar
+                            android:id="@+id/product_rating_bar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:starSize="11dp"></com.laka.live.shopping.widget.RatingBar>
+
+                        <TextView
+                            android:id="@+id/product_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/space_10"
+                            android:textColor="@color/shopping_category_price_color"
+                            android:textSize="@dimen/space_12" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/product_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_10"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:paddingRight="@dimen/space_15"
+                        android:textColor="@color/shopping_category_price_color"
+                        android:textSize="@dimen/space_12" />
+
+                    <TextView
+                        android:id="@+id/product_evaluate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_10"
+                        android:drawableLeft="@drawable/shopping_category_top_reviews"
+                        android:drawablePadding="@dimen/space_5"
+                        android:textColor="@color/shopping_category_evaluate_color"
+                        android:textSize="@dimen/space_12" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/product_line"
+                    style="@style/shopping_vertical_line"
+                    android:layout_gravity="bottom" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.laka.live.shopping.widget.MaterialRippleLayout>
+</LinearLayout>

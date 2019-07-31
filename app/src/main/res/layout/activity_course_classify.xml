@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0"
+            android:orientation="horizontal" />
+
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0" />
+
+
+        <RelativeLayout
+            android:id="@+id/home_head"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/head_height"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/right"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:src="@drawable/nav_icon_back"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/back_head_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/back"
+                android:layout_toStartOf="@+id/right"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="课程分类" />
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:src="@drawable/nav_icon_back" />
+
+            <View
+                style="@style/head_divider"
+                android:layout_alignParentBottom="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/categoryLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.laka.live.shopping.widget.ShoppingCustomRecycler
+                    android:id="@+id/category"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_60"
+                    android:background="@color/white"
+                    android:paddingLeft="@dimen/space_15" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_5"
+                    android:background="@color/colorF5F5F5" />
+
+            </LinearLayout>
+
+            <com.laka.live.ui.widget.MoreBtnView
+                android:id="@+id/moreClassify"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/space_60"
+                android:layout_alignParentRight="true"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingTop="@dimen/space_12">
+
+            <include
+                android:id="@+id/live_tab"
+                layout="@layout/classify_tab" />
+
+            <include
+                android:id="@+id/video_tab"
+                layout="@layout/classify_tab" />
+
+            <include
+                android:id="@+id/news_tab"
+                layout="@layout/classify_tab" />
+
+        </LinearLayout>
+
+        <View style="@style/horizontal_line_half_dp" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/colorEFF0F7" />
+
+    </LinearLayout>
+
+</TabHost>
